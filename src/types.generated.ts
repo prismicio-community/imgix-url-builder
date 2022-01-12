@@ -1,7 +1,5 @@
 // Types generated using `imgix-url-params` as a source.
-
 type Ratio = `${number}:${number}`;
-type HexColor = `#${string}`;
 type ColorKeyword =
 	| "aliceblue"
 	| "antiquewhite"
@@ -450,7 +448,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/bg
 	 */
-	bg?: HexColor | ColorKeyword;
+	bg?: string | ColorKeyword;
 	/**
 	 * Blend align
 	 *
@@ -476,7 +474,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-color
 	 */
-	blendColor?: HexColor | ColorKeyword;
+	blendColor?: string | ColorKeyword;
 	/**
 	 * Blend crop
 	 *
@@ -502,7 +500,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-h
 	 */
-	blendH?: number | number;
+	blendH?: number;
 	/**
 	 * Blend mode
 	 *
@@ -554,7 +552,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-w
 	 */
-	blendW?: number | number;
+	blendW?: number;
 	/**
 	 * Blend x position
 	 *
@@ -582,7 +580,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend
 	 */
-	blend?: HexColor | ColorKeyword | string | string;
+	blend?: string | ColorKeyword;
 	/**
 	 * Gaussian blur
 	 *
@@ -648,7 +646,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/border
 	 */
-	border?: [number, HexColor | ColorKeyword];
+	border?: [number, string | ColorKeyword];
 	/**
 	 * Brightness
 	 *
@@ -781,7 +779,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/duotone
 	 */
-	duotone?: [HexColor | ColorKeyword, HexColor | ColorKeyword];
+	duotone?: [string | ColorKeyword, string | ColorKeyword];
 	/**
 	 * Exposure
 	 *
@@ -795,8 +793,8 @@ interface ImgixURLParams {
 	/**
 	 * URL expiration timestamp
 	 *
-	 * A Unix timestamp specifying a UTC time. Requests made to this URL
-	 * after that time will output a 404 status code.
+	 * A Unix timestamp specifying a UTC time. Requests made to this URL after
+	 * that time will output a 404 status code.
 	 *
 	 * @see https://docs.imgix.com/apis/url/expires
 	 */
@@ -822,8 +820,7 @@ interface ImgixURLParams {
 	/**
 	 * Json face data
 	 *
-	 * Specifies that face data should be included in output when combined
-	 * with `fm=json`.
+	 * Specifies that face data should be included in output when combined with `fm=json`.
 	 *
 	 * @see https://docs.imgix.com/apis/url/face-detection/faces
 	 */
@@ -837,7 +834,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-color
 	 */
-	fillColor?: HexColor | ColorKeyword;
+	fillColor?: string | ColorKeyword;
 	/**
 	 * Fill mode
 	 *
@@ -944,7 +941,7 @@ interface ImgixURLParams {
 	 *
 	 * Sets grid colors for the transparency checkerboard grid.
 	 */
-	gridColors?: [HexColor | ColorKeyword, HexColor | ColorKeyword];
+	gridColors?: [string | ColorKeyword, string | ColorKeyword];
 	/**
 	 * Grid size
 	 *
@@ -958,7 +955,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/h
 	 */
-	h?: number | number;
+	h?: number;
 	/**
 	 * Highlight
 	 *
@@ -1040,7 +1037,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-base
 	 */
-	markBase?: string | string;
+	markBase?: string;
 	/**
 	 * Watermark fit mode
 	 *
@@ -1058,7 +1055,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-h
 	 */
-	markH?: number | number;
+	markH?: number;
 	/**
 	 * Watermark padding
 	 *
@@ -1102,7 +1099,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-w
 	 */
-	markW?: number | number;
+	markW?: number;
 	/**
 	 * Watermark x position
 	 *
@@ -1126,7 +1123,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark
 	 */
-	mark?: string | string;
+	mark?: string;
 	/**
 	 * Mask background color
 	 *
@@ -1136,7 +1133,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/mask/mask-bg
 	 */
-	maskBg?: HexColor | ColorKeyword;
+	maskBg?: string | ColorKeyword;
 	/**
 	 * Mask type
 	 *
@@ -1144,7 +1141,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/mask
 	 */
-	mask?: "ellipse" | "corners" | string | string;
+	mask?: "ellipse" | "corners" | string;
 	/**
 	 * Maximum height
 	 *
@@ -1184,7 +1181,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/monochrome
 	 */
-	monochrome?: HexColor | ColorKeyword;
+	monochrome?: string | ColorKeyword;
 	/**
 	 * Noise reduction bound
 	 *
@@ -1321,8 +1318,8 @@ interface ImgixURLParams {
 	 * @see https://docs.imgix.com/apis/url/size/rect
 	 */
 	rect?: [
-		number | "left" | "center" | "right" | number,
-		number | "top" | "middle" | "bottom" | number,
+		number | "left" | "center" | "right",
+		number | "top" | "middle" | "bottom",
 		number,
 		number,
 	];
@@ -1391,7 +1388,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-color
 	 */
-	trimColor?: HexColor | ColorKeyword;
+	trimColor?: string | ColorKeyword;
 	/**
 	 * Trim mean difference
 	 *
@@ -1443,8 +1440,8 @@ interface ImgixURLParams {
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative
-	 * to the base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the
+	 * base image.
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-align
 	 */
@@ -1466,7 +1463,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-color
 	 */
-	txtColor?: HexColor | ColorKeyword;
+	txtColor?: string | ColorKeyword;
 	/**
 	 * Text fit mode
 	 *
@@ -1511,7 +1508,7 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line-color
 	 */
-	txtLineColor?: HexColor | ColorKeyword;
+	txtLineColor?: string | ColorKeyword;
 	/**
 	 * Text outline
 	 *
@@ -1525,8 +1522,8 @@ interface ImgixURLParams {
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a
-	 * textbox and the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and
+	 * the edges of the base image.
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-pad
 	 */
@@ -1554,8 +1551,8 @@ interface ImgixURLParams {
 	/**
 	 * Text tracking
 	 *
-	 * Sets the tracking (letter spacing) for rendered text. Only works on
-	 * the multi-line text endpoint.
+	 * Sets the tracking (letter spacing) for rendered text. Only works on the
+	 * multi-line text endpoint.
 	 *
 	 * @default `0`
 	 *
@@ -1615,5 +1612,6 @@ interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/w
 	 */
-	w?: number | number;
+	w?: number;
 }
+      }
