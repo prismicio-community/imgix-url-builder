@@ -7,5 +7,7 @@ export { buildURL } from "../buildURL";
 // They may contain Node.js-specific code or should not be run in a
 // client-facing environment.
 export { SecureClient } from "./SecureClient";
+export type { SecureClientOptions } from "./SecureClient";
+
 export { buildSignedURL } from "./buildSignedURL";
 export { signURL } from "./signURL";

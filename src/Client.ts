@@ -1,7 +1,7 @@
 import { buildURL } from "./buildURL";
 import { ImgixURLParams } from "./types.generated";
 
-type ClientOptions = {
+export type ClientOptions = {
 	origin: string;
 };
 

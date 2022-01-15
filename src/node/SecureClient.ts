@@ -3,7 +3,7 @@ import { buildURL } from "../buildURL";
 import { buildSignedURL } from "./buildSignedURL";
 import { signURL } from "./signURL";
 
-type SecureClientOptions = {
+export type SecureClientOptions = {
 	origin: string;
 	secureURLToken: string;
 };
