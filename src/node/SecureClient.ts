@@ -21,12 +21,12 @@ export class SecureClient {
 		return this.buildSignedURLForPath(encodeURIComponent(url), params);
 	}
 
-	buildURLForPath(path: string, params: ImgixURLParams = {}): string {
-		return buildURL(this.urlForPath(path), params);
+	buildSignedURLForPath(path: string, params: ImgixURLParams = {}): string {
+		return this.buildSignedURL(`${new URL(path, this.origin)}`, params);
 	}
 
-	buildSignedURLForPath(path: string, params: ImgixURLParams = {}): string {
-		return buildSignedURL(this.urlForPath(path), this.secureURLToken, params);
+	buildURLForPath(path: string, params: ImgixURLParams = {}): string {
+		return buildURL(`${new URL(path, this.origin)}`, params);
 	}
 
 	buildSignedURL(url: string, params: ImgixURLParams = {}): string {
@@ -35,9 +35,5 @@ export class SecureClient {
 
 	signURL(url: string): string {
 		return signURL(url, this.secureURLToken);
-	}
-
-	private urlForPath(path: string): string {
-		return new URL(path, this.origin).toString();
 	}
 }
