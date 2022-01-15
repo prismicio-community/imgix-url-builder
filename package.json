@@ -16,12 +16,16 @@
 	"exports": {
 		".": {
 			"require": "./dist/index.cjs",
-			"import": "./dist/index.js"
+			"import": "./dist/index.mjs"
+		},
+		"./node": {
+			"require": "./dist/node/index.cjs",
+			"import": "./dist/node/index.mjs"
 		},
 		"./package.json": "./package.json"
 	},
 	"main": "dist/index.cjs",
-	"module": "dist/index.js",
+	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"files": [
 		"dist",
@@ -31,6 +35,7 @@
 		"build": "siroc build",
 		"dev": "siroc build --watch",
 		"format": "prettier --write .",
+		"gen": "node --loader ts-node/esm --experimental-json-modules ./scripts/generateImgixURLParamsTypeFile.ts",
 		"lint": "eslint --ext .js,.ts .",
 		"prepare": "npm run build",
 		"release": "npm run test && standard-version && git push --follow-tags && npm run build && npm publish",
@@ -40,6 +45,10 @@
 		"size": "size-limit",
 		"test": "npm run lint && npm run unit && npm run build && npm run size",
 		"unit": "nyc --reporter=lcovonly --reporter=text --exclude-after-remap=false ava"
+	},
+	"dependencies": {
+		"camel-case": "^4.1.2",
+		"param-case": "^3.0.4"
 	},
 	"devDependencies": {
 		"@size-limit/preset-small-lib": "^7.0.5",
@@ -60,6 +69,7 @@
 		"standard-version": "^9.3.2",
 		"ts-eager": "^2.0.2",
 		"ts-morph": "^13.0.2",
+		"ts-node": "^10.4.0",
 		"typescript": "^4.5.4"
 	},
 	"engines": {
@@ -67,9 +77,5 @@
 	},
 	"publishConfig": {
 		"access": "public"
-	},
-	"dependencies": {
-		"camel-case": "^4.1.2",
-		"param-case": "^3.0.4"
 	}
 }

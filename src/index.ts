@@ -1,1 +1,2 @@
-export { generateUrlParamsTypes } from "./generateUrlParamsTypes";
+export { Client } from "./Client";
+export { buildURL } from "./buildURL";

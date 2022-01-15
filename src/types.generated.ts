@@ -1,4 +1,5 @@
 // Types generated using `imgix-url-params` as a source.
+
 type Ratio = `${number}:${number}`;
 type ColorKeyword =
 	| "aliceblue"
@@ -422,7 +423,7 @@ type Font =
 	| "Zapf Dingbats"
 	| "Zapfino";
 
-interface ImgixURLParams {
+export interface ImgixURLParams {
 	/**
 	 * Aspect ratio
 	 *
@@ -444,7 +445,7 @@ interface ImgixURLParams {
 	 *
 	 * Colors the background of padded and partially-transparent images.
 	 *
-	 * @default `"fff"`
+	 * @defaultValue `"fff"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/bg
 	 */
@@ -454,59 +455,211 @@ interface ImgixURLParams {
 	 *
 	 * Changes the blend alignment relative to the parent image.
 	 *
+	 * Aliases: `blendalign`, `ba`
+	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-align
 	 */
 	blendAlign?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[];
+	/**
+	 * Blend align
+	 *
+	 * Changes the blend alignment relative to the parent image.
+	 *
+	 * Alias for: `blendAlign`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-align
+	 */
+	blendalign?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[];
+	/**
+	 * Blend align
+	 *
+	 * Changes the blend alignment relative to the parent image.
+	 *
+	 * Alias for: `blendAlign`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-align
+	 */
+	ba?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[];
 	/**
 	 * Blend alpha
 	 *
 	 * Changes the alpha of the blend image.
 	 *
-	 * @default `100`
+	 * Aliases: `blendalpha`, `balph`
+	 *
+	 * @defaultValue `100`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-alpha
 	 */
 	blendAlpha?: number;
 	/**
+	 * Blend alpha
+	 *
+	 * Changes the alpha of the blend image.
+	 *
+	 * Alias for: `blendAlpha`
+	 *
+	 * @defaultValue `100`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-alpha
+	 */
+	blendalpha?: number;
+	/**
+	 * Blend alpha
+	 *
+	 * Changes the alpha of the blend image.
+	 *
+	 * Alias for: `blendAlpha`
+	 *
+	 * @defaultValue `100`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-alpha
+	 */
+	balph?: number;
+	/**
 	 * Blend color
 	 *
 	 * Specifies a color to use when applying the blend.
+	 *
+	 * Aliases: `blendcolor`, `blendClr`, `blendclr`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-color
 	 */
 	blendColor?: string | ColorKeyword;
 	/**
+	 * Blend color
+	 *
+	 * Specifies a color to use when applying the blend.
+	 *
+	 * Alias for: `blendColor`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-color
+	 */
+	blendcolor?: string | ColorKeyword;
+	/**
+	 * Blend color
+	 *
+	 * Specifies a color to use when applying the blend.
+	 *
+	 * Alias for: `blendColor`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-color
+	 */
+	blendClr?: string | ColorKeyword;
+	/**
+	 * Blend color
+	 *
+	 * Specifies a color to use when applying the blend.
+	 *
+	 * Alias for: `blendColor`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-color
+	 */
+	blendclr?: string | ColorKeyword;
+	/**
 	 * Blend crop
 	 *
 	 * Specifies the type of crop for blend images.
+	 *
+	 * Aliases: `blendcrop`, `bc`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-crop
 	 */
 	blendCrop?: ("top" | "bottom" | "left" | "right" | "faces")[];
 	/**
+	 * Blend crop
+	 *
+	 * Specifies the type of crop for blend images.
+	 *
+	 * Alias for: `blendCrop`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-crop
+	 */
+	blendcrop?: ("top" | "bottom" | "left" | "right" | "faces")[];
+	/**
+	 * Blend crop
+	 *
+	 * Specifies the type of crop for blend images.
+	 *
+	 * Alias for: `blendCrop`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-crop
+	 */
+	bc?: ("top" | "bottom" | "left" | "right" | "faces")[];
+	/**
 	 * Blend fit
 	 *
 	 * Specifies the fit mode for blend images.
 	 *
-	 * @default `"clip"`
+	 * Aliases: `blendfit`, `bf`
+	 *
+	 * @defaultValue `"clip"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-fit
 	 */
 	blendFit?: "clamp" | "clip" | "crop" | "scale" | "max";
 	/**
+	 * Blend fit
+	 *
+	 * Specifies the fit mode for blend images.
+	 *
+	 * Alias for: `blendFit`
+	 *
+	 * @defaultValue `"clip"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-fit
+	 */
+	blendfit?: "clamp" | "clip" | "crop" | "scale" | "max";
+	/**
+	 * Blend fit
+	 *
+	 * Specifies the fit mode for blend images.
+	 *
+	 * Alias for: `blendFit`
+	 *
+	 * @defaultValue `"clip"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-fit
+	 */
+	bf?: "clamp" | "clip" | "crop" | "scale" | "max";
+	/**
 	 * Blend height
 	 *
 	 * Adjusts the height of the blend image.
+	 *
+	 * Aliases: `blendh`, `bh`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-h
 	 */
 	blendH?: number;
 	/**
+	 * Blend height
+	 *
+	 * Adjusts the height of the blend image.
+	 *
+	 * Alias for: `blendH`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-h
+	 */
+	blendh?: number;
+	/**
+	 * Blend height
+	 *
+	 * Adjusts the height of the blend image.
+	 *
+	 * Alias for: `blendH`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-h
+	 */
+	bh?: number;
+	/**
 	 * Blend mode
 	 *
 	 * Sets the blend mode for a blend image.
 	 *
-	 * @default `"overlay"`
+	 * Aliases: `blendmode`, `bm`
+	 *
+	 * @defaultValue `"overlay"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-mode
 	 */
@@ -528,65 +681,255 @@ interface ImgixURLParams {
 		| "softlight"
 		| "normal";
 	/**
+	 * Blend mode
+	 *
+	 * Sets the blend mode for a blend image.
+	 *
+	 * Alias for: `blendMode`
+	 *
+	 * @defaultValue `"overlay"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-mode
+	 */
+	blendmode?:
+		| "color"
+		| "burn"
+		| "dodge"
+		| "darken"
+		| "difference"
+		| "exclusion"
+		| "hardlight"
+		| "hue"
+		| "lighten"
+		| "luminosity"
+		| "multiply"
+		| "overlay"
+		| "saturation"
+		| "screen"
+		| "softlight"
+		| "normal";
+	/**
+	 * Blend mode
+	 *
+	 * Sets the blend mode for a blend image.
+	 *
+	 * Alias for: `blendMode`
+	 *
+	 * @defaultValue `"overlay"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-mode
+	 */
+	bm?:
+		| "color"
+		| "burn"
+		| "dodge"
+		| "darken"
+		| "difference"
+		| "exclusion"
+		| "hardlight"
+		| "hue"
+		| "lighten"
+		| "luminosity"
+		| "multiply"
+		| "overlay"
+		| "saturation"
+		| "screen"
+		| "softlight"
+		| "normal";
+	/**
 	 * Blend padding
 	 *
 	 * Applies padding to the blend image.
 	 *
-	 * @default `0`
+	 * Aliases: `blendpad`, `bp`
+	 *
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-pad
 	 */
 	blendPad?: number;
 	/**
+	 * Blend padding
+	 *
+	 * Applies padding to the blend image.
+	 *
+	 * Alias for: `blendPad`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-pad
+	 */
+	blendpad?: number;
+	/**
+	 * Blend padding
+	 *
+	 * Applies padding to the blend image.
+	 *
+	 * Alias for: `blendPad`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-pad
+	 */
+	bp?: number;
+	/**
 	 * Blend size
 	 *
 	 * Adjusts the size of the blend image.
+	 *
+	 * Aliases: `blendsize`, `bs`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-size
 	 */
 	blendSize?: "inherit";
 	/**
+	 * Blend size
+	 *
+	 * Adjusts the size of the blend image.
+	 *
+	 * Alias for: `blendSize`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-size
+	 */
+	blendsize?: "inherit";
+	/**
+	 * Blend size
+	 *
+	 * Adjusts the size of the blend image.
+	 *
+	 * Alias for: `blendSize`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-size
+	 */
+	bs?: "inherit";
+	/**
 	 * Blend width
 	 *
 	 * Adjusts the width of the blend image.
+	 *
+	 * Aliases: `blendw`, `bw`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-w
 	 */
 	blendW?: number;
 	/**
+	 * Blend width
+	 *
+	 * Adjusts the width of the blend image.
+	 *
+	 * Alias for: `blendW`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-w
+	 */
+	blendw?: number;
+	/**
+	 * Blend width
+	 *
+	 * Adjusts the width of the blend image.
+	 *
+	 * Alias for: `blendW`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-w
+	 */
+	bw?: number;
+	/**
 	 * Blend x position
 	 *
 	 * Adjusts the x-offset of the blend image relative to its parent.
 	 *
-	 * @default `0`
+	 * Aliases: `blendx`, `bx`
+	 *
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-x
 	 */
 	blendX?: number;
 	/**
+	 * Blend x position
+	 *
+	 * Adjusts the x-offset of the blend image relative to its parent.
+	 *
+	 * Alias for: `blendX`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-x
+	 */
+	blendx?: number;
+	/**
+	 * Blend x position
+	 *
+	 * Adjusts the x-offset of the blend image relative to its parent.
+	 *
+	 * Alias for: `blendX`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-x
+	 */
+	bx?: number;
+	/**
 	 * Blend y position
 	 *
 	 * Adjusts the y-offset of the blend image relative to its parent.
 	 *
-	 * @default `0`
+	 * Aliases: `blendy`, `by`
+	 *
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-y
 	 */
 	blendY?: number;
 	/**
+	 * Blend y position
+	 *
+	 * Adjusts the y-offset of the blend image relative to its parent.
+	 *
+	 * Alias for: `blendY`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-y
+	 */
+	blendy?: number;
+	/**
+	 * Blend y position
+	 *
+	 * Adjusts the y-offset of the blend image relative to its parent.
+	 *
+	 * Alias for: `blendY`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend-y
+	 */
+	by?: number;
+	/**
 	 * Blend
 	 *
 	 * Specifies the location of the blend image.
+	 *
+	 * Aliases: `b`
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend
 	 */
 	blend?: string | ColorKeyword;
 	/**
+	 * Blend
+	 *
+	 * Specifies the location of the blend image.
+	 *
+	 * Alias for: `blend`
+	 *
+	 * @see https://docs.imgix.com/apis/url/blending/blend
+	 */
+	b?: string | ColorKeyword;
+	/**
 	 * Gaussian blur
 	 *
 	 * Applies a gaussian blur to an image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/blur
 	 */
@@ -652,7 +995,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the brightness of the source image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/bri
 	 */
@@ -670,7 +1013,7 @@ interface ImgixURLParams {
 	 *
 	 * Specifies the output chroma subsampling rate.
 	 *
-	 * @default `420`
+	 * @defaultValue `420`
 	 *
 	 * @see https://docs.imgix.com/apis/url/format/chromasub
 	 */
@@ -688,7 +1031,7 @@ interface ImgixURLParams {
 	 *
 	 * Specifies how many colors to include in a palette-extraction response.
 	 *
-	 * @default `6`
+	 * @defaultValue `6`
 	 *
 	 * @see https://docs.imgix.com/apis/url/color-palette/colors
 	 */
@@ -698,7 +1041,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the contrast of the source image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/con
 	 */
@@ -757,7 +1100,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the device-pixel ratio of the output image.
 	 *
-	 * @default `1`
+	 * @defaultValue `1`
 	 *
 	 * @see https://docs.imgix.com/apis/url/dpr
 	 */
@@ -767,7 +1110,7 @@ interface ImgixURLParams {
 	 *
 	 * Changes the alpha of the duotone effect atop the source image.
 	 *
-	 * @default `100`
+	 * @defaultValue `100`
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/duotone-alpha
 	 */
@@ -785,7 +1128,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the exposure of the output image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/exp
 	 */
@@ -812,7 +1155,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts padding around a selected face.
 	 *
-	 * @default `1`
+	 * @defaultValue `1`
 	 *
 	 * @see https://docs.imgix.com/apis/url/face-detection/facepad
 	 */
@@ -830,11 +1173,25 @@ interface ImgixURLParams {
 	 *
 	 * Sets the fill color for images with additional space created by the fit setting
 	 *
-	 * @default `"fff"`
+	 * Aliases: `fillcolor`
+	 *
+	 * @defaultValue `"fff"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-color
 	 */
 	fillColor?: string | ColorKeyword;
+	/**
+	 * Fill color
+	 *
+	 * Sets the fill color for images with additional space created by the fit setting
+	 *
+	 * Alias for: `fillColor`
+	 *
+	 * @defaultValue `"fff"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/fill/fill-color
+	 */
+	fillcolor?: string | ColorKeyword;
 	/**
 	 * Fill mode
 	 *
@@ -848,11 +1205,34 @@ interface ImgixURLParams {
 	 *
 	 * Specifies how to map the source image to the output image dimensions.
 	 *
-	 * @default `"clip"`
+	 * Aliases: `f`
+	 *
+	 * @defaultValue `"clip"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/fit
 	 */
 	fit?:
+		| "clamp"
+		| "clip"
+		| "crop"
+		| "facearea"
+		| "fill"
+		| "fillmax"
+		| "max"
+		| "min"
+		| "scale";
+	/**
+	 * Resize fit mode
+	 *
+	 * Specifies how to map the source image to the output image dimensions.
+	 *
+	 * Alias for: `fit`
+	 *
+	 * @defaultValue `"clip"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/size/fit
+	 */
+	f?:
 		| "clamp"
 		| "clip"
 		| "crop"
@@ -897,7 +1277,7 @@ interface ImgixURLParams {
 	 *
 	 * Displays crosshairs identifying the location of the set focal point
 	 *
-	 * @default `false`
+	 * @defaultValue `false`
 	 *
 	 * @see https://docs.imgix.com/apis/url/focalpoint-crop/fp-debug
 	 */
@@ -931,7 +1311,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the gamma of the source image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/gam
 	 */
@@ -953,15 +1333,27 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the height of the output image.
 	 *
+	 * Aliases: `height`
+	 *
 	 * @see https://docs.imgix.com/apis/url/size/h
 	 */
 	h?: number;
+	/**
+	 * Image height
+	 *
+	 * Adjusts the height of the output image.
+	 *
+	 * Alias for: `h`
+	 *
+	 * @see https://docs.imgix.com/apis/url/size/h
+	 */
+	height?: number;
 	/**
 	 * Highlight
 	 *
 	 * Adjusts the highlights of the source image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/high
 	 */
@@ -971,7 +1363,7 @@ interface ImgixURLParams {
 	 *
 	 * Applies a half-tone effect to the source image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/htn
 	 */
@@ -981,7 +1373,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the hue of the source image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/hue
 	 */
@@ -991,11 +1383,25 @@ interface ImgixURLParams {
 	 *
 	 * Inverts the colors on the source image.
 	 *
-	 * @default `false`
+	 * Aliases: `inv`
+	 *
+	 * @defaultValue `false`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/invert
 	 */
 	invert?: boolean;
+	/**
+	 * Invert
+	 *
+	 * Inverts the colors on the source image.
+	 *
+	 * Alias for: `invert`
+	 *
+	 * @defaultValue `false`
+	 *
+	 * @see https://docs.imgix.com/apis/url/adjustment/invert
+	 */
+	inv?: boolean;
 	/**
 	 * IPTC Passthrough
 	 *
@@ -1007,7 +1413,7 @@ interface ImgixURLParams {
 	 *
 	 * Specifies that the output image should be a lossless variant.
 	 *
-	 * @default `false`
+	 * @defaultValue `false`
 	 *
 	 * @see https://docs.imgix.com/apis/url/format/lossless
 	 */
@@ -1017,61 +1423,205 @@ interface ImgixURLParams {
 	 *
 	 * Changes the watermark alignment relative to the parent image.
 	 *
+	 * Aliases: `ma`, `markalign`
+	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-align
 	 */
 	markAlign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	/**
+	 * Watermark alignment mode
+	 *
+	 * Changes the watermark alignment relative to the parent image.
+	 *
+	 * Alias for: `markAlign`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-align
+	 */
+	ma?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	/**
+	 * Watermark alignment mode
+	 *
+	 * Changes the watermark alignment relative to the parent image.
+	 *
+	 * Alias for: `markAlign`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-align
+	 */
+	markalign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
 	/**
 	 * Watermark alpha
 	 *
 	 * Changes the alpha of the watermark image.
 	 *
-	 * @default `100`
+	 * Aliases: `markalpha`, `malph`
+	 *
+	 * @defaultValue `100`
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-alpha
 	 */
 	markAlpha?: number;
 	/**
+	 * Watermark alpha
+	 *
+	 * Changes the alpha of the watermark image.
+	 *
+	 * Alias for: `markAlpha`
+	 *
+	 * @defaultValue `100`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-alpha
+	 */
+	markalpha?: number;
+	/**
+	 * Watermark alpha
+	 *
+	 * Changes the alpha of the watermark image.
+	 *
+	 * Alias for: `markAlpha`
+	 *
+	 * @defaultValue `100`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-alpha
+	 */
+	malph?: number;
+	/**
 	 * Watermark base url
 	 *
 	 * Changes base URL of the watermark image.
+	 *
+	 * Aliases: `mb`, `markbase`
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-base
 	 */
 	markBase?: string;
 	/**
+	 * Watermark base url
+	 *
+	 * Changes base URL of the watermark image.
+	 *
+	 * Alias for: `markBase`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-base
+	 */
+	mb?: string;
+	/**
+	 * Watermark base url
+	 *
+	 * Changes base URL of the watermark image.
+	 *
+	 * Alias for: `markBase`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-base
+	 */
+	markbase?: string;
+	/**
 	 * Watermark fit mode
 	 *
 	 * Specifies the fit mode for watermark images.
 	 *
-	 * @default `"clip"`
+	 * Aliases: `mf`, `markfit`
+	 *
+	 * @defaultValue `"clip"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-fit
 	 */
 	markFit?: "clip" | "crop" | "fill" | "max" | "scale";
 	/**
+	 * Watermark fit mode
+	 *
+	 * Specifies the fit mode for watermark images.
+	 *
+	 * Alias for: `markFit`
+	 *
+	 * @defaultValue `"clip"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-fit
+	 */
+	mf?: "clip" | "crop" | "fill" | "max" | "scale";
+	/**
+	 * Watermark fit mode
+	 *
+	 * Specifies the fit mode for watermark images.
+	 *
+	 * Alias for: `markFit`
+	 *
+	 * @defaultValue `"clip"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-fit
+	 */
+	markfit?: "clip" | "crop" | "fill" | "max" | "scale";
+	/**
 	 * Watermark height
 	 *
 	 * Adjusts the height of the watermark image.
+	 *
+	 * Aliases: `mh`, `markh`
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-h
 	 */
 	markH?: number;
 	/**
+	 * Watermark height
+	 *
+	 * Adjusts the height of the watermark image.
+	 *
+	 * Alias for: `markH`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-h
+	 */
+	mh?: number;
+	/**
+	 * Watermark height
+	 *
+	 * Adjusts the height of the watermark image.
+	 *
+	 * Alias for: `markH`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-h
+	 */
+	markh?: number;
+	/**
 	 * Watermark padding
 	 *
 	 * Applies padding to the watermark image.
 	 *
-	 * @default `5`
+	 * Aliases: `mp`, `markpad`
+	 *
+	 * @defaultValue `5`
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-pad
 	 */
 	markPad?: number;
 	/**
+	 * Watermark padding
+	 *
+	 * Applies padding to the watermark image.
+	 *
+	 * Alias for: `markPad`
+	 *
+	 * @defaultValue `5`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-pad
+	 */
+	mp?: number;
+	/**
+	 * Watermark padding
+	 *
+	 * Applies padding to the watermark image.
+	 *
+	 * Alias for: `markPad`
+	 *
+	 * @defaultValue `5`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-pad
+	 */
+	markpad?: number;
+	/**
 	 * Watermark rotation
 	 *
 	 * Rotates a watermark or tiled watermarks by a specified number of degrees.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-rot
 	 */
@@ -1081,59 +1631,195 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the scale of the watermark image.
 	 *
+	 * Aliases: `ms`, `markscale`
+	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-scale
 	 */
 	markScale?: number;
+	/**
+	 * Watermark scale
+	 *
+	 * Adjusts the scale of the watermark image.
+	 *
+	 * Alias for: `markScale`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-scale
+	 */
+	ms?: number;
+	/**
+	 * Watermark scale
+	 *
+	 * Adjusts the scale of the watermark image.
+	 *
+	 * Alias for: `markScale`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-scale
+	 */
+	markscale?: number;
 	/**
 	 * Watermark tile
 	 *
 	 * Adds tiled watermark.
 	 *
+	 * Aliases: `mtile`, `marktile`
+	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-tile
 	 */
 	markTile?: "grid";
+	/**
+	 * Watermark tile
+	 *
+	 * Adds tiled watermark.
+	 *
+	 * Alias for: `markTile`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-tile
+	 */
+	mtile?: "grid";
+	/**
+	 * Watermark tile
+	 *
+	 * Adds tiled watermark.
+	 *
+	 * Alias for: `markTile`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-tile
+	 */
+	marktile?: "grid";
 	/**
 	 * Watermark width
 	 *
 	 * Adjusts the width of the watermark image.
 	 *
+	 * Aliases: `mw`, `markw`
+	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-w
 	 */
 	markW?: number;
+	/**
+	 * Watermark width
+	 *
+	 * Adjusts the width of the watermark image.
+	 *
+	 * Alias for: `markW`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-w
+	 */
+	mw?: number;
+	/**
+	 * Watermark width
+	 *
+	 * Adjusts the width of the watermark image.
+	 *
+	 * Alias for: `markW`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-w
+	 */
+	markw?: number;
 	/**
 	 * Watermark x position
 	 *
 	 * Adjusts the x-offset of the watermark image relative to its parent.
 	 *
+	 * Aliases: `mx`, `markx`
+	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-x
 	 */
 	markX?: number;
+	/**
+	 * Watermark x position
+	 *
+	 * Adjusts the x-offset of the watermark image relative to its parent.
+	 *
+	 * Alias for: `markX`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-x
+	 */
+	mx?: number;
+	/**
+	 * Watermark x position
+	 *
+	 * Adjusts the x-offset of the watermark image relative to its parent.
+	 *
+	 * Alias for: `markX`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-x
+	 */
+	markx?: number;
 	/**
 	 * Watermark y position
 	 *
 	 * Adjusts the y-offset of the watermark image relative to its parent.
 	 *
+	 * Aliases: `my`, `marky`
+	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-y
 	 */
 	markY?: number;
+	/**
+	 * Watermark y position
+	 *
+	 * Adjusts the y-offset of the watermark image relative to its parent.
+	 *
+	 * Alias for: `markY`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-y
+	 */
+	my?: number;
+	/**
+	 * Watermark y position
+	 *
+	 * Adjusts the y-offset of the watermark image relative to its parent.
+	 *
+	 * Alias for: `markY`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark-y
+	 */
+	marky?: number;
 	/**
 	 * Watermark image url
 	 *
 	 * Specifies the location of the watermark image.
 	 *
+	 * Aliases: `m`
+	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark
 	 */
 	mark?: string;
+	/**
+	 * Watermark image url
+	 *
+	 * Specifies the location of the watermark image.
+	 *
+	 * Alias for: `mark`
+	 *
+	 * @see https://docs.imgix.com/apis/url/watermark/mark
+	 */
+	m?: string;
 	/**
 	 * Mask background color
 	 *
 	 * Colors the background of the transparent mask area of images
 	 *
-	 * @default `"fff"`
+	 * Aliases: `maskbg`
+	 *
+	 * @defaultValue `"fff"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/mask/mask-bg
 	 */
 	maskBg?: string | ColorKeyword;
+	/**
+	 * Mask background color
+	 *
+	 * Colors the background of the transparent mask area of images
+	 *
+	 * Alias for: `maskBg`
+	 *
+	 * @defaultValue `"fff"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/mask/mask-bg
+	 */
+	maskbg?: string | ColorKeyword;
 	/**
 	 * Mask type
 	 *
@@ -1147,47 +1833,107 @@ interface ImgixURLParams {
 	 *
 	 * Specifies the maximum height of the output image in pixels.
 	 *
+	 * Aliases: `maxHeight`
+	 *
 	 * @see https://docs.imgix.com/apis/url/size/max-height
 	 */
 	maxH?: number;
+	/**
+	 * Maximum height
+	 *
+	 * Specifies the maximum height of the output image in pixels.
+	 *
+	 * Alias for: `maxH`
+	 *
+	 * @see https://docs.imgix.com/apis/url/size/max-height
+	 */
+	maxHeight?: number;
 	/**
 	 * Maximum width
 	 *
 	 * Specifies the maximum width of the output image in pixels.
 	 *
+	 * Aliases: `maxWidth`
+	 *
 	 * @see https://docs.imgix.com/apis/url/size/max-width
 	 */
 	maxW?: number;
+	/**
+	 * Maximum width
+	 *
+	 * Specifies the maximum width of the output image in pixels.
+	 *
+	 * Alias for: `maxW`
+	 *
+	 * @see https://docs.imgix.com/apis/url/size/max-width
+	 */
+	maxWidth?: number;
 	/**
 	 * Minimum height
 	 *
 	 * Specifies the minimum height of the output image in pixels.
 	 *
+	 * Aliases: `minHeight`
+	 *
 	 * @see https://docs.imgix.com/apis/url/size/min-height
 	 */
 	minH?: number;
+	/**
+	 * Minimum height
+	 *
+	 * Specifies the minimum height of the output image in pixels.
+	 *
+	 * Alias for: `minH`
+	 *
+	 * @see https://docs.imgix.com/apis/url/size/min-height
+	 */
+	minHeight?: number;
 	/**
 	 * Minimum width
 	 *
 	 * Specifies the minimum width of the output image in pixels.
 	 *
+	 * Aliases: `minWidth`
+	 *
 	 * @see https://docs.imgix.com/apis/url/size/min-width
 	 */
 	minW?: number;
+	/**
+	 * Minimum width
+	 *
+	 * Specifies the minimum width of the output image in pixels.
+	 *
+	 * Alias for: `minW`
+	 *
+	 * @see https://docs.imgix.com/apis/url/size/min-width
+	 */
+	minWidth?: number;
 	/**
 	 * Monochrome
 	 *
 	 * Applies a monochrome effect to the source image.
 	 *
+	 * Aliases: `mono`
+	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/monochrome
 	 */
 	monochrome?: string | ColorKeyword;
+	/**
+	 * Monochrome
+	 *
+	 * Applies a monochrome effect to the source image.
+	 *
+	 * Alias for: `monochrome`
+	 *
+	 * @see https://docs.imgix.com/apis/url/stylize/monochrome
+	 */
+	mono?: string | ColorKeyword;
 	/**
 	 * Noise reduction bound
 	 *
 	 * Reduces the noise in an image.
 	 *
-	 * @default `20`
+	 * @defaultValue `20`
 	 *
 	 * @see https://docs.imgix.com/apis/url/noise-reduction/nr
 	 */
@@ -1197,7 +1943,7 @@ interface ImgixURLParams {
 	 *
 	 * Provides a threshold by which to sharpen an image.
 	 *
-	 * @default `20`
+	 * @defaultValue `20`
 	 *
 	 * @see https://docs.imgix.com/apis/url/noise-reduction/nrs
 	 */
@@ -1207,9 +1953,21 @@ interface ImgixURLParams {
 	 *
 	 * Changes the image orientation.
 	 *
+	 * Aliases: `or`
+	 *
 	 * @see https://docs.imgix.com/apis/url/rotation/orient
 	 */
 	orient?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 90 | 180 | 270;
+	/**
+	 * Orientation
+	 *
+	 * Changes the image orientation.
+	 *
+	 * Alias for: `orient`
+	 *
+	 * @see https://docs.imgix.com/apis/url/rotation/orient
+	 */
+	or?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 90 | 180 | 270;
 	/**
 	 * Padding bottom
 	 *
@@ -1247,7 +2005,7 @@ interface ImgixURLParams {
 	 *
 	 * Pads an image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/pad
 	 */
@@ -1257,7 +2015,7 @@ interface ImgixURLParams {
 	 *
 	 * Selects a page from a PDF for display.
 	 *
-	 * @default `1`
+	 * @defaultValue `1`
 	 *
 	 * @see https://docs.imgix.com/apis/url/pdf/page
 	 */
@@ -1275,17 +2033,31 @@ interface ImgixURLParams {
 	 *
 	 * Enables or disables PDF annotation.
 	 *
-	 * @default `true`
+	 * Aliases: `annotation`
+	 *
+	 * @defaultValue `true`
 	 *
 	 * @see https://docs.imgix.com/apis/url/pdf/pdf-annotation
 	 */
 	pdfAnnotation?: boolean;
 	/**
+	 * Pdf annotation
+	 *
+	 * Enables or disables PDF annotation.
+	 *
+	 * Alias for: `pdfAnnotation`
+	 *
+	 * @defaultValue `true`
+	 *
+	 * @see https://docs.imgix.com/apis/url/pdf/pdf-annotation
+	 */
+	annotation?: boolean;
+	/**
 	 * Css prefix
 	 *
 	 * Specifies a CSS prefix for all classes in palette-extraction.
 	 *
-	 * @default `"image"`
+	 * @defaultValue `"image"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/color-palette/prefix
 	 */
@@ -1295,7 +2067,7 @@ interface ImgixURLParams {
 	 *
 	 * Applies a pixelation effect to an image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/px
 	 */
@@ -1305,7 +2077,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the quality of an output image.
 	 *
-	 * @default `75`
+	 * @defaultValue `75`
 	 *
 	 * @see https://docs.imgix.com/apis/url/format/q
 	 */
@@ -1328,7 +2100,7 @@ interface ImgixURLParams {
 	 *
 	 * Rotates an image by a specified number of degrees.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/rotation/rot
 	 */
@@ -1338,7 +2110,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the saturation of an image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/sat
 	 */
@@ -1348,7 +2120,7 @@ interface ImgixURLParams {
 	 *
 	 * Applies a sepia effect to an image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/sepia
 	 */
@@ -1358,7 +2130,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the highlights of the source image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/shad
 	 */
@@ -1368,7 +2140,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the sharpness of the source image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/sharp
 	 */
@@ -1386,49 +2158,117 @@ interface ImgixURLParams {
 	 *
 	 * Specifies a trim color on a trim operation.
 	 *
+	 * Aliases: `trimcolor`
+	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-color
 	 */
 	trimColor?: string | ColorKeyword;
+	/**
+	 * Trim color
+	 *
+	 * Specifies a trim color on a trim operation.
+	 *
+	 * Alias for: `trimColor`
+	 *
+	 * @see https://docs.imgix.com/apis/url/trim/trim-color
+	 */
+	trimcolor?: string | ColorKeyword;
 	/**
 	 * Trim mean difference
 	 *
 	 * Specifies the mean difference on a trim operation.
 	 *
-	 * @default `11`
+	 * Aliases: `trimmd`
+	 *
+	 * @defaultValue `11`
 	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-md
 	 */
 	trimMd?: number;
 	/**
+	 * Trim mean difference
+	 *
+	 * Specifies the mean difference on a trim operation.
+	 *
+	 * Alias for: `trimMd`
+	 *
+	 * @defaultValue `11`
+	 *
+	 * @see https://docs.imgix.com/apis/url/trim/trim-md
+	 */
+	trimmd?: number;
+	/**
 	 * Trim padding
 	 *
 	 * Pads the area of the source image before trimming.
 	 *
-	 * @default `0`
+	 * Aliases: `trimpad`
+	 *
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-pad
 	 */
 	trimPad?: number;
 	/**
+	 * Trim padding
+	 *
+	 * Pads the area of the source image before trimming.
+	 *
+	 * Alias for: `trimPad`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/trim/trim-pad
+	 */
+	trimpad?: number;
+	/**
 	 * Trim standard deviation
 	 *
 	 * Specifies the standard deviation on a trim operation.
 	 *
-	 * @default `10`
+	 * Aliases: `trimsd`
+	 *
+	 * @defaultValue `10`
 	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-sd
 	 */
 	trimSd?: number;
 	/**
+	 * Trim standard deviation
+	 *
+	 * Specifies the standard deviation on a trim operation.
+	 *
+	 * Alias for: `trimSd`
+	 *
+	 * @defaultValue `10`
+	 *
+	 * @see https://docs.imgix.com/apis/url/trim/trim-sd
+	 */
+	trimsd?: number;
+	/**
 	 * Trim tolerance
 	 *
 	 * Specifies the tolerance on a trim operation.
 	 *
-	 * @default `0`
+	 * Aliases: `trimtol`
+	 *
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-tol
 	 */
 	trimTol?: number;
+	/**
+	 * Trim tolerance
+	 *
+	 * Specifies the tolerance on a trim operation.
+	 *
+	 * Alias for: `trimTol`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/trim/trim-tol
+	 */
+	trimtol?: number;
 	/**
 	 * Trim image
 	 *
@@ -1443,144 +2283,489 @@ interface ImgixURLParams {
 	 * Sets the vertical and horizontal alignment of rendered text relative to the
 	 * base image.
 	 *
+	 * Aliases: `txtalign`, `ta`
+	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-align
 	 */
 	txtAlign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	/**
+	 * Text align
+	 *
+	 * Sets the vertical and horizontal alignment of rendered text relative to the
+	 * base image.
+	 *
+	 * Alias for: `txtAlign`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-align
+	 */
+	txtalign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	/**
+	 * Text align
+	 *
+	 * Sets the vertical and horizontal alignment of rendered text relative to the
+	 * base image.
+	 *
+	 * Alias for: `txtAlign`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-align
+	 */
+	ta?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
 	/**
 	 * Text clipping mode
 	 *
 	 * Sets the clipping properties of rendered text.
 	 *
-	 * @default `"end"`
+	 * Aliases: `txtclip`, `tcl`
+	 *
+	 * @defaultValue `"end"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-clip
 	 */
 	txtClip?: ("start" | "middle" | "end" | "ellipsis")[];
 	/**
+	 * Text clipping mode
+	 *
+	 * Sets the clipping properties of rendered text.
+	 *
+	 * Alias for: `txtClip`
+	 *
+	 * @defaultValue `"end"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-clip
+	 */
+	txtclip?: ("start" | "middle" | "end" | "ellipsis")[];
+	/**
+	 * Text clipping mode
+	 *
+	 * Sets the clipping properties of rendered text.
+	 *
+	 * Alias for: `txtClip`
+	 *
+	 * @defaultValue `"end"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-clip
+	 */
+	tcl?: ("start" | "middle" | "end" | "ellipsis")[];
+	/**
 	 * Text color
 	 *
 	 * Specifies the color of rendered text.
+	 *
+	 * Aliases: `txtcolor`, `txtClr`, `txtclr`, `tc`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-color
 	 */
 	txtColor?: string | ColorKeyword;
 	/**
+	 * Text color
+	 *
+	 * Specifies the color of rendered text.
+	 *
+	 * Alias for: `txtColor`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-color
+	 */
+	txtcolor?: string | ColorKeyword;
+	/**
+	 * Text color
+	 *
+	 * Specifies the color of rendered text.
+	 *
+	 * Alias for: `txtColor`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-color
+	 */
+	txtClr?: string | ColorKeyword;
+	/**
+	 * Text color
+	 *
+	 * Specifies the color of rendered text.
+	 *
+	 * Alias for: `txtColor`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-color
+	 */
+	txtclr?: string | ColorKeyword;
+	/**
+	 * Text color
+	 *
+	 * Specifies the color of rendered text.
+	 *
+	 * Alias for: `txtColor`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-color
+	 */
+	tc?: string | ColorKeyword;
+	/**
 	 * Text fit mode
 	 *
 	 * Specifies the fit approach for rendered text.
+	 *
+	 * Aliases: `txtfit`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-fit
 	 */
 	txtFit?: "max";
 	/**
+	 * Text fit mode
+	 *
+	 * Specifies the fit approach for rendered text.
+	 *
+	 * Alias for: `txtFit`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-fit
+	 */
+	txtfit?: "max";
+	/**
 	 * Text font
 	 *
 	 * Selects a font for rendered text.
 	 *
+	 * Aliases: `tf`, `txtfont`
+	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-font
 	 */
 	txtFont?: Font;
+	/**
+	 * Text font
+	 *
+	 * Selects a font for rendered text.
+	 *
+	 * Alias for: `txtFont`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-font
+	 */
+	tf?: Font;
+	/**
+	 * Text font
+	 *
+	 * Selects a font for rendered text.
+	 *
+	 * Alias for: `txtFont`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-font
+	 */
+	txtfont?: Font;
 	/**
 	 * Text leading
 	 *
 	 * Sets the leading (line spacing) for rendered text. Only works on the
 	 * multi-line text endpoint.
 	 *
-	 * @default `0`
+	 * Aliases: `txtlead`
+	 *
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/typesetting/txt-lead
 	 */
 	txtLead?: number;
 	/**
+	 * Text leading
+	 *
+	 * Sets the leading (line spacing) for rendered text. Only works on the
+	 * multi-line text endpoint.
+	 *
+	 * Alias for: `txtLead`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/typesetting/txt-lead
+	 */
+	txtlead?: number;
+	/**
 	 * Text ligatures
 	 *
 	 * Controls the level of ligature substitution
+	 *
+	 * Aliases: `txtlig`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-lig
 	 */
 	txtLig?: 0 | 1 | 2;
 	/**
+	 * Text ligatures
+	 *
+	 * Controls the level of ligature substitution
+	 *
+	 * Alias for: `txtLig`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-lig
+	 */
+	txtlig?: 0 | 1 | 2;
+	/**
 	 * Text outline color
 	 *
 	 * Specifies a text outline color.
 	 *
-	 * @default `"fff"`
+	 * Aliases: `txtlinecolor`, `txtLineClr`, `txtlineclr`
+	 *
+	 * @defaultValue `"fff"`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line-color
 	 */
 	txtLineColor?: string | ColorKeyword;
 	/**
+	 * Text outline color
+	 *
+	 * Specifies a text outline color.
+	 *
+	 * Alias for: `txtLineColor`
+	 *
+	 * @defaultValue `"fff"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-line-color
+	 */
+	txtlinecolor?: string | ColorKeyword;
+	/**
+	 * Text outline color
+	 *
+	 * Specifies a text outline color.
+	 *
+	 * Alias for: `txtLineColor`
+	 *
+	 * @defaultValue `"fff"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-line-color
+	 */
+	txtLineClr?: string | ColorKeyword;
+	/**
+	 * Text outline color
+	 *
+	 * Specifies a text outline color.
+	 *
+	 * Alias for: `txtLineColor`
+	 *
+	 * @defaultValue `"fff"`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-line-color
+	 */
+	txtlineclr?: string | ColorKeyword;
+	/**
 	 * Text outline
 	 *
 	 * Outlines the rendered text with a specified color.
 	 *
-	 * @default `0`
+	 * Aliases: `txtline`, `tl`
+	 *
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line
 	 */
 	txtLine?: number;
+	/**
+	 * Text outline
+	 *
+	 * Outlines the rendered text with a specified color.
+	 *
+	 * Alias for: `txtLine`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-line
+	 */
+	txtline?: number;
+	/**
+	 * Text outline
+	 *
+	 * Outlines the rendered text with a specified color.
+	 *
+	 * Alias for: `txtLine`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-line
+	 */
+	tl?: number;
 	/**
 	 * Text padding
 	 *
 	 * Specifies the padding (in device-independent pixels) between a textbox and
 	 * the edges of the base image.
 	 *
+	 * Aliases: `txtpad`, `tp`
+	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-pad
 	 */
 	txtPad?: number;
+	/**
+	 * Text padding
+	 *
+	 * Specifies the padding (in device-independent pixels) between a textbox and
+	 * the edges of the base image.
+	 *
+	 * Alias for: `txtPad`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-pad
+	 */
+	txtpad?: number;
+	/**
+	 * Text padding
+	 *
+	 * Specifies the padding (in device-independent pixels) between a textbox and
+	 * the edges of the base image.
+	 *
+	 * Alias for: `txtPad`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-pad
+	 */
+	tp?: number;
 	/**
 	 * Text shadow
 	 *
 	 * Applies a shadow to rendered text.
 	 *
-	 * @default `0`
+	 * Aliases: `txtshad`, `tsh`
+	 *
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-shad
 	 */
 	txtShad?: number;
 	/**
+	 * Text shadow
+	 *
+	 * Applies a shadow to rendered text.
+	 *
+	 * Alias for: `txtShad`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-shad
+	 */
+	txtshad?: number;
+	/**
+	 * Text shadow
+	 *
+	 * Applies a shadow to rendered text.
+	 *
+	 * Alias for: `txtShad`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-shad
+	 */
+	tsh?: number;
+	/**
 	 * Text font size
 	 *
 	 * Sets the font size of rendered text.
 	 *
-	 * @default `12`
+	 * Aliases: `tsz`, `txtsize`
+	 *
+	 * @defaultValue `12`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-size
 	 */
 	txtSize?: number;
+	/**
+	 * Text font size
+	 *
+	 * Sets the font size of rendered text.
+	 *
+	 * Alias for: `txtSize`
+	 *
+	 * @defaultValue `12`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-size
+	 */
+	tsz?: number;
+	/**
+	 * Text font size
+	 *
+	 * Sets the font size of rendered text.
+	 *
+	 * Alias for: `txtSize`
+	 *
+	 * @defaultValue `12`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-size
+	 */
+	txtsize?: number;
 	/**
 	 * Text tracking
 	 *
 	 * Sets the tracking (letter spacing) for rendered text. Only works on the
 	 * multi-line text endpoint.
 	 *
-	 * @default `0`
+	 * Aliases: `txttrack`, `tt`
+	 *
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/typesetting/txt-track
 	 */
 	txtTrack?: number;
 	/**
+	 * Text tracking
+	 *
+	 * Sets the tracking (letter spacing) for rendered text. Only works on the
+	 * multi-line text endpoint.
+	 *
+	 * Alias for: `txtTrack`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/typesetting/txt-track
+	 */
+	txttrack?: number;
+	/**
+	 * Text tracking
+	 *
+	 * Sets the tracking (letter spacing) for rendered text. Only works on the
+	 * multi-line text endpoint.
+	 *
+	 * Alias for: `txtTrack`
+	 *
+	 * @defaultValue `0`
+	 *
+	 * @see https://docs.imgix.com/apis/url/typesetting/txt-track
+	 */
+	tt?: number;
+	/**
 	 * Text width
 	 *
 	 * Sets the width of rendered text.
+	 *
+	 * Aliases: `txtwidth`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-width
 	 */
 	txtWidth?: number;
 	/**
+	 * Text width
+	 *
+	 * Sets the width of rendered text.
+	 *
+	 * Alias for: `txtWidth`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt-width
+	 */
+	txtwidth?: number;
+	/**
 	 * Text string
 	 *
 	 * Sets the text string to render.
+	 *
+	 * Aliases: `t`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt
 	 */
 	txt?: string;
 	/**
+	 * Text string
+	 *
+	 * Sets the text string to render.
+	 *
+	 * Alias for: `txt`
+	 *
+	 * @see https://docs.imgix.com/apis/url/text/txt
+	 */
+	t?: string;
+	/**
 	 * Unsharp mask
 	 *
 	 * Sharpens the source image using an unsharp mask.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/usm
 	 */
@@ -1590,7 +2775,7 @@ interface ImgixURLParams {
 	 *
 	 * Specifies the radius for an unsharp mask operation.
 	 *
-	 * @default `2.5`
+	 * @defaultValue `2.5`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/usmrad
 	 */
@@ -1600,7 +2785,7 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the vibrance of an image.
 	 *
-	 * @default `0`
+	 * @defaultValue `0`
 	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/vib
 	 */
@@ -1610,8 +2795,28 @@ interface ImgixURLParams {
 	 *
 	 * Adjusts the width of the output image.
 	 *
+	 * Aliases: `width`
+	 *
 	 * @see https://docs.imgix.com/apis/url/size/w
 	 */
 	w?: number;
+	/**
+	 * Image width
+	 *
+	 * Adjusts the width of the output image.
+	 *
+	 * Alias for: `w`
+	 *
+	 * @see https://docs.imgix.com/apis/url/size/w
+	 */
+	width?: number;
+	/**
+	 * Signed URL hash
+	 *
+	 * Used secure a URL by preventing parameter changes. Note that this parameter
+	 * requires a secret token and should only be generated on a server.
+	 *
+	 * @see https://docs.imgix.com/setup/securing-images
+	 */
+	s?: string;
 }
-      }
