@@ -94,16 +94,19 @@ const generateUrlParamsTypes = (): string => {
 		{
 			name: "Ratio",
 			type: "`${number}:${number}`",
+			isExported: true,
 		},
 		{
 			name: "ColorKeyword",
 			type: imgixParams.colorKeywordValues
 				.map((value) => `"${value}"`)
 				.join(" | "),
+			isExported: true,
 		},
 		{
 			name: "Font",
 			type: imgixParams.fontValues.map((value) => `"${value}"`).join(" | "),
+			isExported: true,
 		},
 	]);
 

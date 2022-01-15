@@ -1,7 +1,7 @@
 // Types generated using `imgix-url-params` as a source.
 
-type Ratio = `${number}:${number}`;
-type ColorKeyword =
+export type Ratio = `${number}:${number}`;
+export type ColorKeyword =
 	| "aliceblue"
 	| "antiquewhite"
 	| "aqua"
@@ -152,7 +152,7 @@ type ColorKeyword =
 	| "whitesmoke"
 	| "yellow"
 	| "yellowgreen";
-type Font =
+export type Font =
 	| "serif"
 	| "sans-serif"
 	| "monospace"
@@ -2813,7 +2813,7 @@ export interface ImgixURLParams {
 	/**
 	 * Signed URL hash
 	 *
-	 * Used secure a URL by preventing parameter changes. Note that this parameter
+	 * Secure a URL to prevent URL parameter changes. Note that this parameter
 	 * requires a secret token and should only be generated on a server.
 	 *
 	 * @see https://docs.imgix.com/setup/securing-images
