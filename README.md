@@ -2,15 +2,9 @@
 
 TODO: Go through all "TODO" comments in the project
 
-TODO: Replace all on all files (README.md, CONTRIBUTING.md, bug_report.md, package.json):
-- package_name
-- package_description
-- github_org_slash_github_repo
-- github_repo
-
 -->
 
-# package_name
+# imgix-ts
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -19,9 +13,11 @@ TODO: Replace all on all files (README.md, CONTRIBUTING.md, bug_report.md, packa
 [![Conventional Commits][conventional-commits-src]][conventional-commits-href]
 [![License][license-src]][license-href]
 
+> ⚠ This project is in an experimental state. Use it at your own risks or stay tuned for the official release!
+
 <!-- TODO: Replacing link to Prismic with [Prismic][prismic] is useful here -->
 
-package_description.
+JavaScript/TypeScript Imgix URL builders for browsers and Node.js.
 
 <!--
 
@@ -38,18 +34,20 @@ Non-breaking space: &nbsp; are here on purpose to fix emoji rendering on certain
 ## Install
 
 ```bash
-npm install package_name
+npm install imgix-ts
 ```
 
 ## Documentation
 
-To discover what's new on this package check out [the changelog][changelog]. For full documentation, visit the [official Prismic documentation][prismic-docs].
+To discover what's new on this package check out [the changelog][changelog]. Documentation is not yet available.
+
+<!-- TODO: Write or link to documentation. -->
 
 ## Contributing
 
 Whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the Prismic developer community!
 
-**Asking a question**: [Open a new topic][forum-question] on our community forum explaining what you want to achieve / your question. Our support team will get back to you shortly.
+**Asking a question**: [Open an issue][repo-bug-report] explaining what you want to achieve / your question. A maintainer will get back to you shortly.
 
 **Reporting a bug**: [Open an issue][repo-bug-report] explaining your application's setup and the bug you're encountering.
 
@@ -90,21 +88,21 @@ For more clarity on this project and its structure you can also check out the de
 <!-- TODO: Replace link with a more useful one if available -->
 
 [forum-question]: https://community.prismic.io
-[repo-bug-report]: https://github.com/github_org_slash_github_repo/issues/new?assignees=&labels=bug&template=bug_report.md&title=
-[repo-feature-request]: https://github.com/github_org_slash_github_repo/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
-[repo-pull-requests]: https://github.com/github_org_slash_github_repo/pulls
+[repo-bug-report]: https://github.com/prismicio-community/imgix-ts/issues/new?assignees=&labels=bug&template=bug_report.md&title=
+[repo-feature-request]: https://github.com/prismicio-community/imgix-ts/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
+[repo-pull-requests]: https://github.com/prismicio-community/imgix-ts/pulls
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/package_name/latest.svg
-[npm-version-href]: https://npmjs.com/package/package_name
-[npm-downloads-src]: https://img.shields.io/npm/dm/package_name.svg
-[npm-downloads-href]: https://npmjs.com/package/package_name
-[github-actions-ci-src]: https://github.com/github_org_slash_github_repo/workflows/ci/badge.svg
-[github-actions-ci-href]: https://github.com/github_org_slash_github_repo/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/github/github_org_slash_github_repo.svg
-[codecov-href]: https://codecov.io/gh/github_org_slash_github_repo
+[npm-version-src]: https://img.shields.io/npm/v/imgix-ts/latest.svg
+[npm-version-href]: https://npmjs.com/package/imgix-ts
+[npm-downloads-src]: https://img.shields.io/npm/dm/imgix-ts.svg
+[npm-downloads-href]: https://npmjs.com/package/imgix-ts
+[github-actions-ci-src]: https://github.com/prismicio-community/imgix-ts/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/prismicio-community/imgix-ts/actions?query=workflow%3Aci
+[codecov-src]: https://img.shields.io/codecov/c/github/prismicio-community/imgix-ts.svg
+[codecov-href]: https://codecov.io/gh/prismicio-community/imgix-ts
 [conventional-commits-src]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
 [conventional-commits-href]: https://conventionalcommits.org
-[license-src]: https://img.shields.io/npm/l/package_name.svg
-[license-href]: https://npmjs.com/package/package_name
+[license-src]: https://img.shields.io/npm/l/imgix-ts.svg
+[license-href]: https://npmjs.com/package/imgix-ts
