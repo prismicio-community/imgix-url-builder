@@ -4,7 +4,7 @@ import { SecureClient } from "../src/node";
 
 test("builds a signed URL", (t) => {
 	const client = new SecureClient({
-		origin: "https://example.com",
+		baseURL: "https://example.com",
 		secureURLToken: "token",
 	});
 
@@ -17,7 +17,7 @@ test("builds a signed URL", (t) => {
 
 test("builds a signed URL with params", (t) => {
 	const client = new SecureClient({
-		origin: "https://example.com",
+		baseURL: "https://example.com",
 		secureURLToken: "token",
 	});
 

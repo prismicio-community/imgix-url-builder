@@ -2,6 +2,39 @@ import { paramCase } from "param-case";
 
 import type { ImgixURLParams } from "./types.generated";
 
+/**
+ * Builds a URL to an Imgix image with Imgix URL API parameters.
+ *
+ * The given URL must be a full absolute URL containing the protocol and domain.
+ *
+ * URL parameters already applied to the image will be retained. To remove
+ * existing parameters, set the parameter to `undefined` in the `params` argument.
+ *
+ * @example
+ *
+ * ```ts
+ * const url = buildURL("https://example.imgix.net/image.png", {
+ * 	width: 400,
+ * });
+ * // => https://example.imgix.net/image.png?width=400
+ * ```
+ *
+ * @example
+ *
+ * ```ts
+ * const url = buildURL("https://example.imgix.net/image.png?width=400", {
+ * 	height: 300,
+ * });
+ * // => https://example.imgix.net/image.png?width=400&height=300
+ * ```
+ *
+ * @param url - Full absolute URL to the Imgix image.
+ * @param params - An object of Imgix URL API parameters.
+ *
+ * @returns `url` with the given Imgix URL API parameters applied.
+ *
+ * @see Imgix URL API reference: https://docs.imgix.com/apis/rendering
+ */
 export const buildURL = (url: string, params: ImgixURLParams): string => {
 	const instance = new URL(url);
 

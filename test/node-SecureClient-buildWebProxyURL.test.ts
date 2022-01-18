@@ -4,7 +4,7 @@ import { SecureClient } from "../src/node";
 
 test("builds a signed web proxy URL", (t) => {
 	const client = new SecureClient({
-		origin: "https://testing.imgix.net",
+		baseURL: "https://testing.imgix.net",
 		secureURLToken: "token",
 	});
 
@@ -18,7 +18,7 @@ test("builds a signed web proxy URL", (t) => {
 
 test("builds a signed web proxy URL with parameters", (t) => {
 	const client = new SecureClient({
-		origin: "https://testing.imgix.net",
+		baseURL: "https://testing.imgix.net",
 		secureURLToken: "token",
 	});
 

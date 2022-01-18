@@ -8,6 +8,5 @@ export { buildURL } from "../buildURL";
 // client-facing environment.
 export { SecureClient } from "./SecureClient";
 export type { SecureClientOptions } from "./SecureClient";
-
 export { buildSignedURL } from "./buildSignedURL";
 export { signURL } from "./signURL";
