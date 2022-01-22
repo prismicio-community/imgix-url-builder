@@ -1,6 +1,24 @@
-import { paramCase } from "param-case";
-
 import type { ImgixURLParams } from "./types.generated";
+
+/**
+ * Converts a camel case string to a param case string.
+ *
+ * @example
+ *
+ * ```ts
+ * camelCaseToParamCase("fooBar");
+ * // => 'foo-bar'
+ * ```
+ *
+ * @param input - Camel case string to convert.
+ *
+ * @returns Param case version of `input`.
+ */
+const camelCaseToParamCase = (input: string): string => {
+	return input.replace(/[A-Z]/g, (match) => {
+		return `-${match.toLowerCase()}`;
+	});
+};
 
 /**
  * Builds a URL to an Imgix image with Imgix URL API parameters.
@@ -39,7 +57,7 @@ export const buildURL = (url: string, params: ImgixURLParams): string => {
 	const instance = new URL(url);
 
 	for (const camelCasedParamKey in params) {
-		const paramKey = paramCase(camelCasedParamKey);
+		const paramKey = camelCaseToParamCase(camelCasedParamKey);
 		const paramValue = params[camelCasedParamKey as keyof typeof params];
 
 		if (paramValue === undefined) {

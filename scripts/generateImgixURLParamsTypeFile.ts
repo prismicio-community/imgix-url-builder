@@ -1,11 +1,30 @@
 import { writeFileSync, readFileSync } from "fs";
 import { URL } from "url";
 import { JSDocStructure, OptionalKind, Project } from "ts-morph";
-import { camelCase } from "camel-case";
 import prettier from "prettier";
 import imgixParams from "imgix-url-params/dist/parameters.json";
 
 export const BLANK_LINE_IDENTIFIER = "// ___BLANK_LINE_TO_BE_REPLACED___";
+
+/**
+ * Converts a param case string to a camel case string.
+ *
+ * @example
+ *
+ * ```ts
+ * paramCaseToCamelCase("foo-bar");
+ * // => 'fooBar'
+ * ```
+ *
+ * @param input - Param case string to convert.
+ *
+ * @returns Camel case version of `input`.
+ */
+const paramCaseToCamelCase = (input: string): string => {
+	return input.replace(/-(\w)/g, (_matches, letter: string) => {
+		return letter.toUpperCase();
+	});
+};
 
 const typeMap = {
 	ratio: "Ratio",
@@ -157,7 +176,7 @@ const generateUrlParamsTypes = (): string => {
 
 				if ("aliases" in spec) {
 					const aliases = spec.aliases
-						.map((alias) => `\`${camelCase(alias)}\``)
+						.map((alias) => `\`${paramCaseToCamelCase(alias)}\``)
 						.join(", ");
 
 					writer.blankLineIfLastNot();
@@ -167,7 +186,7 @@ const generateUrlParamsTypes = (): string => {
 		};
 
 		imgixURLParamsType.addProperty({
-			name: camelCase(key),
+			name: paramCaseToCamelCase(key),
 			type: expectsListToTypeString(spec.expects),
 			hasQuestionToken: true,
 			docs: [primaryDocs],
@@ -183,12 +202,12 @@ const generateUrlParamsTypes = (): string => {
 						}
 
 						writer.blankLineIfLastNot();
-						writer.writeLine(`Alias for: \`${camelCase(key)}\``);
+						writer.writeLine(`Alias for: \`${paramCaseToCamelCase(key)}\``);
 					},
 				};
 
 				imgixURLParamsType.addProperty({
-					name: camelCase(alias),
+					name: paramCaseToCamelCase(alias),
 					type: expectsListToTypeString(spec.expects),
 					hasQuestionToken: true,
 					docs: [aliasDocs],
