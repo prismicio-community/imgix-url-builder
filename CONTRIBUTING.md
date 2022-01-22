@@ -2,7 +2,7 @@
 
 This document is aimed at providing developers (mainly maintainers) documentation on this project and its structure. It is not intended to pass requirements for contributing to this project.
 
-For the latter, the [Quick Start](#quick-start) section below can help you. You are free to [open issues][repo-issue] and [submit pull requests][repo-pull-requests] toward the `master` branch directly without worrying about our standards. For pull requests, we will help you through our merging process.
+For the latter, the [Quick Start](#quick-start) section below can help you. You are free to [open issues][repo-issue] and [submit pull requests][repo-pull-requests] toward the `main` branch directly without worrying about our standards. For pull requests, we will help you through our merging process.
 
 > For a Table of Contents, use GitHub's TOC button, top left of the document.
 
@@ -37,7 +37,7 @@ Processes refer to tasks that you may need to perform while working on this proj
 
 ### Developing
 
-There is no development branch. The `master` branch refers to the latest [stable (living) version](#stable-xxx) of the project and pull requests should be made against it.
+There is no development branch. The `main` branch refers to the latest [stable (living) version](#stable-xxx) of the project and pull requests should be made against it.
 
 If development on a [new major version](#iteration-cycle) has begun, a branch named after the major version will be created (e.g. `v2` for work on the future `v2.0.0` of the project). Pull requests targeting that new major version should be made against it.
 
@@ -83,7 +83,7 @@ To build the project:
 npm run build
 ```
 
-The CI system will try to build the project on each commit targeting the `master` branch. The CI check will fail if the build does.
+The CI system will try to build the project on each commit targeting the `main` branch. The CI check will fail if the build does.
 
 ### Testing
 
@@ -119,7 +119,7 @@ When working on unit tests, you might want to update snapshots (be careful when 
 npm run unit -- --update-snapshots
 ```
 
-The CI system will run tests on each commit targeting the `master` branch. The CI check will fail if any test does.
+The CI system will run tests on each commit targeting the `main` branch. The CI check will fail if any test does.
 
 ### Publishing
 
@@ -300,7 +300,7 @@ This one is used to standardize the way pull requests are created on the reposit
 
 **CI configuration (`.github/workflows/ci.yml`)**
 
-Our CI workflow is configured to run against all commits and pull requests directed toward the `master` branch. It makes sure the project builds and passes all tests configured on it (lint, unit, e2e, etc.) Coverage and bundle size are also collected by this workflow.
+Our CI workflow is configured to run against all commits and pull requests directed toward the `main` branch. It makes sure the project builds and passes all tests configured on it (lint, unit, e2e, etc.) Coverage and bundle size are also collected by this workflow.
 
 ### 📁 &nbsp;`dist`
 
