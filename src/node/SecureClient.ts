@@ -1,14 +1,13 @@
+import type { BuildPixelDensitySrcSetParams } from "../buildPixelDensitySrcSet";
+import type { BuildWidthSrcSetParams } from "../buildWidthSrcSet";
 import type { ImgixURLParams } from "../types.generated";
-import { buildURL } from "../buildURL";
-import { buildSignedURL } from "./buildSignedURL";
-import { signURL } from "./signURL";
-import { buildWidthSrcSet, BuildWidthSrcSetParams } from "../buildWidthSrcSet";
-import { buildSignedWidthSrcSet } from "./buildSignedWidthSrcSet";
+import { buildPixelDensitySrcSet } from "../buildPixelDensitySrcSet";
 import { buildSignedPixelDensitySrcSet } from "./buildSignedPixelDensitySrcSet";
-import {
-	buildPixelDensitySrcSet,
-	BuildPixelDensitySrcSetParams,
-} from "../buildPixelDensitySrcSet";
+import { buildSignedURL } from "./buildSignedURL";
+import { buildSignedWidthSrcSet } from "./buildSignedWidthSrcSet";
+import { buildURL } from "../buildURL";
+import { buildWidthSrcSet } from "../buildWidthSrcSet";
+import { signURL } from "./signURL";
 
 /**
  * Options to instantiate a new secure client.

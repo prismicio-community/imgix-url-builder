@@ -1,10 +1,9 @@
-import {
-	buildPixelDensitySrcSet,
-	BuildPixelDensitySrcSetParams,
-} from "./buildPixelDensitySrcSet";
+import type { BuildPixelDensitySrcSetParams } from "./buildPixelDensitySrcSet";
+import type { BuildWidthSrcSetParams } from "./buildWidthSrcSet";
+import type { ImgixURLParams } from "./types.generated";
+import { buildPixelDensitySrcSet } from "./buildPixelDensitySrcSet";
 import { buildURL } from "./buildURL";
-import { buildWidthSrcSet, BuildWidthSrcSetParams } from "./buildWidthSrcSet";
-import { ImgixURLParams } from "./types.generated";
+import { buildWidthSrcSet } from "./buildWidthSrcSet";
 
 /**
  * Options to instantiate a new client.
