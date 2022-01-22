@@ -19,9 +19,11 @@ import { signURL } from "./signURL";
  * @example
  *
  * ```ts
- * const url = buildSignedURL("https://example.imgix.net/image.png", {
- * 	width: 400,
- * });
+ * const url = buildSignedURL(
+ * 	"https://example.imgix.net/image.png",
+ * 	"example-token",
+ * 	{ width: 400 },
+ * );
  * // => https://example.imgix.net/image.png?width=400&s=def3e221c3f4c4debda091b8e49420ea
  * ```
  *
@@ -30,6 +32,7 @@ import { signURL } from "./signURL";
  * ```ts
  * const url = buildSignedURL(
  * 	"https://example.imgix.net/image.png?width=400",
+ * 	"example-token",
  * 	{ height: 300 },
  * );
  * // => https://example.imgix.net/image.png?width=400&height=300&s=f12c7c39333410c10c2930b57116a943

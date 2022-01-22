@@ -42,7 +42,7 @@ export const buildURL = (url: string, params: ImgixURLParams): string => {
 		const paramKey = paramCase(camelCasedParamKey);
 		const paramValue = params[camelCasedParamKey as keyof typeof params];
 
-		if (typeof paramValue === "undefined") {
+		if (paramValue === undefined) {
 			instance.searchParams.delete(paramKey);
 		} else if (Array.isArray(paramValue)) {
 			instance.searchParams.set(paramKey, paramValue.join(","));

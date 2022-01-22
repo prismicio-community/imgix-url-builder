@@ -2,6 +2,13 @@ import type { ImgixURLParams } from "../types.generated";
 import { buildURL } from "../buildURL";
 import { buildSignedURL } from "./buildSignedURL";
 import { signURL } from "./signURL";
+import { buildWidthSrcSet, BuildWidthSrcSetParams } from "../buildWidthSrcSet";
+import { buildSignedWidthSrcSet } from "./buildSignedWidthSrcSet";
+import { buildSignedPixelDensitySrcSet } from "./buildSignedPixelDensitySrcSet";
+import {
+	buildPixelDensitySrcSet,
+	BuildPixelDensitySrcSetParams,
+} from "../buildPixelDensitySrcSet";
 
 /**
  * Options to instantiate a new secure client.
@@ -128,7 +135,7 @@ export class SecureClient {
 	 * client's base URL.
 	 *
 	 * Note: The returned URL is not signed. See `buildSignedURL` if a signature
-	 * is required)
+	 * is required.
 	 *
 	 * @example
 	 *
@@ -225,5 +232,335 @@ export class SecureClient {
 	 */
 	signURL(url: string): string {
 		return signURL(url, this.secureURLToken);
+	}
+
+	/**
+	 * Builds an `<img>` `srcset` attribute value for a given set of widths. It
+	 * can also optinally apply Imgix URL API parameters to the URLs. The URLs are
+	 * signed by appending a signature to their URL parameters. This locks the
+	 * URLs and their parameters to the signature to prevent URL tampering.
+	 *
+	 * The `width` URL parameter will be applied for each `srcset` entry. If a
+	 * `width` or `w` parameter is provided to the `params` parameter, it will be ignored.
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const srcset = client.buildSignedWidthSrcSet(
+	 * 	"https://example.imgix.net/image.png",
+	 * 	{ widths: [400, 800, 1600] },
+	 * );
+	 * // => https://example.imgix.net/image.png?width=400&s=def3e221c3f4c4debda091b8e49420ea 400w,
+	 * //    https://example.imgix.net/image.png?width=800&s=f12c7c39333410c10c2930b57116a943 800w,
+	 * //    https://example.imgix.net/image.png?width=1600&s=3a975b5087ab7ad2ab91fe66072fd628 1600w
+	 * ```
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const srcset = client.buildSignedWidthSrcSet(
+	 * 	"https://example.imgix.net/image.png",
+	 * 	{
+	 * 		widths: [400, 800, 1600],
+	 * 		sat: -100,
+	 * 	},
+	 * );
+	 * // => https://example.imgix.net/image.png?width=400&sat=-100&s=def3e221c3f4c4debda091b8e49420ea 400w,
+	 * //    https://example.imgix.net/image.png?width=800&sat=-100&s=f12c7c39333410c10c2930b57116a943 800w,
+	 * //    https://example.imgix.net/image.png?width=1600&sat=-100&s=3a975b5087ab7ad2ab91fe66072fd628 1600w
+	 * ```
+	 *
+	 * @param url - Full absolute URL to the Imgix image.
+	 * @param params - An object of Imgix URL API parameters. The `widths`
+	 *   parameter defines the resulting `srcset` widths.
+	 *
+	 * @returns A `srcset` attribute value for `url` with the given Imgix URL API
+	 *   parameters applied.
+	 */
+	buildSignedWidthSrcSet(url: string, params: BuildWidthSrcSetParams): string {
+		return buildSignedWidthSrcSet(url, this.secureURLToken, params);
+	}
+
+	/**
+	 * Builds an `<img>` `srcset` attribute value for a given set of widths for
+	 * the client's base URL. It can also optinally apply Imgix URL API parameters
+	 * to the URLs.
+	 *
+	 * The `width` URL parameter will be applied for each `srcset` entry. If a
+	 * `width` or `w` parameter is provided to the `params` parameter, it will be ignored.
+	 *
+	 * Note: The returned URLs are not signed. See `buildSignedWidthSrcSet` if
+	 * signatures are required.
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const client = new SecureClient({
+	 * 	baseURL: "https://example.imgix.net",
+	 * 	secureURLToken: "example-token",
+	 * });
+	 * const srcset = client.buildWidthSrcSetForPath("/image.png", {
+	 * 	widths: [400, 800, 1600],
+	 * });
+	 * // => https://example.imgix.net/image.png?width=400 400w,
+	 * //    https://example.imgix.net/image.png?width=800 800w,
+	 * //    https://example.imgix.net/image.png?width=1600 1600w
+	 * ```
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const client = new SecureClient({
+	 * 	baseURL: "https://example.imgix.net",
+	 * 	secureURLToken: "example-token",
+	 * });
+	 * const srcset = client.buildWidthSrcSetForPath("/image.png", {
+	 * 	widths: [400, 800, 1600],
+	 * 	sat: -100,
+	 * });
+	 * // => https://example.imgix.net/image.png?width=400&sat=-100 400w,
+	 * //    https://example.imgix.net/image.png?width=800&sat=-100 800w,
+	 * //    https://example.imgix.net/image.png?width=1600&sat=-100 1600w
+	 * ```
+	 *
+	 * @param path - Path to the image relative to the client's base URL.
+	 * @param params - An object of Imgix URL API parameters. The `widths`
+	 *   parameter defines the resulting `srcset` widths.
+	 *
+	 * @returns A `srcset` attribute value for `url` with the given Imgix URL API
+	 *   parameters applied.
+	 */
+	buildWidthSrcSetForPath(
+		path: string,
+		params: BuildWidthSrcSetParams,
+	): string {
+		return buildWidthSrcSet(`${new URL(path, this.baseURL)}`, params);
+	}
+
+	/**
+	 * Builds an `<img>` `srcset` attribute value for a given set of widths for
+	 * the client's base URL. It can also optinally apply Imgix URL API parameters
+	 * to the URLs. The URLs are signed by appending a signature to their URL
+	 * parameters. This locks the URLs and their parameters to the signature to
+	 * prevent URL tampering.
+	 *
+	 * The `width` URL parameter will be applied for each `srcset` entry. If a
+	 * `width` or `w` parameter is provided to the `params` parameter, it will be ignored.
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const client = new SecureClient({
+	 * 	baseURL: "https://example.imgix.net",
+	 * 	secureURLToken: "example-token",
+	 * });
+	 * const srcset = client.buildSignedWidthSrcSetForPath("/image.png", {
+	 * 	widths: [400, 800, 1600],
+	 * });
+	 * // => https://example.imgix.net/image.png?width=400&s=def3e221c3f4c4debda091b8e49420ea 400w,
+	 * //    https://example.imgix.net/image.png?width=800&s=f12c7c39333410c10c2930b57116a943 800w,
+	 * //    https://example.imgix.net/image.png?width=1600&s=3a975b5087ab7ad2ab91fe66072fd628 1600w
+	 * ```
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const client = new SecureClient({
+	 * 	baseURL: "https://example.imgix.net",
+	 * 	secureURLToken: "example-token",
+	 * });
+	 * const srcset = client.buildSignedWidthSrcSetForPath("/image.png", {
+	 * 	widths: [400, 800, 1600],
+	 * 	sat: -100,
+	 * });
+	 * // => https://example.imgix.net/image.png?width=400&sat=-100&s=def3e221c3f4c4debda091b8e49420ea 400w,
+	 * //    https://example.imgix.net/image.png?width=800&sat=-100&s=f12c7c39333410c10c2930b57116a943 800w,
+	 * //    https://example.imgix.net/image.png?width=1600&sat=-100&s=3a975b5087ab7ad2ab91fe66072fd628 1600w
+	 * ```
+	 *
+	 * @param path - Path to the image relative to the client's base URL.
+	 * @param params - An object of Imgix URL API parameters. The `widths`
+	 *   parameter defines the resulting `srcset` widths.
+	 *
+	 * @returns A `srcset` attribute value for `url` with the given Imgix URL API
+	 *   parameters applied.
+	 */
+	buildSignedWidthSrcSetForPath(
+		path: string,
+		params: BuildWidthSrcSetParams,
+	): string {
+		return this.buildSignedWidthSrcSet(
+			`${new URL(path, this.baseURL)}`,
+			params,
+		);
+	}
+
+	/**
+	 * Builds an `<img>` `srcset` attribute value for a given set of pixel
+	 * densities. It can also optinally apply Imgix URL API parameters to the
+	 * URLs. The URLs are signed by appending a signature to their URL parameters.
+	 * This locks the URLs and their parameters to the signature to prevent URL tampering.
+	 *
+	 * The `dpr` URL parameter will be applied for each `srcset` entry. If a `dpr`
+	 * parameter is provided to the `params` parameter, it will be ignored.
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const srcset = client.buildSignedPixelDensitySrcSet(
+	 * 	"https://example.imgix.net/image.png",
+	 * 	{ pixelDensities: [1, 2, 3] },
+	 * );
+	 * // => https://example.imgix.net/image.png?dpr=1&s=def3e221c3f4c4debda091b8e49420ea 1x,
+	 * //    https://example.imgix.net/image.png?dpr=2&s=f12c7c39333410c10c2930b57116a943 2x,
+	 * //    https://example.imgix.net/image.png?dpr=3&s=3a975b5087ab7ad2ab91fe66072fd628 3x
+	 * ```
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const srcset = client.buildSignedPixelDensitySrcSet(
+	 * 	"https://example.imgix.net/image.png",
+	 * 	{
+	 * 		pixelDensities: [1, 2, 3],
+	 * 		sat: -100,
+	 * 	},
+	 * );
+	 * // => https://example.imgix.net/image.png?dpr=1&sat=-100&s=def3e221c3f4c4debda091b8e49420ea 1x,
+	 * //    https://example.imgix.net/image.png?dpr=2&sat=-100&s=f12c7c39333410c10c2930b57116a943 2x,
+	 * //    https://example.imgix.net/image.png?dpr=3&sat=-100&s=3a975b5087ab7ad2ab91fe66072fd628 3x
+	 * ```
+	 *
+	 * @param url - Full absolute URL to the Imgix image.
+	 * @param params - An object of Imgix URL API parameters. The `pixelDensities`
+	 *   parameter defines the resulting `srcset` widths.
+	 *
+	 * @returns A `srcset` attribute value for `url` with the given Imgix URL API
+	 *   parameters applied.
+	 */
+	buildSignedPixelDensitySrcSet(
+		url: string,
+		params: BuildPixelDensitySrcSetParams,
+	): string {
+		return buildSignedPixelDensitySrcSet(url, this.secureURLToken, params);
+	}
+
+	/**
+	 * Builds an `<img>` `srcset` attribute value for a given set of pixel
+	 * densities for the client's base URL. It can also optinally apply Imgix URL
+	 * API parameters to the URLs.
+	 *
+	 * The `dpr` URL parameter will be applied for each `srcset` entry. If a `dpr`
+	 * parameter is provided to the `params` parameter, it will be ignored.
+	 *
+	 * Note: The returned URLs are not signed. See `buildSignedPixelDensitySrcSet`
+	 * if signatures are required.
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const client = new SecureClient({
+	 * 	baseURL: "https://example.imgix.net",
+	 * 	secureURLToken: "example-token",
+	 * });
+	 * const srcset = client.buildPixelDensitySrcSetForPath("/image.png", {
+	 * 	pixelDensities: [1, 2, 3],
+	 * });
+	 * // => https://example.imgix.net/image.png?dpr=1 1x,
+	 * //    https://example.imgix.net/image.png?dpr=2 2x,
+	 * //    https://example.imgix.net/image.png?dpr=3 3x
+	 * ```
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const client = new SecureClient({
+	 * 	baseURL: "https://example.imgix.net",
+	 * 	secureURLToken: "example-token",
+	 * });
+	 * const srcset = client.buildPixelDensitySrcSetForPath("/image.png", {
+	 * 	pixelDensities: [1, 2, 3],
+	 * 	sat: -100,
+	 * });
+	 * // => https://example.imgix.net/image.png?dpr=1&sat=-100 1x,
+	 * //    https://example.imgix.net/image.png?dpr=2&sat=-100 2x,
+	 * //    https://example.imgix.net/image.png?dpr=3&sat=-100 3x
+	 * ```
+	 *
+	 * @param path - Path to the image relative to the client's base URL.
+	 * @param params - An object of Imgix URL API parameters. The `pixelDensities`
+	 *   parameter defines the resulting `srcset` widths.
+	 *
+	 * @returns A `srcset` attribute value for `url` with the given Imgix URL API
+	 *   parameters applied.
+	 */
+	buildPixelDensitySrcSetForPath(
+		path: string,
+		params: BuildPixelDensitySrcSetParams,
+	): string {
+		return buildPixelDensitySrcSet(`${new URL(path, this.baseURL)}`, params);
+	}
+
+	/**
+	 * Builds an `<img>` `srcset` attribute value for a given set of pixel
+	 * densities for the client's base URL. It can also optinally apply Imgix URL
+	 * API parameters to the URLs. The URLs are signed by appending a signature to
+	 * their URL parameters. This locks the URLs and their parameters to the
+	 * signature to prevent URL tampering.
+	 *
+	 * The `dpr` URL parameter will be applied for each `srcset` entry. If a `dpr`
+	 * parameter is provided to the `params` parameter, it will be ignored.
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const client = new SecureClient({
+	 * 	baseURL: "https://example.imgix.net",
+	 * 	secureURLToken: "example-token",
+	 * });
+	 * const srcset = client.buildSignedPixelDensitySrcSetForPath(
+	 * 	"/image.png",
+	 * 	{ pixelDensities: [1, 2, 3] },
+	 * );
+	 * // => https://example.imgix.net/image.png?dpr=1&s=def3e221c3f4c4debda091b8e49420ea 1x,
+	 * //    https://example.imgix.net/image.png?dpr=2&s=f12c7c39333410c10c2930b57116a943 2x,
+	 * //    https://example.imgix.net/image.png?dpr=3&s=3a975b5087ab7ad2ab91fe66072fd628 3x
+	 * ```
+	 *
+	 * @example
+	 *
+	 * ```ts
+	 * const client = new SecureClient({
+	 * 	baseURL: "https://example.imgix.net",
+	 * 	secureURLToken: "example-token",
+	 * });
+	 * const srcset = client.buildSignedPixelDensitySrcSetForPath(
+	 * 	"/image.png",
+	 * 	{
+	 * 		pixelDensities: [1, 2, 3],
+	 * 		sat: -100,
+	 * 	},
+	 * );
+	 * // => https://example.imgix.net/image.png?dpr=1&sat=-100&s=def3e221c3f4c4debda091b8e49420ea 1x,
+	 * //    https://example.imgix.net/image.png?dpr=2&sat=-100&s=f12c7c39333410c10c2930b57116a943 2x,
+	 * //    https://example.imgix.net/image.png?dpr=3&sat=-100&s=3a975b5087ab7ad2ab91fe66072fd628 3x
+	 * ```
+	 *
+	 * @param path - Path to the image relative to the client's base URL.
+	 * @param params - An object of Imgix URL API parameters. The `pixelDensities`
+	 *   parameter defines the resulting `srcset` widths.
+	 *
+	 * @returns A `srcset` attribute value for `url` with the given Imgix URL API
+	 *   parameters applied.
+	 */
+	buildSignedPixelDensitySrcSetForPath(
+		path: string,
+		params: BuildPixelDensitySrcSetParams,
+	): string {
+		return buildSignedPixelDensitySrcSet(
+			`${new URL(path, this.baseURL)}`,
+			this.secureURLToken,
+			params,
+		);
 	}
 }
