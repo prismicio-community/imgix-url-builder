@@ -1,6 +1,6 @@
 {
 	"name": "imgix-url-builder",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "JavaScript/TypeScript Imgix URL builders for browsers and Node.js",
 	"keywords": [
 		"typescript",
