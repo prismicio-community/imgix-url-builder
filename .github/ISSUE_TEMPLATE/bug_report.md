@@ -16,7 +16,7 @@ assignees: ""
 
 ### Versions
 
-- imgix-ts: <!-- ex: v0.1.0 -->
+- imgix-url-builder: <!-- ex: v0.1.0 -->
 - node: <!-- ex: v12.14.0 -->
 
 ### Reproduction

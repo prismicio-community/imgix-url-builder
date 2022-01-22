@@ -4,7 +4,7 @@ TODO: Go through all "TODO" comments in the project
 
 -->
 
-# imgix-ts
+# imgix-url-builder
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -34,7 +34,7 @@ Non-breaking space: &nbsp; are here on purpose to fix emoji rendering on certain
 ## Install
 
 ```bash
-npm install imgix-ts
+npm install imgix-url-builder
 ```
 
 ## Documentation
@@ -88,21 +88,21 @@ For more clarity on this project and its structure you can also check out the de
 <!-- TODO: Replace link with a more useful one if available -->
 
 [forum-question]: https://community.prismic.io
-[repo-bug-report]: https://github.com/prismicio-community/imgix-ts/issues/new?assignees=&labels=bug&template=bug_report.md&title=
-[repo-feature-request]: https://github.com/prismicio-community/imgix-ts/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
-[repo-pull-requests]: https://github.com/prismicio-community/imgix-ts/pulls
+[repo-bug-report]: https://github.com/prismicio-community/imgix-url-builder/issues/new?assignees=&labels=bug&template=bug_report.md&title=
+[repo-feature-request]: https://github.com/prismicio-community/imgix-url-builder/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
+[repo-pull-requests]: https://github.com/prismicio-community/imgix-url-builder/pulls
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/imgix-ts/latest.svg
-[npm-version-href]: https://npmjs.com/package/imgix-ts
-[npm-downloads-src]: https://img.shields.io/npm/dm/imgix-ts.svg
-[npm-downloads-href]: https://npmjs.com/package/imgix-ts
-[github-actions-ci-src]: https://github.com/prismicio-community/imgix-ts/workflows/ci/badge.svg
-[github-actions-ci-href]: https://github.com/prismicio-community/imgix-ts/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/github/prismicio-community/imgix-ts.svg
-[codecov-href]: https://codecov.io/gh/prismicio-community/imgix-ts
+[npm-version-src]: https://img.shields.io/npm/v/imgix-url-builder/latest.svg
+[npm-version-href]: https://npmjs.com/package/imgix-url-builder
+[npm-downloads-src]: https://img.shields.io/npm/dm/imgix-url-builder.svg
+[npm-downloads-href]: https://npmjs.com/package/imgix-url-builder
+[github-actions-ci-src]: https://github.com/prismicio-community/imgix-url-builder/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/prismicio-community/imgix-url-builder/actions?query=workflow%3Aci
+[codecov-src]: https://img.shields.io/codecov/c/github/prismicio-community/imgix-url-builder.svg
+[codecov-href]: https://codecov.io/gh/prismicio-community/imgix-url-builder
 [conventional-commits-src]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
 [conventional-commits-href]: https://conventionalcommits.org
-[license-src]: https://img.shields.io/npm/l/imgix-ts.svg
-[license-href]: https://npmjs.com/package/imgix-ts
+[license-src]: https://img.shields.io/npm/l/imgix-url-builder.svg
+[license-href]: https://npmjs.com/package/imgix-url-builder

@@ -1,5 +1,5 @@
 {
-	"name": "imgix-ts",
+	"name": "imgix-url-builder",
 	"version": "0.0.0",
 	"description": "JavaScript/TypeScript Imgix URL builders for browsers and Node.js",
 	"keywords": [
@@ -8,7 +8,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "ssh://git@github.com/prismicio-community/imgix-ts.git"
+		"url": "ssh://git@github.com/prismicio-community/imgix-url-builder.git"
 	},
 	"license": "Apache-2.0",
 	"author": "Prismic <contact@prismic.io> (https://prismic.io)",
