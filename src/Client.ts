@@ -75,7 +75,8 @@ export class Client {
 	 * to the URLs.
 	 *
 	 * The `width` URL parameter will be applied for each `srcset` entry. If a
-	 * `width` or `w` parameter is provided to the `params` parameter, it will be ignored.
+	 * `width` or `w` parameter is provided to the `params` parameter, it will be
+	 * ignored.
 	 *
 	 * @example
 	 *

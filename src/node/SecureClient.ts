@@ -173,10 +173,12 @@ export class SecureClient {
 	 * signed by appending a signature to the URL parameters. This locks the URL
 	 * and its parameters to the signature to prevent URL tampering.
 	 *
-	 * The given URL must be a full absolute URL containing the protocol and domain.
+	 * The given URL must be a full absolute URL containing the protocol and
+	 * domain.
 	 *
 	 * URL parameters already applied to the image will be retained. To remove
-	 * existing parameters, set the parameter to `undefined` in the `params` argument.
+	 * existing parameters, set the parameter to `undefined` in the `params`
+	 * argument.
 	 *
 	 * @example
 	 *
@@ -212,7 +214,8 @@ export class SecureClient {
 
 	/**
 	 * Signs an Imgix image URL by appending a signature to the URL parameters.
-	 * This locks the URL and its parameters to the signature to prevent URL tampering.
+	 * This locks the URL and its parameters to the signature to prevent URL
+	 * tampering.
 	 *
 	 * @example
 	 *
@@ -240,7 +243,8 @@ export class SecureClient {
 	 * URLs and their parameters to the signature to prevent URL tampering.
 	 *
 	 * The `width` URL parameter will be applied for each `srcset` entry. If a
-	 * `width` or `w` parameter is provided to the `params` parameter, it will be ignored.
+	 * `width` or `w` parameter is provided to the `params` parameter, it will be
+	 * ignored.
 	 *
 	 * @example
 	 *
@@ -286,7 +290,8 @@ export class SecureClient {
 	 * to the URLs.
 	 *
 	 * The `width` URL parameter will be applied for each `srcset` entry. If a
-	 * `width` or `w` parameter is provided to the `params` parameter, it will be ignored.
+	 * `width` or `w` parameter is provided to the `params` parameter, it will be
+	 * ignored.
 	 *
 	 * Note: The returned URLs are not signed. See `buildSignedWidthSrcSet` if
 	 * signatures are required.
@@ -344,7 +349,8 @@ export class SecureClient {
 	 * prevent URL tampering.
 	 *
 	 * The `width` URL parameter will be applied for each `srcset` entry. If a
-	 * `width` or `w` parameter is provided to the `params` parameter, it will be ignored.
+	 * `width` or `w` parameter is provided to the `params` parameter, it will be
+	 * ignored.
 	 *
 	 * @example
 	 *
@@ -398,7 +404,8 @@ export class SecureClient {
 	 * Builds an `<img>` `srcset` attribute value for a given set of pixel
 	 * densities. It can also optinally apply Imgix URL API parameters to the
 	 * URLs. The URLs are signed by appending a signature to their URL parameters.
-	 * This locks the URLs and their parameters to the signature to prevent URL tampering.
+	 * This locks the URLs and their parameters to the signature to prevent URL
+	 * tampering.
 	 *
 	 * The `dpr` URL parameter will be applied for each `srcset` entry. If a `dpr`
 	 * parameter is provided to the `params` parameter, it will be ignored.

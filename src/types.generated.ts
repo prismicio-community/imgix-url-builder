@@ -704,8 +704,7 @@ export interface ImgixURLParams {
 	/**
 	 * Aspect ratio
 	 *
-	 * Specifies an aspect ratio to maintain when resizing and cropping the
-	 * image
+	 * Specifies an aspect ratio to maintain when resizing and cropping the image
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/ar
 	 */
@@ -1742,8 +1741,8 @@ export interface ImgixURLParams {
 	/**
 	 * Animation loop count
 	 *
-	 * Specifies the number of times an animated image should repeat. A value of
-	 * 0 means infinite looping.
+	 * Specifies the number of times an animated image should repeat. A value of 0
+	 * means infinite looping.
 	 *
 	 * @defaultValue `0`
 	 */
@@ -2634,8 +2633,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative to
-	 * the base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the
+	 * base image.
 	 *
 	 * Aliases: `txtalign`, `ta`
 	 *
@@ -2645,8 +2644,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative to
-	 * the base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the
+	 * base image.
 	 *
 	 * Alias for: `txtAlign`
 	 *
@@ -2656,8 +2655,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative to
-	 * the base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the
+	 * base image.
 	 *
 	 * Alias for: `txtAlign`
 	 *
@@ -2933,8 +2932,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a textbox
-	 * and the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and
+	 * the edges of the base image.
 	 *
 	 * Aliases: `txtpad`, `tp`
 	 *
@@ -2944,8 +2943,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a textbox
-	 * and the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and
+	 * the edges of the base image.
 	 *
 	 * Alias for: `txtPad`
 	 *
@@ -2955,8 +2954,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a textbox
-	 * and the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and
+	 * the edges of the base image.
 	 *
 	 * Alias for: `txtPad`
 	 *
@@ -3097,8 +3096,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text x position
 	 *
-	 * Sets the horizontal (x) position of the text in pixels relative to the
-	 * left edge of the base image.
+	 * Sets the horizontal (x) position of the text in pixels relative to the left
+	 * edge of the base image.
 	 *
 	 * Aliases: `txtx`
 	 *
@@ -3110,8 +3109,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text x position
 	 *
-	 * Sets the horizontal (x) position of the text in pixels relative to the
-	 * left edge of the base image.
+	 * Sets the horizontal (x) position of the text in pixels relative to the left
+	 * edge of the base image.
 	 *
 	 * Alias for: `txtX`
 	 *
