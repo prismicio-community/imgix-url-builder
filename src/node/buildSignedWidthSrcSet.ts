@@ -8,7 +8,8 @@ import { buildSignedURL } from "./buildSignedURL";
  * and their parameters to the signature to prevent URL tampering.
  *
  * The `width` URL parameter will be applied for each `srcset` entry. If a
- * `width` or `w` parameter is provided to the `params` parameter, it will be ignored.
+ * `width` or `w` parameter is provided to the `params` parameter, it will be
+ * ignored.
  *
  * **Important**: This function should only be used in a trusted environment and
  * never in a browser. The `secureURLToken` parameter is a secret and should not
@@ -44,7 +45,8 @@ import { buildSignedURL } from "./buildSignedURL";
  * ```
  *
  * @param url - Full absolute URL to the Imgix image.
- * @param secureURLToken - The secret secure URL token for the image's Imgix source.
+ * @param secureURLToken - The secret secure URL token for the image's Imgix
+ *   source.
  * @param params - An object of Imgix URL API parameters. The `widths` parameter
  *   defines the resulting `srcset` widths.
  *

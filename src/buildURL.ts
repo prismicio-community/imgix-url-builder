@@ -26,7 +26,8 @@ const camelCaseToParamCase = (input: string): string => {
  * The given URL must be a full absolute URL containing the protocol and domain.
  *
  * URL parameters already applied to the image will be retained. To remove
- * existing parameters, set the parameter to `undefined` in the `params` argument.
+ * existing parameters, set the parameter to `undefined` in the `params`
+ * argument.
  *
  * @example
  *

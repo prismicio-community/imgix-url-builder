@@ -2,7 +2,7 @@ import { writeFileSync, readFileSync } from "fs";
 import { URL } from "url";
 import { JSDocStructure, OptionalKind, Project } from "ts-morph";
 import prettier from "prettier";
-import imgixParams from "imgix-url-params/dist/parameters.json";
+import imgixParams from "imgix-url-params/dist/parameters.json" assert { type: "json" };
 
 export const BLANK_LINE_IDENTIFIER = "// ___BLANK_LINE_TO_BE_REPLACED___";
 
@@ -39,6 +39,7 @@ const typeMap = {
 	timestamp: "number",
 	boolean: "boolean",
 	font: "Font",
+	interval: "Range",
 };
 
 const possibleValueToTypeString = <T>(possibleValue: T): string => {
@@ -54,7 +55,7 @@ const possibleValueToTypeString = <T>(possibleValue: T): string => {
 };
 
 const expectsListToTypeString = (
-	expectsList: typeof imgixParams.parameters[keyof typeof imgixParams.parameters]["expects"],
+	expectsList: (typeof imgixParams.parameters)[keyof typeof imgixParams.parameters]["expects"],
 ) => {
 	const types = new Set<string>();
 
@@ -73,7 +74,7 @@ const expectsListToTypeString = (
 					for (let i = 0; i < expect.length; i++) {
 						const expectsSubList = expect[
 							i.toString() as keyof typeof expect
-						] as typeof imgixParams.parameters[keyof typeof imgixParams.parameters]["expects"];
+						] as (typeof imgixParams.parameters)[keyof typeof imgixParams.parameters]["expects"];
 
 						listTypes.push(expectsListToTypeString(expectsSubList));
 					}
@@ -127,6 +128,11 @@ const generateUrlParamsTypes = (): string => {
 			type: imgixParams.fontValues.map((value) => `"${value}"`).join(" | "),
 			isExported: true,
 		},
+		{
+			name: "Range",
+			type: "`${number}-${number}` | `${number}-` | `-${number}`",
+			isExported: true,
+		},
 	]);
 
 	sourceFile.addStatements(BLANK_LINE_IDENTIFIER);
@@ -144,8 +150,11 @@ const generateUrlParamsTypes = (): string => {
 		const baseDocs: OptionalKind<JSDocStructure> = {
 			description: (writer) => {
 				writer.writeLine(spec.display_name);
-				writer.blankLine();
-				writer.writeLine(spec.short_description);
+
+				if ("short_description" in spec) {
+					writer.blankLine();
+					writer.writeLine(spec.short_description);
+				}
 			},
 			tags: [],
 		};

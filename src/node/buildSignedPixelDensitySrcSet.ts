@@ -5,7 +5,8 @@ import { buildSignedURL } from "./buildSignedURL";
  * Builds an `<img>` `srcset` attribute value for a given set of pixel
  * densities. It can also optinally apply Imgix URL API parameters to the URLs.
  * The URLs are signed by appending a signature to their URL parameters. This
- * locks the URLs and their parameters to the signature to prevent URL tampering.
+ * locks the URLs and their parameters to the signature to prevent URL
+ * tampering.
  *
  * The `dpr` URL parameter will be applied for each `srcset` entry. If a `dpr`
  * parameter is provided to the `params` parameter, it will be ignored.
@@ -44,7 +45,8 @@ import { buildSignedURL } from "./buildSignedURL";
  * ```
  *
  * @param url - Full absolute URL to the Imgix image.
- * @param secureURLToken - The secret secure URL token for the image's Imgix source.
+ * @param secureURLToken - The secret secure URL token for the image's Imgix
+ *   source.
  * @param params - An object of Imgix URL API parameters. The `pixelDensities`
  *   parameter defines the resulting `srcset` widths.
  *
