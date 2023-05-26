@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/prismicio-community/imgix-url-builder/compare/v0.0.3...v0.0.4) (2023-05-26)
+
+
+### Bug Fixes
+
+* update to the latest Imgix URL params ([#4](https://github.com/prismicio-community/imgix-url-builder/issues/4)) ([ac382de](https://github.com/prismicio-community/imgix-url-builder/commit/ac382de45107066c990fb2bfea0157bcbbb0c930))
+
 ### [0.0.3](https://github.com/prismicio-community/imgix-url-builder/compare/v0.0.2...v0.0.3) (2022-03-12)
 
 
