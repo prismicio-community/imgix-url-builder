@@ -25,6 +25,17 @@ const paramCaseToCamelCase = (input: string): string => {
 	});
 };
 
+/**
+ * Capitalizes the first character in a given string.
+ *
+ * @param input - The string to capitalize.
+ *
+ * @returns `input` with the first character in uppercase.
+ */
+const capitalize = (input: string) => {
+	return input.charAt(0).toUpperCase() + input.slice(1);
+};
+
 const typeMap = {
 	ratio: "Ratio",
 	hex_color: "string",
@@ -148,7 +159,7 @@ const generateUrlParamsTypes = async (): Promise<string> => {
 
 		const baseDocs: OptionalKind<JSDocStructure> = {
 			description: (writer) => {
-				writer.writeLine(spec.display_name);
+				writer.writeLine(capitalize(spec.display_name));
 
 				if ("short_description" in spec) {
 					writer.blankLine();
