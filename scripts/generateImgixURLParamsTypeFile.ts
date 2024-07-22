@@ -253,7 +253,7 @@ const generateUrlParamsTypes = (): string => {
 		.replace(new RegExp(BLANK_LINE_IDENTIFIER, "g"), "");
 
 	const prettierOptions = JSON.parse(
-		readFileSync(new URL("../.prettierrc", import.meta.url).pathname, "utf8"),
+		readFileSync(new URL("../.prettierrc", import.meta.url), "utf8"),
 	);
 	const formattedOutput = prettier.format(output, {
 		...prettierOptions,
@@ -265,8 +265,7 @@ const generateUrlParamsTypes = (): string => {
 
 export const generateImgixURLParamsTypeFile = (): void => {
 	const contents = generateUrlParamsTypes();
-	const filename = new URL("../src/types.generated.ts", import.meta.url)
-		.pathname;
+	const filename = new URL("../src/types.generated.ts", import.meta.url);
 
 	writeFileSync(filename, contents);
 };
