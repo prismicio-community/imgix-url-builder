@@ -1,8 +1,7 @@
-import { writeFileSync, readFileSync } from "fs";
-import { URL } from "url";
+import { writeFileSync, readFileSync } from "node:fs";
 import { JSDocStructure, OptionalKind, Project } from "ts-morph";
-import prettier from "prettier";
-import imgixParams from "imgix-url-params/dist/parameters.json" assert { type: "json" };
+import * as prettier from "prettier";
+import imgixParams from "imgix-url-params/dist/parameters.json";
 
 export const BLANK_LINE_IDENTIFIER = "// ___BLANK_LINE_TO_BE_REPLACED___";
 
