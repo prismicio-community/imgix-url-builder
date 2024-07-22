@@ -100,7 +100,7 @@ const expectsListToTypeString = (
 	return [...types].join(" | ") || "unknown";
 };
 
-const generateUrlParamsTypes = (): string => {
+const generateUrlParamsTypes = async (): Promise<string> => {
 	const project = new Project();
 	const sourceFile = project.createSourceFile("imgixUrlParams.ts");
 
@@ -255,7 +255,7 @@ const generateUrlParamsTypes = (): string => {
 	const prettierOptions = JSON.parse(
 		readFileSync(new URL("../.prettierrc", import.meta.url), "utf8"),
 	);
-	const formattedOutput = prettier.format(output, {
+	const formattedOutput = await prettier.format(output, {
 		...prettierOptions,
 		parser: "typescript",
 	});
@@ -263,8 +263,8 @@ const generateUrlParamsTypes = (): string => {
 	return formattedOutput;
 };
 
-export const generateImgixURLParamsTypeFile = (): void => {
-	const contents = generateUrlParamsTypes();
+export const generateImgixURLParamsTypeFile = async (): Promise<void> => {
+	const contents = await generateUrlParamsTypes();
 	const filename = new URL("../src/types.generated.ts", import.meta.url);
 
 	writeFileSync(filename, contents);
