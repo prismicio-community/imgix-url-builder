@@ -16,26 +16,48 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"require": "./dist/index.cjs",
-			"import": "./dist/index.mjs"
+			"require": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.cjs"
+			},
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
 		},
 		"./node": {
-			"require": "./dist/node/index.cjs",
-			"import": "./dist/node/index.mjs"
+			"require": {
+				"types": "./dist/node/index.d.ts",
+				"default": "./dist/node.cjs"
+			},
+			"import": {
+				"types": "./dist/node/index.d.ts",
+				"default": "./dist/node.js"
+			}
 		},
 		"./package.json": "./package.json"
 	},
-	"main": "dist/index.cjs",
-	"module": "dist/index.mjs",
-	"react-native": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"react-native": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"typesVersions": {
+		"*": {
+			"*": [
+				"dist/index.d.ts"
+			],
+			"node": [
+				"dist/node/index.d.ts"
+			]
+		}
+	},
 	"files": [
 		"dist",
 		"src"
 	],
 	"scripts": {
-		"build": "siroc build",
-		"dev": "siroc build --watch",
+		"build": "vite build",
+		"dev": "vite build --watch",
 		"format": "prettier --write .",
 		"gen": "node --loader ts-node/esm --experimental-json-modules ./scripts/generateImgixURLParamsTypeFile.ts",
 		"lint": "eslint --ext .js,.ts .",
@@ -68,6 +90,8 @@
 		"ts-morph": "^18.0.0",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.5.3",
+		"vite": "^5.3.4",
+		"vite-plugin-sdk": "^0.1.2"
 	},
 	"engines": {
 		"node": ">=12.7.0"
