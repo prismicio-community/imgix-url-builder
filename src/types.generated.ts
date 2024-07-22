@@ -1154,8 +1154,7 @@ export interface ImgixURLParams {
 	/**
 	 * Aspect ratio
 	 *
-	 * Specifies an aspect ratio to maintain when resizing and cropping the
-	 * image
+	 * Specifies an aspect ratio to maintain when resizing and cropping the image
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/ar
 	 */
@@ -2042,9 +2041,9 @@ export interface ImgixURLParams {
 	/**
 	 * Fill generative negative prompt
 	 *
-	 * Provides a negative text suggestion to the generative fill parameter.
-	 * Used to reduce the probability of a subject, detail, or object appearing
-	 * in generative output.
+	 * Provides a negative text suggestion to the generative fill parameter. Used
+	 * to reduce the probability of a subject, detail, or object appearing in
+	 * generative output.
 	 *
 	 * Aliases: `fillGenerativeNegativePrompt`
 	 *
@@ -2054,9 +2053,9 @@ export interface ImgixURLParams {
 	/**
 	 * Fill generative negative prompt
 	 *
-	 * Provides a negative text suggestion to the generative fill parameter.
-	 * Used to reduce the probability of a subject, detail, or object appearing
-	 * in generative output.
+	 * Provides a negative text suggestion to the generative fill parameter. Used
+	 * to reduce the probability of a subject, detail, or object appearing in
+	 * generative output.
 	 *
 	 * Alias for: `fillGenNegPrompt`
 	 *
@@ -2182,8 +2181,8 @@ export interface ImgixURLParams {
 	 * Fill gradient radial x
 	 *
 	 * Specifies the location of the radial gradient's center along the x-axis,
-	 * using either a pixel value or a floating point percentage (ranging from
-	 * 0.0 to 1.0) of the image's width
+	 * using either a pixel value or a floating point percentage (ranging from 0.0
+	 * to 1.0) of the image's width
 	 *
 	 * @defaultValue `0.5`
 	 *
@@ -2193,8 +2192,8 @@ export interface ImgixURLParams {
 	/**
 	 * Fill gradient radial y
 	 *
-	 * Parameter sets the radial gradient's center on the y-axis, using pixels
-	 * or a 0.0 to 1.0 percentage of the image's height
+	 * Parameter sets the radial gradient's center on the y-axis, using pixels or
+	 * a 0.0 to 1.0 percentage of the image's height
 	 *
 	 * @defaultValue `0.5`
 	 *
@@ -2359,8 +2358,8 @@ export interface ImgixURLParams {
 	/**
 	 * Animated gif quality
 	 *
-	 * Specifies the quality of the animated gif. The higher the value, the
-	 * better more compression is applied.
+	 * Specifies the quality of the animated gif. The higher the value, the better
+	 * more compression is applied.
 	 *
 	 * Aliases: `gifq`
 	 */
@@ -2368,8 +2367,8 @@ export interface ImgixURLParams {
 	/**
 	 * Animated gif quality
 	 *
-	 * Specifies the quality of the animated gif. The higher the value, the
-	 * better more compression is applied.
+	 * Specifies the quality of the animated gif. The higher the value, the better
+	 * more compression is applied.
 	 *
 	 * Alias for: `gifQ`
 	 */
@@ -2497,8 +2496,8 @@ export interface ImgixURLParams {
 	/**
 	 * Animation loop count
 	 *
-	 * Specifies the number of times an animated image should repeat. A value of
-	 * 0 means infinite looping.
+	 * Specifies the number of times an animated image should repeat. A value of 0
+	 * means infinite looping.
 	 *
 	 * @defaultValue `0`
 	 */
@@ -3397,8 +3396,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative to
-	 * the base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the
+	 * base image.
 	 *
 	 * Aliases: `txtalign`, `ta`
 	 *
@@ -3408,8 +3407,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative to
-	 * the base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the
+	 * base image.
 	 *
 	 * Alias for: `txtAlign`
 	 *
@@ -3419,8 +3418,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative to
-	 * the base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the
+	 * base image.
 	 *
 	 * Alias for: `txtAlign`
 	 *
@@ -3676,8 +3675,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a textbox
-	 * and the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and
+	 * the edges of the base image.
 	 *
 	 * Aliases: `txtpad`, `tp`
 	 *
@@ -3687,8 +3686,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a textbox
-	 * and the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and
+	 * the edges of the base image.
 	 *
 	 * Alias for: `txtPad`
 	 *
@@ -3698,8 +3697,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a textbox
-	 * and the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and
+	 * the edges of the base image.
 	 *
 	 * Alias for: `txtPad`
 	 *
@@ -3840,8 +3839,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text x position
 	 *
-	 * Sets the horizontal (x) position of the text in pixels relative to the
-	 * left edge of the base image.
+	 * Sets the horizontal (x) position of the text in pixels relative to the left
+	 * edge of the base image.
 	 *
 	 * Aliases: `txtx`
 	 *
@@ -3853,8 +3852,8 @@ export interface ImgixURLParams {
 	/**
 	 * Text x position
 	 *
-	 * Sets the horizontal (x) position of the text in pixels relative to the
-	 * left edge of the base image.
+	 * Sets the horizontal (x) position of the text in pixels relative to the left
+	 * edge of the base image.
 	 *
 	 * Alias for: `txtX`
 	 *
