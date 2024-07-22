@@ -89,7 +89,7 @@
 		"standard-version": "^9.5.0",
 		"ts-eager": "^2.0.2",
 		"ts-morph": "^23.0.0",
-		"ts-node": "^10.9.2",
+		"tsx": "^4.16.2",
 		"typescript": "^5.5.3",
 		"vite": "^5.3.4",
 		"vite-plugin-sdk": "^0.1.2"
