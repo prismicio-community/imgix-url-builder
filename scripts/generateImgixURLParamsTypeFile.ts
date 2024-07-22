@@ -1,8 +1,7 @@
-import { writeFileSync, readFileSync } from "fs";
-import { URL } from "url";
+import { writeFileSync, readFileSync } from "node:fs";
 import { JSDocStructure, OptionalKind, Project } from "ts-morph";
-import prettier from "prettier";
-import imgixParams from "imgix-url-params/dist/parameters.json" assert { type: "json" };
+import * as prettier from "prettier";
+import imgixParams from "imgix-url-params/dist/parameters.json";
 
 export const BLANK_LINE_IDENTIFIER = "// ___BLANK_LINE_TO_BE_REPLACED___";
 
@@ -24,6 +23,17 @@ const paramCaseToCamelCase = (input: string): string => {
 	return input.replace(/-(\w)/g, (_matches, letter: string) => {
 		return letter.toUpperCase();
 	});
+};
+
+/**
+ * Capitalizes the first character in a given string.
+ *
+ * @param input - The string to capitalize.
+ *
+ * @returns `input` with the first character in uppercase.
+ */
+const capitalize = (input: string) => {
+	return input.charAt(0).toUpperCase() + input.slice(1);
 };
 
 const typeMap = {
@@ -100,7 +110,7 @@ const expectsListToTypeString = (
 	return [...types].join(" | ") || "unknown";
 };
 
-const generateUrlParamsTypes = (): string => {
+const generateUrlParamsTypes = async (): Promise<string> => {
 	const project = new Project();
 	const sourceFile = project.createSourceFile("imgixUrlParams.ts");
 
@@ -149,7 +159,7 @@ const generateUrlParamsTypes = (): string => {
 
 		const baseDocs: OptionalKind<JSDocStructure> = {
 			description: (writer) => {
-				writer.writeLine(spec.display_name);
+				writer.writeLine(capitalize(spec.display_name));
 
 				if ("short_description" in spec) {
 					writer.blankLine();
@@ -253,9 +263,9 @@ const generateUrlParamsTypes = (): string => {
 		.replace(new RegExp(BLANK_LINE_IDENTIFIER, "g"), "");
 
 	const prettierOptions = JSON.parse(
-		readFileSync(new URL("../.prettierrc", import.meta.url).pathname, "utf8"),
+		readFileSync(new URL("../.prettierrc", import.meta.url), "utf8"),
 	);
-	const formattedOutput = prettier.format(output, {
+	const formattedOutput = await prettier.format(output, {
 		...prettierOptions,
 		parser: "typescript",
 	});
@@ -263,10 +273,9 @@ const generateUrlParamsTypes = (): string => {
 	return formattedOutput;
 };
 
-export const generateImgixURLParamsTypeFile = (): void => {
-	const contents = generateUrlParamsTypes();
-	const filename = new URL("../src/types.generated.ts", import.meta.url)
-		.pathname;
+export const generateImgixURLParamsTypeFile = async (): Promise<void> => {
+	const contents = await generateUrlParamsTypes();
+	const filename = new URL("../src/types.generated.ts", import.meta.url);
 
 	writeFileSync(filename, contents);
 };
