@@ -4,7 +4,10 @@ import { buildURL } from "./buildURL";
 /**
  * Parameters for `buildWidthSrcSet`.
  */
-export type BuildWidthSrcSetParams = Omit<ImgixURLParams, "width" | "w"> & {
+export type BuildWidthSrcSetParams = Omit<
+	ImgixURLParams,
+	"width" | "w" | "height" | "h"
+> & {
 	/**
 	 * The pixel widths to include in the resulting `srcset` value.
 	 *
@@ -23,7 +26,8 @@ export type BuildWidthSrcSetParams = Omit<ImgixURLParams, "width" | "w"> & {
  *
  * The `width` URL parameter will be applied for each `srcset` entry. If a
  * `width` or `w` parameter is provided to the `params` parameter, it will be
- * ignored.
+ * ignored. Similarly, if a `height` or `h` parameter is provided to the
+ * `params` parameter, it will be ignored to prevent unexpected aspect ratio.
  *
  * @example
  *
@@ -61,7 +65,7 @@ export const buildWidthSrcSet = (
 ): string => {
 	return widths
 		.map((width) => {
-			return `${buildURL(url, { ...params, w: undefined, width })} ${width}w`;
+			return `${buildURL(url, { ...params, w: undefined, h: undefined, height: undefined, width })} ${width}w`;
 		})
 		.join(", ");
 };
