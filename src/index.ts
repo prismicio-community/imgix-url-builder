@@ -1,17 +1,12 @@
-export { Client } from "./Client";
-export type { ClientOptions } from "./Client";
+export { Client } from "./Client"
+export type { ClientOptions } from "./Client"
 
-export { buildURL } from "./buildURL";
+export { buildURL } from "./buildURL"
 
-export { buildWidthSrcSet } from "./buildWidthSrcSet";
-export type { BuildWidthSrcSetParams } from "./buildWidthSrcSet";
+export { buildWidthSrcSet } from "./buildWidthSrcSet"
+export type { BuildWidthSrcSetParams } from "./buildWidthSrcSet"
 
-export { buildPixelDensitySrcSet } from "./buildPixelDensitySrcSet";
-export type { BuildPixelDensitySrcSetParams } from "./buildPixelDensitySrcSet";
+export { buildPixelDensitySrcSet } from "./buildPixelDensitySrcSet"
+export type { BuildPixelDensitySrcSetParams } from "./buildPixelDensitySrcSet"
 
-export type {
-	ImgixURLParams,
-	Font,
-	Ratio,
-	ColorKeyword,
-} from "./types.generated";
+export type { ImgixURLParams, Font, Ratio, ColorKeyword } from "./types.generated"

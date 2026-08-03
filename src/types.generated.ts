@@ -1,6 +1,6 @@
 // Types generated using `imgix-url-params` as a source.
 
-export type Ratio = `${number}:${number}`;
+export type Ratio = `${number}:${number}`
 export type ColorKeyword =
 	| "aliceblue"
 	| "antiquewhite"
@@ -151,7 +151,7 @@ export type ColorKeyword =
 	| "white"
 	| "whitesmoke"
 	| "yellow"
-	| "yellowgreen";
+	| "yellowgreen"
 export type Font =
 	| "AlBayan"
 	| "AlBayan-Bold"
@@ -1147,8 +1147,8 @@ export type Font =
 	| "ZenOldMincho-Bold"
 	| "ZenOldMincho-Medium"
 	| "ZenOldMincho-Regular"
-	| "ZenOldMincho-SemiBold";
-export type Range = `${number}-${number}` | `${number}-` | `-${number}`;
+	| "ZenOldMincho-SemiBold"
+export type Range = `${number}-${number}` | `${number}-` | `-${number}`
 
 export interface ImgixURLParams {
 	/**
@@ -1158,7 +1158,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/ar
 	 */
-	ar?: Ratio;
+	ar?: Ratio
 	/**
 	 * Automatic
 	 *
@@ -1166,17 +1166,16 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/auto
 	 */
-	auto?: ("enhance" | "format" | "redeye" | "compress" | "true")[];
+	auto?: ("enhance" | "format" | "redeye" | "compress" | "true")[]
 	/**
 	 * Background removal fallback
 	 *
 	 * Overrides default fallback behavior for bg-remove failures.
 	 *
 	 * @defaultValue `true`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/background/bg-remove
 	 */
-	bgRemoveFallback?: boolean;
+	bgRemoveFallback?: boolean
 	/**
 	 * Background removal
 	 *
@@ -1185,10 +1184,9 @@ export interface ImgixURLParams {
 	 * Aliases: `backgroundRemove`
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/background/bg-remove
 	 */
-	bgRemove?: boolean;
+	bgRemove?: boolean
 	/**
 	 * Background removal
 	 *
@@ -1197,20 +1195,18 @@ export interface ImgixURLParams {
 	 * Alias for: `bgRemove`
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/background/bg-remove
 	 */
-	backgroundRemove?: boolean;
+	backgroundRemove?: boolean
 	/**
 	 * Background removal fallback
 	 *
 	 * Overrides default fallback behavior for bg-replace failures.
 	 *
 	 * @defaultValue `true`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/background/bg-replace
 	 */
-	bgReplaceFallback?: boolean;
+	bgReplaceFallback?: boolean
 	/**
 	 * Background replacement negative prompt
 	 *
@@ -1219,10 +1215,9 @@ export interface ImgixURLParams {
 	 * Aliases: `backgroundReplaceNegativePrompt`
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/background/bg-replace-neg-prompt
 	 */
-	bgReplaceNegPrompt?: string;
+	bgReplaceNegPrompt?: string
 	/**
 	 * Background replacement negative prompt
 	 *
@@ -1231,10 +1226,9 @@ export interface ImgixURLParams {
 	 * Alias for: `bgReplaceNegPrompt`
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/background/bg-replace-neg-prompt
 	 */
-	backgroundReplaceNegativePrompt?: string;
+	backgroundReplaceNegativePrompt?: string
 	/**
 	 * Background replacement
 	 *
@@ -1243,10 +1237,9 @@ export interface ImgixURLParams {
 	 * Aliases: `backgroundReplace`
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/background/bg-replace
 	 */
-	bgReplace?: string;
+	bgReplace?: string
 	/**
 	 * Background replacement
 	 *
@@ -1255,20 +1248,18 @@ export interface ImgixURLParams {
 	 * Alias for: `bgReplace`
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/background/bg-replace
 	 */
-	backgroundReplace?: string;
+	backgroundReplace?: string
 	/**
 	 * Background color
 	 *
 	 * Colors the background of padded and partially-transparent images.
 	 *
 	 * @defaultValue `"fff"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/bg
 	 */
-	bg?: string | ColorKeyword;
+	bg?: string | ColorKeyword
 	/**
 	 * Blend align
 	 *
@@ -1278,7 +1269,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-align
 	 */
-	blendAlign?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[];
+	blendAlign?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[]
 	/**
 	 * Blend align
 	 *
@@ -1288,7 +1279,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-align
 	 */
-	blendalign?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[];
+	blendalign?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[]
 	/**
 	 * Blend align
 	 *
@@ -1298,7 +1289,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-align
 	 */
-	ba?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[];
+	ba?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[]
 	/**
 	 * Blend alpha
 	 *
@@ -1307,10 +1298,9 @@ export interface ImgixURLParams {
 	 * Aliases: `blendalpha`, `balph`
 	 *
 	 * @defaultValue `100`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-alpha
 	 */
-	blendAlpha?: number;
+	blendAlpha?: number
 	/**
 	 * Blend alpha
 	 *
@@ -1319,10 +1309,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendAlpha`
 	 *
 	 * @defaultValue `100`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-alpha
 	 */
-	blendalpha?: number;
+	blendalpha?: number
 	/**
 	 * Blend alpha
 	 *
@@ -1331,10 +1320,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendAlpha`
 	 *
 	 * @defaultValue `100`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-alpha
 	 */
-	balph?: number;
+	balph?: number
 	/**
 	 * Blend color
 	 *
@@ -1344,7 +1332,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-color
 	 */
-	blendColor?: string | ColorKeyword;
+	blendColor?: string | ColorKeyword
 	/**
 	 * Blend color
 	 *
@@ -1354,7 +1342,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-color
 	 */
-	blendcolor?: string | ColorKeyword;
+	blendcolor?: string | ColorKeyword
 	/**
 	 * Blend color
 	 *
@@ -1364,7 +1352,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-color
 	 */
-	blendClr?: string | ColorKeyword;
+	blendClr?: string | ColorKeyword
 	/**
 	 * Blend color
 	 *
@@ -1374,7 +1362,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-color
 	 */
-	blendclr?: string | ColorKeyword;
+	blendclr?: string | ColorKeyword
 	/**
 	 * Blend crop
 	 *
@@ -1384,7 +1372,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-crop
 	 */
-	blendCrop?: ("top" | "bottom" | "left" | "right" | "faces")[];
+	blendCrop?: ("top" | "bottom" | "left" | "right" | "faces")[]
 	/**
 	 * Blend crop
 	 *
@@ -1394,7 +1382,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-crop
 	 */
-	blendcrop?: ("top" | "bottom" | "left" | "right" | "faces")[];
+	blendcrop?: ("top" | "bottom" | "left" | "right" | "faces")[]
 	/**
 	 * Blend crop
 	 *
@@ -1404,7 +1392,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-crop
 	 */
-	bc?: ("top" | "bottom" | "left" | "right" | "faces")[];
+	bc?: ("top" | "bottom" | "left" | "right" | "faces")[]
 	/**
 	 * Blend fit
 	 *
@@ -1413,10 +1401,9 @@ export interface ImgixURLParams {
 	 * Aliases: `blendfit`, `bf`
 	 *
 	 * @defaultValue `"clip"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-fit
 	 */
-	blendFit?: "clamp" | "clip" | "crop" | "scale" | "max";
+	blendFit?: "clamp" | "clip" | "crop" | "scale" | "max"
 	/**
 	 * Blend fit
 	 *
@@ -1425,10 +1412,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendFit`
 	 *
 	 * @defaultValue `"clip"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-fit
 	 */
-	blendfit?: "clamp" | "clip" | "crop" | "scale" | "max";
+	blendfit?: "clamp" | "clip" | "crop" | "scale" | "max"
 	/**
 	 * Blend fit
 	 *
@@ -1437,10 +1423,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendFit`
 	 *
 	 * @defaultValue `"clip"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-fit
 	 */
-	bf?: "clamp" | "clip" | "crop" | "scale" | "max";
+	bf?: "clamp" | "clip" | "crop" | "scale" | "max"
 	/**
 	 * Blend height
 	 *
@@ -1450,7 +1435,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-h
 	 */
-	blendH?: number;
+	blendH?: number
 	/**
 	 * Blend height
 	 *
@@ -1460,7 +1445,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-h
 	 */
-	blendh?: number;
+	blendh?: number
 	/**
 	 * Blend height
 	 *
@@ -1470,7 +1455,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-h
 	 */
-	bh?: number;
+	bh?: number
 	/**
 	 * Blend mode
 	 *
@@ -1479,7 +1464,6 @@ export interface ImgixURLParams {
 	 * Aliases: `blendmode`, `bm`
 	 *
 	 * @defaultValue `"overlay"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-mode
 	 */
 	blendMode?:
@@ -1498,7 +1482,7 @@ export interface ImgixURLParams {
 		| "saturation"
 		| "screen"
 		| "softlight"
-		| "normal";
+		| "normal"
 	/**
 	 * Blend mode
 	 *
@@ -1507,7 +1491,6 @@ export interface ImgixURLParams {
 	 * Alias for: `blendMode`
 	 *
 	 * @defaultValue `"overlay"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-mode
 	 */
 	blendmode?:
@@ -1526,7 +1509,7 @@ export interface ImgixURLParams {
 		| "saturation"
 		| "screen"
 		| "softlight"
-		| "normal";
+		| "normal"
 	/**
 	 * Blend mode
 	 *
@@ -1535,7 +1518,6 @@ export interface ImgixURLParams {
 	 * Alias for: `blendMode`
 	 *
 	 * @defaultValue `"overlay"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-mode
 	 */
 	bm?:
@@ -1554,7 +1536,7 @@ export interface ImgixURLParams {
 		| "saturation"
 		| "screen"
 		| "softlight"
-		| "normal";
+		| "normal"
 	/**
 	 * Blend padding
 	 *
@@ -1563,10 +1545,9 @@ export interface ImgixURLParams {
 	 * Aliases: `blendpad`, `bp`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-pad
 	 */
-	blendPad?: number;
+	blendPad?: number
 	/**
 	 * Blend padding
 	 *
@@ -1575,10 +1556,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendPad`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-pad
 	 */
-	blendpad?: number;
+	blendpad?: number
 	/**
 	 * Blend padding
 	 *
@@ -1587,10 +1567,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendPad`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-pad
 	 */
-	bp?: number;
+	bp?: number
 	/**
 	 * Blend size
 	 *
@@ -1600,7 +1579,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-size
 	 */
-	blendSize?: "inherit";
+	blendSize?: "inherit"
 	/**
 	 * Blend size
 	 *
@@ -1610,7 +1589,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-size
 	 */
-	blendsize?: "inherit";
+	blendsize?: "inherit"
 	/**
 	 * Blend size
 	 *
@@ -1620,7 +1599,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-size
 	 */
-	bs?: "inherit";
+	bs?: "inherit"
 	/**
 	 * Blend width
 	 *
@@ -1630,7 +1609,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-w
 	 */
-	blendW?: number;
+	blendW?: number
 	/**
 	 * Blend width
 	 *
@@ -1640,7 +1619,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-w
 	 */
-	blendw?: number;
+	blendw?: number
 	/**
 	 * Blend width
 	 *
@@ -1650,7 +1629,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-w
 	 */
-	bw?: number;
+	bw?: number
 	/**
 	 * Blend x position
 	 *
@@ -1659,10 +1638,9 @@ export interface ImgixURLParams {
 	 * Aliases: `blendx`, `bx`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-x
 	 */
-	blendX?: number;
+	blendX?: number
 	/**
 	 * Blend x position
 	 *
@@ -1671,10 +1649,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendX`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-x
 	 */
-	blendx?: number;
+	blendx?: number
 	/**
 	 * Blend x position
 	 *
@@ -1683,10 +1660,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendX`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-x
 	 */
-	bx?: number;
+	bx?: number
 	/**
 	 * Blend y position
 	 *
@@ -1695,10 +1671,9 @@ export interface ImgixURLParams {
 	 * Aliases: `blendy`, `by`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-y
 	 */
-	blendY?: number;
+	blendY?: number
 	/**
 	 * Blend y position
 	 *
@@ -1707,10 +1682,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendY`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-y
 	 */
-	blendy?: number;
+	blendy?: number
 	/**
 	 * Blend y position
 	 *
@@ -1719,10 +1693,9 @@ export interface ImgixURLParams {
 	 * Alias for: `blendY`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend-y
 	 */
-	by?: number;
+	by?: number
 	/**
 	 * Blend
 	 *
@@ -1732,7 +1705,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend
 	 */
-	blend?: string | ColorKeyword;
+	blend?: string | ColorKeyword
 	/**
 	 * Blend
 	 *
@@ -1742,17 +1715,16 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/blending/blend
 	 */
-	b?: string | ColorKeyword;
+	b?: string | ColorKeyword
 	/**
 	 * Gaussian blur
 	 *
 	 * Applies a gaussian blur to an image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/blur
 	 */
-	blur?: number;
+	blur?: number
 	/**
 	 * Border bottom
 	 *
@@ -1760,7 +1732,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/border-bottom
 	 */
-	borderBottom?: number;
+	borderBottom?: number
 	/**
 	 * Border left
 	 *
@@ -1768,7 +1740,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/border-left
 	 */
-	borderLeft?: number;
+	borderLeft?: number
 	/**
 	 * Inner border radius
 	 *
@@ -1776,7 +1748,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/border-radius-inner
 	 */
-	borderRadiusInner?: number | [number, number, number, number];
+	borderRadiusInner?: number | [number, number, number, number]
 	/**
 	 * Outer border radius
 	 *
@@ -1784,7 +1756,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/border-radius
 	 */
-	borderRadius?: number | [number, number, number, number];
+	borderRadius?: number | [number, number, number, number]
 	/**
 	 * Border right
 	 *
@@ -1792,7 +1764,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/border-right
 	 */
-	borderRight?: number;
+	borderRight?: number
 	/**
 	 * Border top
 	 *
@@ -1800,7 +1772,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/border-top
 	 */
-	borderTop?: number;
+	borderTop?: number
 	/**
 	 * Border size & color
 	 *
@@ -1808,17 +1780,16 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/border
 	 */
-	border?: [number, string | ColorKeyword];
+	border?: [number, string | ColorKeyword]
 	/**
 	 * Brightness
 	 *
 	 * Adjusts the brightness of the source image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/bri
 	 */
-	bri?: number;
+	bri?: number
 	/**
 	 * Client hints
 	 *
@@ -1826,17 +1797,16 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/format/ch
 	 */
-	ch?: ("width" | "dpr" | "save-data")[];
+	ch?: ("width" | "dpr" | "save-data")[]
 	/**
 	 * Chroma subsampling
 	 *
 	 * Specifies the output chroma subsampling rate.
 	 *
 	 * @defaultValue `420`
-	 *
 	 * @see https://docs.imgix.com/apis/url/format/chromasub
 	 */
-	chromasub?: 444 | 422 | 420;
+	chromasub?: 444 | 422 | 420
 	/**
 	 * Color quantization
 	 *
@@ -1844,27 +1814,25 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/format/colorquant
 	 */
-	colorquant?: number;
+	colorquant?: number
 	/**
 	 * Palette color count
 	 *
 	 * Specifies how many colors to include in a palette-extraction response.
 	 *
 	 * @defaultValue `6`
-	 *
 	 * @see https://docs.imgix.com/apis/url/color-palette/colors
 	 */
-	colors?: number;
+	colors?: number
 	/**
 	 * Contrast
 	 *
 	 * Adjusts the contrast of the source image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/con
 	 */
-	con?: number;
+	con?: number
 	/**
 	 * Mask corner radius
 	 *
@@ -1872,7 +1840,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/mask/corner-radius
 	 */
-	cornerRadius?: number | [number, number, number, number];
+	cornerRadius?: number | [number, number, number, number]
 	/**
 	 * Crop mode
 	 *
@@ -1880,16 +1848,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/crop
 	 */
-	crop?: (
-		| "top"
-		| "bottom"
-		| "left"
-		| "right"
-		| "faces"
-		| "entropy"
-		| "edges"
-		| "focalpoint"
-	)[];
+	crop?: ("top" | "bottom" | "left" | "right" | "faces" | "entropy" | "edges" | "focalpoint")[]
 	/**
 	 * Color space
 	 *
@@ -1897,7 +1856,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/format/cs
 	 */
-	cs?: "origin" | "srgb" | "adobergb1998" | "tinysrgb" | "strip";
+	cs?: "origin" | "srgb" | "adobergb1998" | "tinysrgb" | "strip"
 	/**
 	 * Download
 	 *
@@ -1905,7 +1864,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/format/dl
 	 */
-	dl?: string;
+	dl?: string
 	/**
 	 * Dots per inch
 	 *
@@ -1913,27 +1872,25 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/format/dpi
 	 */
-	dpi?: number;
+	dpi?: number
 	/**
 	 * Device pixel ratio
 	 *
 	 * Adjusts the device-pixel ratio of the output image.
 	 *
 	 * @defaultValue `1`
-	 *
 	 * @see https://docs.imgix.com/apis/url/dpr
 	 */
-	dpr?: number;
+	dpr?: number
 	/**
 	 * Duotone alpha
 	 *
 	 * Changes the alpha of the duotone effect atop the source image.
 	 *
 	 * @defaultValue `100`
-	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/duotone-alpha
 	 */
-	duotoneAlpha?: number;
+	duotoneAlpha?: number
 	/**
 	 * Duotone
 	 *
@@ -1941,26 +1898,25 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/duotone
 	 */
-	duotone?: [string | ColorKeyword, string | ColorKeyword];
+	duotone?: [string | ColorKeyword, string | ColorKeyword]
 	/**
 	 * Exposure
 	 *
 	 * Adjusts the exposure of the output image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/exp
 	 */
-	exp?: number;
+	exp?: number
 	/**
 	 * URL expiration timestamp
 	 *
-	 * A Unix timestamp specifying a UTC time. Requests made to this URL after
-	 * that time will output a 404 status code.
+	 * A Unix timestamp specifying a UTC time. Requests made to this URL after that time will output a
+	 * 404 status code.
 	 *
 	 * @see https://docs.imgix.com/apis/url/expires
 	 */
-	expires?: number;
+	expires?: number
 	/**
 	 * Face index
 	 *
@@ -1968,52 +1924,46 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/face-detection/faceindex
 	 */
-	faceindex?: number;
+	faceindex?: number
 	/**
 	 * Face padding
 	 *
 	 * Adjusts padding around a selected face.
 	 *
 	 * @defaultValue `1`
-	 *
 	 * @see https://docs.imgix.com/apis/url/face-detection/facepad
 	 */
-	facepad?: number;
+	facepad?: number
 	/**
 	 * Json face data
 	 *
-	 * Specifies that face data should be included in output when combined with
-	 * `fm=json`.
+	 * Specifies that face data should be included in output when combined with `fm=json`.
 	 *
 	 * @see https://docs.imgix.com/apis/url/face-detection/faces
 	 */
-	faces?: 1;
+	faces?: 1
 	/**
 	 * Fill color
 	 *
-	 * Sets the fill color for images with additional space created by the fit
-	 * setting
+	 * Sets the fill color for images with additional space created by the fit setting
 	 *
 	 * Aliases: `fillcolor`
 	 *
 	 * @defaultValue `"fff"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-color
 	 */
-	fillColor?: string | ColorKeyword;
+	fillColor?: string | ColorKeyword
 	/**
 	 * Fill color
 	 *
-	 * Sets the fill color for images with additional space created by the fit
-	 * setting
+	 * Sets the fill color for images with additional space created by the fit setting
 	 *
 	 * Alias for: `fillColor`
 	 *
 	 * @defaultValue `"fff"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-color
 	 */
-	fillcolor?: string | ColorKeyword;
+	fillcolor?: string | ColorKeyword
 	/**
 	 * Fill generative fallback
 	 *
@@ -2022,10 +1972,9 @@ export interface ImgixURLParams {
 	 * Aliases: `fillGenerativeFallback`
 	 *
 	 * @defaultValue `true`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-fallback
 	 */
-	fillGenFallback?: boolean;
+	fillGenFallback?: boolean
 	/**
 	 * Fill generative fallback
 	 *
@@ -2034,34 +1983,31 @@ export interface ImgixURLParams {
 	 * Alias for: `fillGenFallback`
 	 *
 	 * @defaultValue `true`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-fallback
 	 */
-	fillGenerativeFallback?: boolean;
+	fillGenerativeFallback?: boolean
 	/**
 	 * Fill generative negative prompt
 	 *
-	 * Provides a negative text suggestion to the generative fill parameter. Used
-	 * to reduce the probability of a subject, detail, or object appearing in
-	 * generative output.
+	 * Provides a negative text suggestion to the generative fill parameter. Used to reduce the
+	 * probability of a subject, detail, or object appearing in generative output.
 	 *
 	 * Aliases: `fillGenerativeNegativePrompt`
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-neg-prompt
 	 */
-	fillGenNegPrompt?: string;
+	fillGenNegPrompt?: string
 	/**
 	 * Fill generative negative prompt
 	 *
-	 * Provides a negative text suggestion to the generative fill parameter. Used
-	 * to reduce the probability of a subject, detail, or object appearing in
-	 * generative output.
+	 * Provides a negative text suggestion to the generative fill parameter. Used to reduce the
+	 * probability of a subject, detail, or object appearing in generative output.
 	 *
 	 * Alias for: `fillGenNegPrompt`
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-neg-prompt
 	 */
-	fillGenerativeNegativePrompt?: string;
+	fillGenerativeNegativePrompt?: string
 	/**
 	 * Fill generative position
 	 *
@@ -2070,10 +2016,9 @@ export interface ImgixURLParams {
 	 * Aliases: `fillGenerativePosition`
 	 *
 	 * @defaultValue `"center,middle"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-pos
 	 */
-	fillGenPos?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[];
+	fillGenPos?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[]
 	/**
 	 * Fill generative position
 	 *
@@ -2082,17 +2027,9 @@ export interface ImgixURLParams {
 	 * Alias for: `fillGenPos`
 	 *
 	 * @defaultValue `"center,middle"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-pos
 	 */
-	fillGenerativePosition?: (
-		| "top"
-		| "bottom"
-		| "middle"
-		| "left"
-		| "right"
-		| "center"
-	)[];
+	fillGenerativePosition?: ("top" | "bottom" | "middle" | "left" | "right" | "center")[]
 	/**
 	 * Fill generative prompt
 	 *
@@ -2102,7 +2039,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-prompt
 	 */
-	fillGenPrompt?: string;
+	fillGenPrompt?: string
 	/**
 	 * Fill generative prompt
 	 *
@@ -2112,113 +2049,102 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-prompt
 	 */
-	fillGenerativePrompt?: string;
+	fillGenerativePrompt?: string
 	/**
 	 * Fill generative seed
 	 *
-	 * Sets the generative seed value. Used to generate similar outputs from
-	 * different prompts.
+	 * Sets the generative seed value. Used to generate similar outputs from different prompts.
 	 *
 	 * Aliases: `fillGenerativeSeed`
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-seed
 	 */
-	fillGenSeed?: number;
+	fillGenSeed?: number
 	/**
 	 * Fill generative seed
 	 *
-	 * Sets the generative seed value. Used to generate similar outputs from
-	 * different prompts.
+	 * Sets the generative seed value. Used to generate similar outputs from different prompts.
 	 *
 	 * Alias for: `fillGenSeed`
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gen-seed
 	 */
-	fillGenerativeSeed?: number;
+	fillGenerativeSeed?: number
 	/**
 	 * Fill gradient color space
 	 *
-	 * Defines the color space as linear, sRGB, Oklab, HSL, or LCH for gradient
-	 * color interpolation
+	 * Defines the color space as linear, sRGB, Oklab, HSL, or LCH for gradient color interpolation
 	 *
 	 * @defaultValue `"srgb"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gradient-cs
 	 */
-	fillGradientCs?: "linear" | "srgb" | "oklab" | "hsl" | "lch";
+	fillGradientCs?: "linear" | "srgb" | "oklab" | "hsl" | "lch"
 	/**
 	 * Fill gradient linear direction
 	 *
-	 * The fill-gradient-linear-direction specifies the gradient's direction,
-	 * flowing towards the bottom, top, right, or left
+	 * The fill-gradient-linear-direction specifies the gradient's direction, flowing towards the
+	 * bottom, top, right, or left
 	 *
 	 * @defaultValue `"top,bottom"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gradient-linear-direction
 	 */
-	fillGradientLinearDirection?: ("top" | "bottom" | "left" | "right")[];
+	fillGradientLinearDirection?: ("top" | "bottom" | "left" | "right")[]
 	/**
 	 * Fill gradient linear
 	 *
-	 * Blends a gradient between two colors, {color1} and {color2}, along a
-	 * straight path
+	 * Blends a gradient between two colors, {color1} and {color2}, along a straight path
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gradient-linear
 	 */
-	fillGradientLinear?: [string | ColorKeyword, string | ColorKeyword];
+	fillGradientLinear?: [string | ColorKeyword, string | ColorKeyword]
 	/**
 	 * Fill gradient radial radius
 	 *
-	 * Parameter defines the radial gradient's radius as pixels or a percentage
-	 * (0.0-1.0) of the image's smallest dimension
+	 * Parameter defines the radial gradient's radius as pixels or a percentage (0.0-1.0) of the
+	 * image's smallest dimension
 	 *
 	 * @defaultValue `"0.25,0.5"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gradient-radial-radius
 	 */
-	fillGradientRadialRadius?: [number, number];
+	fillGradientRadialRadius?: [number, number]
 	/**
 	 * Fill gradient radial x
 	 *
-	 * Specifies the location of the radial gradient's center along the x-axis,
-	 * using either a pixel value or a floating point percentage (ranging from 0.0
-	 * to 1.0) of the image's width
+	 * Specifies the location of the radial gradient's center along the x-axis, using either a pixel
+	 * value or a floating point percentage (ranging from 0.0 to 1.0) of the image's width
 	 *
 	 * @defaultValue `0.5`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gradient-radial-x
 	 */
-	fillGradientRadialX?: number;
+	fillGradientRadialX?: number
 	/**
 	 * Fill gradient radial y
 	 *
-	 * Parameter sets the radial gradient's center on the y-axis, using pixels or
-	 * a 0.0 to 1.0 percentage of the image's height
+	 * Parameter sets the radial gradient's center on the y-axis, using pixels or a 0.0 to 1.0
+	 * percentage of the image's height
 	 *
 	 * @defaultValue `0.5`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gradient-radial-y
 	 */
-	fillGradientRadialY?: number;
+	fillGradientRadialY?: number
 	/**
 	 * Fill gradient radial
 	 *
-	 * The fill-gradient-radial parameter creates a circular gradient
-	 * transitioning from a central color (Color1) to an outer color (Color2)
+	 * The fill-gradient-radial parameter creates a circular gradient transitioning from a central
+	 * color (Color1) to an outer color (Color2)
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gradient-radial
 	 */
-	fillGradientRadial?: [string | ColorKeyword, string | ColorKeyword];
+	fillGradientRadial?: [string | ColorKeyword, string | ColorKeyword]
 	/**
 	 * Fill gradient type
 	 *
 	 * Specifies if a gradient is radial (circular) or linear (straight)
 	 *
 	 * @defaultValue `"linear"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill-gradient-type
 	 */
-	fillGradientType?: "linear" | "radial";
+	fillGradientType?: "linear" | "radial"
 	/**
 	 * Fill mode
 	 *
@@ -2226,7 +2152,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/fill
 	 */
-	fill?: "solid" | "blur" | "gen" | "generative" | "gradient";
+	fill?: "solid" | "blur" | "gen" | "generative" | "gradient"
 	/**
 	 * Resize fit mode
 	 *
@@ -2235,19 +2161,9 @@ export interface ImgixURLParams {
 	 * Aliases: `f`
 	 *
 	 * @defaultValue `"clip"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/size/fit
 	 */
-	fit?:
-		| "clamp"
-		| "clip"
-		| "crop"
-		| "facearea"
-		| "fill"
-		| "fillmax"
-		| "max"
-		| "min"
-		| "scale";
+	fit?: "clamp" | "clip" | "crop" | "facearea" | "fill" | "fillmax" | "max" | "min" | "scale"
 	/**
 	 * Resize fit mode
 	 *
@@ -2256,19 +2172,9 @@ export interface ImgixURLParams {
 	 * Alias for: `fit`
 	 *
 	 * @defaultValue `"clip"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/size/fit
 	 */
-	f?:
-		| "clamp"
-		| "clip"
-		| "crop"
-		| "facearea"
-		| "fill"
-		| "fillmax"
-		| "max"
-		| "min"
-		| "scale";
+	f?: "clamp" | "clip" | "crop" | "facearea" | "fill" | "fillmax" | "max" | "min" | "scale"
 	/**
 	 * Flip axis
 	 *
@@ -2276,7 +2182,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/rotation/flip
 	 */
-	flip?: "h" | "v" | "hv";
+	flip?: "h" | "v" | "hv"
 	/**
 	 * Output format
 	 *
@@ -2298,17 +2204,16 @@ export interface ImgixURLParams {
 		| "webp"
 		| "webm"
 		| "blurhash"
-		| "avif";
+		| "avif"
 	/**
 	 * Focal point debug
 	 *
 	 * Displays crosshairs identifying the location of the set focal point
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/url/focalpoint-crop/fp-debug
 	 */
-	fpDebug?: boolean;
+	fpDebug?: boolean
 	/**
 	 * Focal point x position
 	 *
@@ -2316,7 +2221,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/focalpoint-crop/fp-x
 	 */
-	fpX?: number;
+	fpX?: number
 	/**
 	 * Focal point y position
 	 *
@@ -2324,7 +2229,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/focalpoint-crop/fp-y
 	 */
-	fpY?: number;
+	fpY?: number
 	/**
 	 * Focal point zoom
 	 *
@@ -2332,59 +2237,58 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/focalpoint-crop/fp-z
 	 */
-	fpZ?: number;
+	fpZ?: number
 	/**
 	 * Frames per second
 	 *
 	 * Specifies the framerate of the generated image.
 	 */
-	fps?: number;
+	fps?: number
 	/**
 	 * Frame selection
 	 *
 	 * Specifies the frame of an animated image to use.
 	 */
-	frame?: number | Range;
+	frame?: number | Range
 	/**
 	 * Gamma
 	 *
 	 * Adjusts the gamma of the source image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/gam
 	 */
-	gam?: number;
+	gam?: number
 	/**
 	 * Animated gif quality
 	 *
-	 * Specifies the quality of the animated gif. The higher the value, the better
-	 * more compression is applied.
+	 * Specifies the quality of the animated gif. The higher the value, the better more compression is
+	 * applied.
 	 *
 	 * Aliases: `gifq`
 	 */
-	gifQ?: number;
+	gifQ?: number
 	/**
 	 * Animated gif quality
 	 *
-	 * Specifies the quality of the animated gif. The higher the value, the better
-	 * more compression is applied.
+	 * Specifies the quality of the animated gif. The higher the value, the better more compression is
+	 * applied.
 	 *
 	 * Alias for: `gifQ`
 	 */
-	gifq?: number;
+	gifq?: number
 	/**
 	 * Grid colors
 	 *
 	 * Sets grid colors for the transparency checkerboard grid.
 	 */
-	gridColors?: [string | ColorKeyword, string | ColorKeyword];
+	gridColors?: [string | ColorKeyword, string | ColorKeyword]
 	/**
 	 * Grid size
 	 *
 	 * Sets grid size for the transparency checkerboard grid.
 	 */
-	gridSize?: number;
+	gridSize?: number
 	/**
 	 * Image height
 	 *
@@ -2394,7 +2298,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/h
 	 */
-	h?: number;
+	h?: number
 	/**
 	 * Image height
 	 *
@@ -2404,43 +2308,40 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/h
 	 */
-	height?: number;
+	height?: number
 	/**
 	 * Highlight
 	 *
 	 * Adjusts the highlights of the source image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/high
 	 */
-	high?: number;
+	high?: number
 	/**
 	 * Halftone
 	 *
 	 * Applies a half-tone effect to the source image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/htn
 	 */
-	htn?: number;
+	htn?: number
 	/**
 	 * Hue shift
 	 *
 	 * Adjusts the hue of the source image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/hue
 	 */
-	hue?: number;
+	hue?: number
 	/**
 	 * Frame interval
 	 *
 	 * Displays every Nth frame starting with the first frame.
 	 */
-	interval?: number;
+	interval?: number
 	/**
 	 * Invert
 	 *
@@ -2449,10 +2350,9 @@ export interface ImgixURLParams {
 	 * Aliases: `inv`
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/invert
 	 */
-	invert?: boolean;
+	invert?: boolean
 	/**
 	 * Invert
 	 *
@@ -2461,57 +2361,53 @@ export interface ImgixURLParams {
 	 * Alias for: `invert`
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/invert
 	 */
-	inv?: boolean;
+	inv?: boolean
 	/**
 	 * IPTC Passthrough
 	 *
 	 * Determine if IPTC data should be passed for JPEG images.
 	 */
-	iptc?: "allow" | "block";
+	iptc?: "allow" | "block"
 	/**
 	 * Jpg progressive
 	 *
-	 * Specifies whether or not a jpg/jpeg uses progressive (true) or baseline
-	 * (false)
+	 * Specifies whether or not a jpg/jpeg uses progressive (true) or baseline (false)
 	 *
 	 * Aliases: `jpegProgressive`
 	 *
 	 * @defaultValue `true`
 	 */
-	jpgProgressive?: boolean;
+	jpgProgressive?: boolean
 	/**
 	 * Jpg progressive
 	 *
-	 * Specifies whether or not a jpg/jpeg uses progressive (true) or baseline
-	 * (false)
+	 * Specifies whether or not a jpg/jpeg uses progressive (true) or baseline (false)
 	 *
 	 * Alias for: `jpgProgressive`
 	 *
 	 * @defaultValue `true`
 	 */
-	jpegProgressive?: boolean;
+	jpegProgressive?: boolean
 	/**
 	 * Animation loop count
 	 *
-	 * Specifies the number of times an animated image should repeat. A value of 0
-	 * means infinite looping.
+	 * Specifies the number of times an animated image should repeat. A value of 0 means infinite
+	 * looping.
 	 *
 	 * @defaultValue `0`
 	 */
-	loop?: number;
+	loop?: number
 	/**
 	 * Lossless compression
 	 *
 	 * Specifies that the output image should be a lossless variant.
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/url/format/lossless
 	 */
-	lossless?: boolean;
+	lossless?: boolean
 	/**
 	 * Watermark alignment mode
 	 *
@@ -2521,7 +2417,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-align
 	 */
-	markAlign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	markAlign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[]
 	/**
 	 * Watermark alignment mode
 	 *
@@ -2531,7 +2427,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-align
 	 */
-	ma?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	ma?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[]
 	/**
 	 * Watermark alignment mode
 	 *
@@ -2541,7 +2437,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-align
 	 */
-	markalign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	markalign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[]
 	/**
 	 * Watermark alpha
 	 *
@@ -2550,10 +2446,9 @@ export interface ImgixURLParams {
 	 * Aliases: `markalpha`, `malph`
 	 *
 	 * @defaultValue `100`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-alpha
 	 */
-	markAlpha?: number;
+	markAlpha?: number
 	/**
 	 * Watermark alpha
 	 *
@@ -2562,10 +2457,9 @@ export interface ImgixURLParams {
 	 * Alias for: `markAlpha`
 	 *
 	 * @defaultValue `100`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-alpha
 	 */
-	markalpha?: number;
+	markalpha?: number
 	/**
 	 * Watermark alpha
 	 *
@@ -2574,10 +2468,9 @@ export interface ImgixURLParams {
 	 * Alias for: `markAlpha`
 	 *
 	 * @defaultValue `100`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-alpha
 	 */
-	malph?: number;
+	malph?: number
 	/**
 	 * Watermark base url
 	 *
@@ -2587,7 +2480,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-base
 	 */
-	markBase?: string;
+	markBase?: string
 	/**
 	 * Watermark base url
 	 *
@@ -2597,7 +2490,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-base
 	 */
-	mb?: string;
+	mb?: string
 	/**
 	 * Watermark base url
 	 *
@@ -2607,7 +2500,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-base
 	 */
-	markbase?: string;
+	markbase?: string
 	/**
 	 * Watermark fit mode
 	 *
@@ -2616,10 +2509,9 @@ export interface ImgixURLParams {
 	 * Aliases: `mf`, `markfit`
 	 *
 	 * @defaultValue `"clip"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-fit
 	 */
-	markFit?: "clip" | "crop" | "fill" | "max" | "scale";
+	markFit?: "clip" | "crop" | "fill" | "max" | "scale"
 	/**
 	 * Watermark fit mode
 	 *
@@ -2628,10 +2520,9 @@ export interface ImgixURLParams {
 	 * Alias for: `markFit`
 	 *
 	 * @defaultValue `"clip"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-fit
 	 */
-	mf?: "clip" | "crop" | "fill" | "max" | "scale";
+	mf?: "clip" | "crop" | "fill" | "max" | "scale"
 	/**
 	 * Watermark fit mode
 	 *
@@ -2640,10 +2531,9 @@ export interface ImgixURLParams {
 	 * Alias for: `markFit`
 	 *
 	 * @defaultValue `"clip"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-fit
 	 */
-	markfit?: "clip" | "crop" | "fill" | "max" | "scale";
+	markfit?: "clip" | "crop" | "fill" | "max" | "scale"
 	/**
 	 * Watermark height
 	 *
@@ -2653,7 +2543,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-h
 	 */
-	markH?: number;
+	markH?: number
 	/**
 	 * Watermark height
 	 *
@@ -2663,7 +2553,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-h
 	 */
-	mh?: number;
+	mh?: number
 	/**
 	 * Watermark height
 	 *
@@ -2673,7 +2563,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-h
 	 */
-	markh?: number;
+	markh?: number
 	/**
 	 * Watermark padding
 	 *
@@ -2682,10 +2572,9 @@ export interface ImgixURLParams {
 	 * Aliases: `mp`, `markpad`
 	 *
 	 * @defaultValue `5`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-pad
 	 */
-	markPad?: number;
+	markPad?: number
 	/**
 	 * Watermark padding
 	 *
@@ -2694,10 +2583,9 @@ export interface ImgixURLParams {
 	 * Alias for: `markPad`
 	 *
 	 * @defaultValue `5`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-pad
 	 */
-	mp?: number;
+	mp?: number
 	/**
 	 * Watermark padding
 	 *
@@ -2706,20 +2594,18 @@ export interface ImgixURLParams {
 	 * Alias for: `markPad`
 	 *
 	 * @defaultValue `5`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-pad
 	 */
-	markpad?: number;
+	markpad?: number
 	/**
 	 * Watermark rotation
 	 *
 	 * Rotates a watermark or tiled watermarks by a specified number of degrees.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-rot
 	 */
-	markRot?: number;
+	markRot?: number
 	/**
 	 * Watermark scale
 	 *
@@ -2729,7 +2615,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-scale
 	 */
-	markScale?: number;
+	markScale?: number
 	/**
 	 * Watermark scale
 	 *
@@ -2739,7 +2625,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-scale
 	 */
-	ms?: number;
+	ms?: number
 	/**
 	 * Watermark scale
 	 *
@@ -2749,7 +2635,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-scale
 	 */
-	markscale?: number;
+	markscale?: number
 	/**
 	 * Watermark tile
 	 *
@@ -2759,7 +2645,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-tile
 	 */
-	markTile?: "grid";
+	markTile?: "grid"
 	/**
 	 * Watermark tile
 	 *
@@ -2769,7 +2655,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-tile
 	 */
-	mtile?: "grid";
+	mtile?: "grid"
 	/**
 	 * Watermark tile
 	 *
@@ -2779,7 +2665,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-tile
 	 */
-	marktile?: "grid";
+	marktile?: "grid"
 	/**
 	 * Watermark width
 	 *
@@ -2789,7 +2675,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-w
 	 */
-	markW?: number;
+	markW?: number
 	/**
 	 * Watermark width
 	 *
@@ -2799,7 +2685,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-w
 	 */
-	mw?: number;
+	mw?: number
 	/**
 	 * Watermark width
 	 *
@@ -2809,7 +2695,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-w
 	 */
-	markw?: number;
+	markw?: number
 	/**
 	 * Watermark x position
 	 *
@@ -2819,7 +2705,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-x
 	 */
-	markX?: number;
+	markX?: number
 	/**
 	 * Watermark x position
 	 *
@@ -2829,7 +2715,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-x
 	 */
-	mx?: number;
+	mx?: number
 	/**
 	 * Watermark x position
 	 *
@@ -2839,7 +2725,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-x
 	 */
-	markx?: number;
+	markx?: number
 	/**
 	 * Watermark y position
 	 *
@@ -2849,7 +2735,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-y
 	 */
-	markY?: number;
+	markY?: number
 	/**
 	 * Watermark y position
 	 *
@@ -2859,7 +2745,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-y
 	 */
-	my?: number;
+	my?: number
 	/**
 	 * Watermark y position
 	 *
@@ -2869,7 +2755,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark-y
 	 */
-	marky?: number;
+	marky?: number
 	/**
 	 * Watermark image url
 	 *
@@ -2879,7 +2765,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark
 	 */
-	mark?: string;
+	mark?: string
 	/**
 	 * Watermark image url
 	 *
@@ -2889,7 +2775,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/watermark/mark
 	 */
-	m?: string;
+	m?: string
 	/**
 	 * Mask background color
 	 *
@@ -2898,10 +2784,9 @@ export interface ImgixURLParams {
 	 * Aliases: `maskbg`
 	 *
 	 * @defaultValue `"fff"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/mask/mask-bg
 	 */
-	maskBg?: string | ColorKeyword;
+	maskBg?: string | ColorKeyword
 	/**
 	 * Mask background color
 	 *
@@ -2910,10 +2795,9 @@ export interface ImgixURLParams {
 	 * Alias for: `maskBg`
 	 *
 	 * @defaultValue `"fff"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/mask/mask-bg
 	 */
-	maskbg?: string | ColorKeyword;
+	maskbg?: string | ColorKeyword
 	/**
 	 * Mask type
 	 *
@@ -2921,7 +2805,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/mask
 	 */
-	mask?: "ellipse" | "corners" | string;
+	mask?: "ellipse" | "corners" | string
 	/**
 	 * Maximum height
 	 *
@@ -2931,7 +2815,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/max-height
 	 */
-	maxH?: number;
+	maxH?: number
 	/**
 	 * Maximum height
 	 *
@@ -2941,7 +2825,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/max-height
 	 */
-	maxHeight?: number;
+	maxHeight?: number
 	/**
 	 * Maximum width
 	 *
@@ -2951,7 +2835,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/max-width
 	 */
-	maxW?: number;
+	maxW?: number
 	/**
 	 * Maximum width
 	 *
@@ -2961,7 +2845,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/max-width
 	 */
-	maxWidth?: number;
+	maxWidth?: number
 	/**
 	 * Minimum height
 	 *
@@ -2971,7 +2855,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/min-height
 	 */
-	minH?: number;
+	minH?: number
 	/**
 	 * Minimum height
 	 *
@@ -2981,7 +2865,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/min-height
 	 */
-	minHeight?: number;
+	minHeight?: number
 	/**
 	 * Minimum width
 	 *
@@ -2991,7 +2875,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/min-width
 	 */
-	minW?: number;
+	minW?: number
 	/**
 	 * Minimum width
 	 *
@@ -3001,7 +2885,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/min-width
 	 */
-	minWidth?: number;
+	minWidth?: number
 	/**
 	 * Monochrome
 	 *
@@ -3011,7 +2895,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/monochrome
 	 */
-	monochrome?: string | ColorKeyword;
+	monochrome?: string | ColorKeyword
 	/**
 	 * Monochrome
 	 *
@@ -3021,27 +2905,25 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/monochrome
 	 */
-	mono?: string | ColorKeyword;
+	mono?: string | ColorKeyword
 	/**
 	 * Noise reduction bound
 	 *
 	 * Reduces the noise in an image.
 	 *
 	 * @defaultValue `20`
-	 *
 	 * @see https://docs.imgix.com/apis/url/noise-reduction/nr
 	 */
-	nr?: number;
+	nr?: number
 	/**
 	 * Noise reduction sharpen
 	 *
 	 * Provides a threshold by which to sharpen an image.
 	 *
 	 * @defaultValue `20`
-	 *
 	 * @see https://docs.imgix.com/apis/url/noise-reduction/nrs
 	 */
-	nrs?: number;
+	nrs?: number
 	/**
 	 * Orientation
 	 *
@@ -3051,7 +2933,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/rotation/orient
 	 */
-	orient?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 90 | 180 | 270;
+	orient?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 90 | 180 | 270
 	/**
 	 * Orientation
 	 *
@@ -3061,7 +2943,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/rotation/orient
 	 */
-	or?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 90 | 180 | 270;
+	or?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 90 | 180 | 270
 	/**
 	 * Padding bottom
 	 *
@@ -3069,7 +2951,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/pad-bottom
 	 */
-	padBottom?: number;
+	padBottom?: number
 	/**
 	 * Padding left
 	 *
@@ -3077,7 +2959,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/pad-left
 	 */
-	padLeft?: number;
+	padLeft?: number
 	/**
 	 * Padding right
 	 *
@@ -3085,7 +2967,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/pad-right
 	 */
-	padRight?: number;
+	padRight?: number
 	/**
 	 * Padding top
 	 *
@@ -3093,27 +2975,25 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/pad-top
 	 */
-	padTop?: number;
+	padTop?: number
 	/**
 	 * Padding
 	 *
 	 * Pads an image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/border-and-padding/pad
 	 */
-	pad?: number;
+	pad?: number
 	/**
 	 * Pdf page number
 	 *
 	 * Selects a page from a PDF for display.
 	 *
 	 * @defaultValue `1`
-	 *
 	 * @see https://docs.imgix.com/apis/url/pdf/page
 	 */
-	page?: number;
+	page?: number
 	/**
 	 * Color palette extraction
 	 *
@@ -3121,7 +3001,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/color-palette/palette
 	 */
-	palette?: "css" | "json";
+	palette?: "css" | "json"
 	/**
 	 * Pdf annotation
 	 *
@@ -3130,10 +3010,9 @@ export interface ImgixURLParams {
 	 * Aliases: `annotation`
 	 *
 	 * @defaultValue `true`
-	 *
 	 * @see https://docs.imgix.com/apis/url/pdf/pdf-annotation
 	 */
-	pdfAnnotation?: boolean;
+	pdfAnnotation?: boolean
 	/**
 	 * Pdf annotation
 	 *
@@ -3142,40 +3021,36 @@ export interface ImgixURLParams {
 	 * Alias for: `pdfAnnotation`
 	 *
 	 * @defaultValue `true`
-	 *
 	 * @see https://docs.imgix.com/apis/url/pdf/pdf-annotation
 	 */
-	annotation?: boolean;
+	annotation?: boolean
 	/**
 	 * Css prefix
 	 *
 	 * Specifies a CSS prefix for all classes in palette-extraction.
 	 *
 	 * @defaultValue `"image"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/color-palette/prefix
 	 */
-	prefix?: string;
+	prefix?: string
 	/**
 	 * Pixellate
 	 *
 	 * Applies a pixelation effect to an image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/px
 	 */
-	px?: number;
+	px?: number
 	/**
 	 * Output quality
 	 *
 	 * Adjusts the quality of an output image.
 	 *
 	 * @defaultValue `75`
-	 *
 	 * @see https://docs.imgix.com/apis/url/format/q
 	 */
-	q?: number;
+	q?: number
 	/**
 	 * Source rectangle region
 	 *
@@ -3188,7 +3063,7 @@ export interface ImgixURLParams {
 		number | "top" | "middle" | "bottom",
 		number,
 		number,
-	];
+	]
 	/**
 	 * Reverse
 	 *
@@ -3196,63 +3071,58 @@ export interface ImgixURLParams {
 	 *
 	 * @defaultValue `false`
 	 */
-	reverse?: boolean;
+	reverse?: boolean
 	/**
 	 * Rotation
 	 *
 	 * Rotates an image by a specified number of degrees.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/rotation/rot
 	 */
-	rot?: number;
+	rot?: number
 	/**
 	 * Saturation
 	 *
 	 * Adjusts the saturation of an image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/sat
 	 */
-	sat?: number;
+	sat?: number
 	/**
 	 * Sepia tone
 	 *
 	 * Applies a sepia effect to an image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/stylize/sepia
 	 */
-	sepia?: number;
+	sepia?: number
 	/**
 	 * Shadow
 	 *
 	 * Adjusts the highlights of the source image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/shad
 	 */
-	shad?: number;
+	shad?: number
 	/**
 	 * Sharpen
 	 *
 	 * Adjusts the sharpness of the source image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/sharp
 	 */
-	sharp?: number;
+	sharp?: number
 	/**
 	 * Frame skip
 	 *
 	 * Skips every Nth frame starting with the first frame.
 	 */
-	skip?: number;
+	skip?: number
 	/**
 	 * Sanitize svg
 	 *
@@ -3260,7 +3130,7 @@ export interface ImgixURLParams {
 	 *
 	 * @defaultValue `true`
 	 */
-	svgSanitize?: boolean;
+	svgSanitize?: boolean
 	/**
 	 * Transparency
 	 *
@@ -3268,7 +3138,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/fill/transparency
 	 */
-	transparency?: "grid";
+	transparency?: "grid"
 	/**
 	 * Trim color
 	 *
@@ -3278,7 +3148,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-color
 	 */
-	trimColor?: string | ColorKeyword;
+	trimColor?: string | ColorKeyword
 	/**
 	 * Trim color
 	 *
@@ -3288,7 +3158,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-color
 	 */
-	trimcolor?: string | ColorKeyword;
+	trimcolor?: string | ColorKeyword
 	/**
 	 * Trim mean difference
 	 *
@@ -3297,10 +3167,9 @@ export interface ImgixURLParams {
 	 * Aliases: `trimmd`
 	 *
 	 * @defaultValue `11`
-	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-md
 	 */
-	trimMd?: number;
+	trimMd?: number
 	/**
 	 * Trim mean difference
 	 *
@@ -3309,10 +3178,9 @@ export interface ImgixURLParams {
 	 * Alias for: `trimMd`
 	 *
 	 * @defaultValue `11`
-	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-md
 	 */
-	trimmd?: number;
+	trimmd?: number
 	/**
 	 * Trim padding
 	 *
@@ -3321,10 +3189,9 @@ export interface ImgixURLParams {
 	 * Aliases: `trimpad`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-pad
 	 */
-	trimPad?: number;
+	trimPad?: number
 	/**
 	 * Trim padding
 	 *
@@ -3333,10 +3200,9 @@ export interface ImgixURLParams {
 	 * Alias for: `trimPad`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-pad
 	 */
-	trimpad?: number;
+	trimpad?: number
 	/**
 	 * Trim standard deviation
 	 *
@@ -3345,10 +3211,9 @@ export interface ImgixURLParams {
 	 * Aliases: `trimsd`
 	 *
 	 * @defaultValue `10`
-	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-sd
 	 */
-	trimSd?: number;
+	trimSd?: number
 	/**
 	 * Trim standard deviation
 	 *
@@ -3357,10 +3222,9 @@ export interface ImgixURLParams {
 	 * Alias for: `trimSd`
 	 *
 	 * @defaultValue `10`
-	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-sd
 	 */
-	trimsd?: number;
+	trimsd?: number
 	/**
 	 * Trim tolerance
 	 *
@@ -3369,10 +3233,9 @@ export interface ImgixURLParams {
 	 * Aliases: `trimtol`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-tol
 	 */
-	trimTol?: number;
+	trimTol?: number
 	/**
 	 * Trim tolerance
 	 *
@@ -3381,10 +3244,9 @@ export interface ImgixURLParams {
 	 * Alias for: `trimTol`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim-tol
 	 */
-	trimtol?: number;
+	trimtol?: number
 	/**
 	 * Trim image
 	 *
@@ -3392,40 +3254,37 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/trim/trim
 	 */
-	trim?: "auto" | "color";
+	trim?: "auto" | "color"
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative to the
-	 * base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the base image.
 	 *
 	 * Aliases: `txtalign`, `ta`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-align
 	 */
-	txtAlign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	txtAlign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[]
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative to the
-	 * base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the base image.
 	 *
 	 * Alias for: `txtAlign`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-align
 	 */
-	txtalign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	txtalign?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[]
 	/**
 	 * Text align
 	 *
-	 * Sets the vertical and horizontal alignment of rendered text relative to the
-	 * base image.
+	 * Sets the vertical and horizontal alignment of rendered text relative to the base image.
 	 *
 	 * Alias for: `txtAlign`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-align
 	 */
-	ta?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[];
+	ta?: ("top" | "middle" | "bottom" | "left" | "center" | "right")[]
 	/**
 	 * Text clipping mode
 	 *
@@ -3434,10 +3293,9 @@ export interface ImgixURLParams {
 	 * Aliases: `txtclip`, `tcl`
 	 *
 	 * @defaultValue `"end"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-clip
 	 */
-	txtClip?: ("start" | "middle" | "end" | "ellipsis")[];
+	txtClip?: ("start" | "middle" | "end" | "ellipsis")[]
 	/**
 	 * Text clipping mode
 	 *
@@ -3446,10 +3304,9 @@ export interface ImgixURLParams {
 	 * Alias for: `txtClip`
 	 *
 	 * @defaultValue `"end"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-clip
 	 */
-	txtclip?: ("start" | "middle" | "end" | "ellipsis")[];
+	txtclip?: ("start" | "middle" | "end" | "ellipsis")[]
 	/**
 	 * Text clipping mode
 	 *
@@ -3458,10 +3315,9 @@ export interface ImgixURLParams {
 	 * Alias for: `txtClip`
 	 *
 	 * @defaultValue `"end"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-clip
 	 */
-	tcl?: ("start" | "middle" | "end" | "ellipsis")[];
+	tcl?: ("start" | "middle" | "end" | "ellipsis")[]
 	/**
 	 * Text color
 	 *
@@ -3471,7 +3327,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-color
 	 */
-	txtColor?: string | ColorKeyword;
+	txtColor?: string | ColorKeyword
 	/**
 	 * Text color
 	 *
@@ -3481,7 +3337,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-color
 	 */
-	txtcolor?: string | ColorKeyword;
+	txtcolor?: string | ColorKeyword
 	/**
 	 * Text color
 	 *
@@ -3491,7 +3347,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-color
 	 */
-	txtClr?: string | ColorKeyword;
+	txtClr?: string | ColorKeyword
 	/**
 	 * Text color
 	 *
@@ -3501,7 +3357,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-color
 	 */
-	txtclr?: string | ColorKeyword;
+	txtclr?: string | ColorKeyword
 	/**
 	 * Text color
 	 *
@@ -3511,7 +3367,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-color
 	 */
-	tc?: string | ColorKeyword;
+	tc?: string | ColorKeyword
 	/**
 	 * Text fit mode
 	 *
@@ -3521,7 +3377,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-fit
 	 */
-	txtFit?: "max";
+	txtFit?: "max"
 	/**
 	 * Text fit mode
 	 *
@@ -3531,7 +3387,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-fit
 	 */
-	txtfit?: "max";
+	txtfit?: "max"
 	/**
 	 * Text font
 	 *
@@ -3541,7 +3397,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-font
 	 */
-	txtFont?: Font;
+	txtFont?: Font
 	/**
 	 * Text font
 	 *
@@ -3551,7 +3407,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-font
 	 */
-	tf?: Font;
+	tf?: Font
 	/**
 	 * Text font
 	 *
@@ -3561,33 +3417,29 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-font
 	 */
-	txtfont?: Font;
+	txtfont?: Font
 	/**
 	 * Text leading
 	 *
-	 * Sets the leading (line spacing) for rendered text. Only works on the
-	 * multi-line text endpoint.
+	 * Sets the leading (line spacing) for rendered text. Only works on the multi-line text endpoint.
 	 *
 	 * Aliases: `txtlead`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/typesetting/txt-lead
 	 */
-	txtLead?: number;
+	txtLead?: number
 	/**
 	 * Text leading
 	 *
-	 * Sets the leading (line spacing) for rendered text. Only works on the
-	 * multi-line text endpoint.
+	 * Sets the leading (line spacing) for rendered text. Only works on the multi-line text endpoint.
 	 *
 	 * Alias for: `txtLead`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/typesetting/txt-lead
 	 */
-	txtlead?: number;
+	txtlead?: number
 	/**
 	 * Text outline color
 	 *
@@ -3596,10 +3448,9 @@ export interface ImgixURLParams {
 	 * Aliases: `txtlinecolor`, `txtLineClr`, `txtlineclr`
 	 *
 	 * @defaultValue `"fff"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line-color
 	 */
-	txtLineColor?: string | ColorKeyword;
+	txtLineColor?: string | ColorKeyword
 	/**
 	 * Text outline color
 	 *
@@ -3608,10 +3459,9 @@ export interface ImgixURLParams {
 	 * Alias for: `txtLineColor`
 	 *
 	 * @defaultValue `"fff"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line-color
 	 */
-	txtlinecolor?: string | ColorKeyword;
+	txtlinecolor?: string | ColorKeyword
 	/**
 	 * Text outline color
 	 *
@@ -3620,10 +3470,9 @@ export interface ImgixURLParams {
 	 * Alias for: `txtLineColor`
 	 *
 	 * @defaultValue `"fff"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line-color
 	 */
-	txtLineClr?: string | ColorKeyword;
+	txtLineClr?: string | ColorKeyword
 	/**
 	 * Text outline color
 	 *
@@ -3632,10 +3481,9 @@ export interface ImgixURLParams {
 	 * Alias for: `txtLineColor`
 	 *
 	 * @defaultValue `"fff"`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line-color
 	 */
-	txtlineclr?: string | ColorKeyword;
+	txtlineclr?: string | ColorKeyword
 	/**
 	 * Text outline
 	 *
@@ -3644,10 +3492,9 @@ export interface ImgixURLParams {
 	 * Aliases: `txtline`, `tl`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line
 	 */
-	txtLine?: number;
+	txtLine?: number
 	/**
 	 * Text outline
 	 *
@@ -3656,10 +3503,9 @@ export interface ImgixURLParams {
 	 * Alias for: `txtLine`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line
 	 */
-	txtline?: number;
+	txtline?: number
 	/**
 	 * Text outline
 	 *
@@ -3668,43 +3514,42 @@ export interface ImgixURLParams {
 	 * Alias for: `txtLine`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-line
 	 */
-	tl?: number;
+	tl?: number
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a textbox and
-	 * the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and the edges of the
+	 * base image.
 	 *
 	 * Aliases: `txtpad`, `tp`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-pad
 	 */
-	txtPad?: number;
+	txtPad?: number
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a textbox and
-	 * the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and the edges of the
+	 * base image.
 	 *
 	 * Alias for: `txtPad`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-pad
 	 */
-	txtpad?: number;
+	txtpad?: number
 	/**
 	 * Text padding
 	 *
-	 * Specifies the padding (in device-independent pixels) between a textbox and
-	 * the edges of the base image.
+	 * Specifies the padding (in device-independent pixels) between a textbox and the edges of the
+	 * base image.
 	 *
 	 * Alias for: `txtPad`
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-pad
 	 */
-	tp?: number;
+	tp?: number
 	/**
 	 * Text shadow
 	 *
@@ -3713,10 +3558,9 @@ export interface ImgixURLParams {
 	 * Aliases: `txtshad`, `tsh`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-shad
 	 */
-	txtShad?: number;
+	txtShad?: number
 	/**
 	 * Text shadow
 	 *
@@ -3725,10 +3569,9 @@ export interface ImgixURLParams {
 	 * Alias for: `txtShad`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-shad
 	 */
-	txtshad?: number;
+	txtshad?: number
 	/**
 	 * Text shadow
 	 *
@@ -3737,10 +3580,9 @@ export interface ImgixURLParams {
 	 * Alias for: `txtShad`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-shad
 	 */
-	tsh?: number;
+	tsh?: number
 	/**
 	 * Text font size
 	 *
@@ -3749,10 +3591,9 @@ export interface ImgixURLParams {
 	 * Aliases: `tsz`, `txtsize`
 	 *
 	 * @defaultValue `12`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-size
 	 */
-	txtSize?: number;
+	txtSize?: number
 	/**
 	 * Text font size
 	 *
@@ -3761,10 +3602,9 @@ export interface ImgixURLParams {
 	 * Alias for: `txtSize`
 	 *
 	 * @defaultValue `12`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-size
 	 */
-	tsz?: number;
+	tsz?: number
 	/**
 	 * Text font size
 	 *
@@ -3773,49 +3613,45 @@ export interface ImgixURLParams {
 	 * Alias for: `txtSize`
 	 *
 	 * @defaultValue `12`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-size
 	 */
-	txtsize?: number;
+	txtsize?: number
 	/**
 	 * Text tracking
 	 *
-	 * Sets the tracking (letter spacing) for rendered text. Only works on the
-	 * multi-line text endpoint.
+	 * Sets the tracking (letter spacing) for rendered text. Only works on the multi-line text
+	 * endpoint.
 	 *
 	 * Aliases: `txttrack`, `tt`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/typesetting/txt-track
 	 */
-	txtTrack?: number;
+	txtTrack?: number
 	/**
 	 * Text tracking
 	 *
-	 * Sets the tracking (letter spacing) for rendered text. Only works on the
-	 * multi-line text endpoint.
+	 * Sets the tracking (letter spacing) for rendered text. Only works on the multi-line text
+	 * endpoint.
 	 *
 	 * Alias for: `txtTrack`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/typesetting/txt-track
 	 */
-	txttrack?: number;
+	txttrack?: number
 	/**
 	 * Text tracking
 	 *
-	 * Sets the tracking (letter spacing) for rendered text. Only works on the
-	 * multi-line text endpoint.
+	 * Sets the tracking (letter spacing) for rendered text. Only works on the multi-line text
+	 * endpoint.
 	 *
 	 * Alias for: `txtTrack`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/typesetting/txt-track
 	 */
-	tt?: number;
+	tt?: number
 	/**
 	 * Text width
 	 *
@@ -3825,7 +3661,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-width
 	 */
-	txtWidth?: number;
+	txtWidth?: number
 	/**
 	 * Text width
 	 *
@@ -3835,59 +3671,55 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-width
 	 */
-	txtwidth?: number;
+	txtwidth?: number
 	/**
 	 * Text x position
 	 *
-	 * Sets the horizontal (x) position of the text in pixels relative to the left
-	 * edge of the base image.
+	 * Sets the horizontal (x) position of the text in pixels relative to the left edge of the base
+	 * image.
 	 *
 	 * Aliases: `txtx`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-x
 	 */
-	txtX?: number;
+	txtX?: number
 	/**
 	 * Text x position
 	 *
-	 * Sets the horizontal (x) position of the text in pixels relative to the left
-	 * edge of the base image.
+	 * Sets the horizontal (x) position of the text in pixels relative to the left edge of the base
+	 * image.
 	 *
 	 * Alias for: `txtX`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-x
 	 */
-	txtx?: number;
+	txtx?: number
 	/**
 	 * Text y position
 	 *
-	 * Sets the vertical (y) position of the text in pixels relative to the top
-	 * edge of the base image.
+	 * Sets the vertical (y) position of the text in pixels relative to the top edge of the base
+	 * image.
 	 *
 	 * Aliases: `txty`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-y
 	 */
-	txtY?: number;
+	txtY?: number
 	/**
 	 * Text y position
 	 *
-	 * Sets the vertical (y) position of the text in pixels relative to the top
-	 * edge of the base image.
+	 * Sets the vertical (y) position of the text in pixels relative to the top edge of the base
+	 * image.
 	 *
 	 * Alias for: `txtY`
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt-y
 	 */
-	txty?: number;
+	txty?: number
 	/**
 	 * Text string
 	 *
@@ -3897,7 +3729,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt
 	 */
-	txt?: string;
+	txt?: string
 	/**
 	 * Text string
 	 *
@@ -3907,57 +3739,52 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/text/txt
 	 */
-	t?: string;
+	t?: string
 	/**
 	 * Super resolution fallback
 	 *
 	 * Overrides default fallback behavior for super resolution failures
 	 *
 	 * @defaultValue `true`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/super-resolution/upscale-fallback
 	 */
-	upscaleFallback?: boolean;
+	upscaleFallback?: boolean
 	/**
 	 * Super resolution
 	 *
 	 * Uses generative AI fill to upscale low resolution images.
 	 *
 	 * @defaultValue `false`
-	 *
 	 * @see https://docs.imgix.com/apis/rendering/super-resolution/upscale
 	 */
-	upscale?: boolean;
+	upscale?: boolean
 	/**
 	 * Unsharp mask
 	 *
 	 * Sharpens the source image using an unsharp mask.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/usm
 	 */
-	usm?: number;
+	usm?: number
 	/**
 	 * Unsharp mask radius
 	 *
 	 * Specifies the radius for an unsharp mask operation.
 	 *
 	 * @defaultValue `2.5`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/usmrad
 	 */
-	usmrad?: number;
+	usmrad?: number
 	/**
 	 * Vibrance
 	 *
 	 * Adjusts the vibrance of an image.
 	 *
 	 * @defaultValue `0`
-	 *
 	 * @see https://docs.imgix.com/apis/url/adjustment/vib
 	 */
-	vib?: number;
+	vib?: number
 	/**
 	 * Image width
 	 *
@@ -3967,7 +3794,7 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/w
 	 */
-	w?: number;
+	w?: number
 	/**
 	 * Image width
 	 *
@@ -3977,14 +3804,14 @@ export interface ImgixURLParams {
 	 *
 	 * @see https://docs.imgix.com/apis/url/size/w
 	 */
-	width?: number;
+	width?: number
 	/**
 	 * Signed URL hash
 	 *
-	 * Secure a URL to prevent URL parameter changes. Note that this parameter
-	 * requires a secret token and should only be generated on a server.
+	 * Secure a URL to prevent URL parameter changes. Note that this parameter requires a secret token
+	 * and should only be generated on a server.
 	 *
 	 * @see https://docs.imgix.com/setup/securing-images
 	 */
-	s?: string;
+	s?: string
 }

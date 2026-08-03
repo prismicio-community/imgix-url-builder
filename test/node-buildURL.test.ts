@@ -1,8 +1,8 @@
-import test from "ava";
+import { expect, it } from "vitest"
 
-import { buildURL as nodeBuildURL } from "../src/node";
-import { buildURL as rootBuildURL } from "../src/node";
+import { buildURL as rootBuildURL } from "../src"
+import { buildURL as nodeBuildURL } from "../src/node"
 
-test("the node entry's buildURL is an alias for the root entry's buildURL", (t) => {
-	t.is(nodeBuildURL, rootBuildURL);
-});
+it("the node entry's buildURL is an alias for the root entry's buildURL", () => {
+	expect(nodeBuildURL).toBe(rootBuildURL)
+})
