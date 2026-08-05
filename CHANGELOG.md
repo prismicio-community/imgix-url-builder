@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.0.7](https://github.com/prismicio-community/imgix-url-builder/compare/v0.0.6...v0.0.7) (2026-08-05)
+
+
+### Bug Fixes
+
+* ignore `h` and `height` in `buildWidthSrcSet` ([faf8755](https://github.com/prismicio-community/imgix-url-builder/commit/faf875520558307f0c0c7ca490d4c64bbb9f0b26))
+
 ### [0.0.6](https://github.com/prismicio-community/imgix-url-builder/compare/v0.0.5...v0.0.6) (2025-03-31)
 
 ### Bug Fixes
