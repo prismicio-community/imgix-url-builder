@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-node@v6
         if: steps.release.outputs.release_created == 'true'
         with:
-          node-version: 24
+          node-version: 26
           registry-url: "https://registry.npmjs.org"
       - if: steps.release.outputs.release_created == 'true'
         run: npm ci
@@ -51,7 +51,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: 26
           registry-url: "https://registry.npmjs.org"
 
       # Canary
