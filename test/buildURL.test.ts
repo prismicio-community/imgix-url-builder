@@ -1,93 +1,93 @@
-import test from "ava";
+import { expect, it } from "vitest"
 
-import { buildURL } from "../src";
+import { buildURL } from "../src"
 
-test("builds URL with params", (t) => {
-	const source = "https://example.com/image.png";
+it("builds URL with params", () => {
+	const source = "https://example.com/image.png"
 	const actual = buildURL(source, {
 		width: 400,
-	});
-	const expected = "https://example.com/image.png?width=400";
+	})
+	const expected = "https://example.com/image.png?width=400"
 
-	t.is(actual, expected);
-});
+	expect(actual).toBe(expected)
+})
 
-test("retains existing params", (t) => {
-	const source = "https://example.com/image.png?width=400";
+it("retains existing params", () => {
+	const source = "https://example.com/image.png?width=400"
 	const actual = buildURL(source, {
 		height: 300,
-	});
-	const expected = "https://example.com/image.png?width=400&height=300";
+	})
+	const expected = "https://example.com/image.png?width=400&height=300"
 
-	t.is(actual, expected);
-});
+	expect(actual).toBe(expected)
+})
 
-test("overrides existing params", (t) => {
-	const source = "https://example.com/image.png?width=400";
+it("overrides existing params", () => {
+	const source = "https://example.com/image.png?width=400"
 	const actual = buildURL(source, {
 		width: 800,
-	});
-	const expected = "https://example.com/image.png?width=800";
+	})
+	const expected = "https://example.com/image.png?width=800"
 
-	t.is(actual, expected);
-});
+	expect(actual).toBe(expected)
+})
 
-test("undefined params are not included", (t) => {
-	const source = "https://example.com/image.png?width=400";
+it("undefined params are not included", () => {
+	const source = "https://example.com/image.png?width=400"
 	const actual = buildURL(source, {
 		height: undefined,
-	});
-	const expected = "https://example.com/image.png?width=400";
+	})
+	const expected = "https://example.com/image.png?width=400"
 
-	t.is(actual, expected);
-});
+	expect(actual).toBe(expected)
+})
 
-test("clears existing params if set to undefined", (t) => {
-	const source = "https://example.com/image.png?width=400&height=300";
+it("clears existing params if set to undefined", () => {
+	const source = "https://example.com/image.png?width=400&height=300"
 	const actual = buildURL(source, {
 		height: undefined,
-	});
-	const expected = "https://example.com/image.png?width=400";
+	})
+	const expected = "https://example.com/image.png?width=400"
 
-	t.is(actual, expected);
-});
+	expect(actual).toBe(expected)
+})
 
-test("supports numeric params", (t) => {
-	const source = "https://example.com/image.png";
+it("supports numeric params", () => {
+	const source = "https://example.com/image.png"
 	const actual = buildURL(source, {
 		sat: -100,
-	});
-	const expected = "https://example.com/image.png?sat=-100";
+	})
+	const expected = "https://example.com/image.png?sat=-100"
 
-	t.is(actual, expected);
-});
+	expect(actual).toBe(expected)
+})
 
-test("supports array params", (t) => {
-	const source = "https://example.com/image.png";
+it("supports array params", () => {
+	const source = "https://example.com/image.png"
 	const actual = buildURL(source, {
 		auto: ["format", "compress"],
-	});
-	const expected = "https://example.com/image.png?auto=format%2Ccompress";
+	})
+	const expected = "https://example.com/image.png?auto=format%2Ccompress"
 
-	t.is(actual, expected);
-});
+	expect(actual).toBe(expected)
+})
 
-test("supports `s` param", (t) => {
-	const source = "https://example.com/image.png";
+it("supports `s` param", () => {
+	const source = "https://example.com/image.png"
 	const actual = buildURL(source, {
 		s: "an-md5-signature",
-	});
-	const expected = "https://example.com/image.png?s=an-md5-signature";
+	})
+	const expected = "https://example.com/image.png?s=an-md5-signature"
 
-	t.is(actual, expected);
-});
+	expect(actual).toBe(expected)
+})
 
-test("converts camelCased params to param-case", (t) => {
-	const source = "https://example.com/image.png";
+it("converts camelCased params to param-case", () => {
+	const source = "https://example.com/image.png"
 	const actual = buildURL(source, {
 		maxWidth: 400,
-	});
-	const expected = "https://example.com/image.png?max-width=400";
+	})
+	const expected = "https://example.com/image.png?max-width=400"
 
-	t.is(actual, expected);
-});
+	expect(actual).toBe(expected)
+})

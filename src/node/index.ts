@@ -1,5 +1,5 @@
 // Re-exports of the root entry.
-export { buildURL } from "../buildURL";
+export { buildURL } from "../buildURL"
 
 // Node.js-specific exports
 //
@@ -7,13 +7,13 @@ export { buildURL } from "../buildURL";
 // They may contain Node.js-specific code or should not be run in a
 // client-facing environment.
 
-export { SecureClient } from "./SecureClient";
-export type { SecureClientOptions } from "./SecureClient";
+export { SecureClient } from "./SecureClient"
+export type { SecureClientOptions } from "./SecureClient"
 
-export { buildSignedURL } from "./buildSignedURL";
+export { buildSignedURL } from "./buildSignedURL"
 
-export { buildSignedWidthSrcSet } from "./buildSignedWidthSrcSet";
+export { buildSignedWidthSrcSet } from "./buildSignedWidthSrcSet"
 
-export { buildSignedPixelDensitySrcSet } from "./buildSignedPixelDensitySrcSet";
+export { buildSignedPixelDensitySrcSet } from "./buildSignedPixelDensitySrcSet"
 
-export { signURL } from "./signURL";
+export { signURL } from "./signURL"
