@@ -1,5 +1,5 @@
 ---
-name: "\U0001F64B\u200D♀️ Feature request"
+name: 🙋‍♀️ Feature request
 about: Suggest an idea or enhancement for the package.
 title: ""
 labels: "enhancement"
