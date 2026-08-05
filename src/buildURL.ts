@@ -4,7 +4,7 @@ import type { ImgixURLParams } from "./types.generated"
  * Converts a camel case string to a param case string.
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	camelCaseToParamCase("fooBar")
  * 	// => 'foo-bar'
  * 	```
@@ -27,7 +27,7 @@ const camelCaseToParamCase = (input: string): string => {
  * the parameter to `undefined` in the `params` argument.
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const url = buildURL("https://example.imgix.net/image.png", {
  * 		width: 400,
  * 	})
@@ -35,7 +35,7 @@ const camelCaseToParamCase = (input: string): string => {
  * 	```
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const url = buildURL("https://example.imgix.net/image.png?width=400", {
  * 		height: 300,
  * 	})

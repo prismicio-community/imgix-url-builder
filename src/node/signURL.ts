@@ -1,4 +1,4 @@
-import { createHash } from "crypto"
+import { createHash } from "node:crypto"
 
 /**
  * Signs an Imgix image URL by appending a signature to the URL parameters. This locks the URL and
@@ -8,7 +8,7 @@ import { createHash } from "crypto"
  * The `secureURLToken` parameter is a secret and should not be exposed to the public.
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const url = signURL("https://example.imgix.net/image.png?width=400", "example-token")
  * 	// => https://example.imgix.net/image.png?width=400&s=def3e221c3f4c4debda091b8e49420ea
  * 	```

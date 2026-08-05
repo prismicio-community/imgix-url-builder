@@ -7,7 +7,7 @@ export type BuildPixelDensitySrcSetParams = Omit<ImgixURLParams, "dpr"> & {
 	 * The pixel densities to include in the resulting `srcset` value.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	;[1, 2, 3]
 	 * 	```
 	 */
@@ -22,7 +22,7 @@ export type BuildPixelDensitySrcSetParams = Omit<ImgixURLParams, "dpr"> & {
  * to the `params` parameter, it will be ignored.
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const srcset = buildPixelDensitySrcSet("https://example.imgix.net/image.png", {
  * 		pixelDensities: [1, 2, 3],
  * 	})
@@ -32,7 +32,7 @@ export type BuildPixelDensitySrcSetParams = Omit<ImgixURLParams, "dpr"> & {
  * 	```
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const srcset = buildPixelDensitySrcSet("https://example.imgix.net/image.png", {
  * 		pixelDensities: [1, 2, 3],
  * 		sat: -100,

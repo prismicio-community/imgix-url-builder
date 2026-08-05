@@ -59,17 +59,17 @@
 		"test": "npm run lint && npm run types && npm run unit && npm run build"
 	},
 	"devDependencies": {
-		"@types/node": "^22.15.0",
-		"@vitest/coverage-v8": "^4.1.2",
-		"imgix-url-params": "^11.23.0",
-		"oxfmt": "^0.43.0",
-		"oxlint": "^1.58.0",
-		"prettier": "^3.3.3",
-		"ts-morph": "^23.0.0",
-		"tsdown": "^0.21.7",
-		"tsx": "^4.16.2",
-		"typescript": "^6.0.2",
-		"vitest": "^4.1.2"
+		"@types/node": "^26.1.2",
+		"@vitest/coverage-v8": "^4.1.10",
+		"imgix-url-params": "^11.36.0",
+		"oxfmt": "^0.62.0",
+		"oxlint": "^1.77.0",
+		"prettier": "^3.9.6",
+		"ts-morph": "^28.0.0",
+		"tsdown": "^0.22.14",
+		"tsx": "^4.23.6",
+		"typescript": "^7.0.2",
+		"vitest": "^4.1.10"
 	},
 	"engines": {
 		"node": ">=20"

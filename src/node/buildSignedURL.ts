@@ -16,7 +16,7 @@ import { signURL } from "./signURL"
  * The `secureURLToken` parameter is a secret and should not be exposed to the public.
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const url = buildSignedURL("https://example.imgix.net/image.png", "example-token", {
  * 		width: 400,
  * 	})
@@ -24,7 +24,7 @@ import { signURL } from "./signURL"
  * 	```
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const url = buildSignedURL("https://example.imgix.net/image.png?width=400", "example-token", {
  * 		height: 300,
  * 	})

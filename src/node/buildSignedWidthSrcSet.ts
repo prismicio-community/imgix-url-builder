@@ -13,7 +13,7 @@ import { buildSignedURL } from "./buildSignedURL"
  * The `secureURLToken` parameter is a secret and should not be exposed to the public.
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const srcset = buildSignedWidthSrcSet("https://example.imgix.net/image.png", "example-token", {
  * 		widths: [400, 800, 1600],
  * 	})
@@ -23,7 +23,7 @@ import { buildSignedURL } from "./buildSignedURL"
  * 	```
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const srcset = buildSignedWidthSrcSet("https://example.imgix.net/image.png", "example-token", {
  * 		widths: [400, 800, 1600],
  * 		sat: -100,

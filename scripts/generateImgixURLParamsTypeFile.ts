@@ -11,7 +11,7 @@ export const BLANK_LINE_IDENTIFIER = "// ___BLANK_LINE_TO_BE_REPLACED___"
  * Converts a param case string to a camel case string.
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	paramCaseToCamelCase("foo-bar")
  * 	// => 'fooBar'
  * 	```

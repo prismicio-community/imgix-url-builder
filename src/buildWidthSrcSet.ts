@@ -7,7 +7,7 @@ export type BuildWidthSrcSetParams = Omit<ImgixURLParams, "width" | "w" | "heigh
 	 * The pixel widths to include in the resulting `srcset` value.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	;[400, 800, 1600]
 	 * 	```
 	 */
@@ -24,7 +24,7 @@ export type BuildWidthSrcSetParams = Omit<ImgixURLParams, "width" | "w" | "heigh
  * ratio.
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const srcset = buildWidthSrcSet("https://example.imgix.net/image.png", {
  * 		widths: [400, 800, 1600],
  * 	})
@@ -34,7 +34,7 @@ export type BuildWidthSrcSetParams = Omit<ImgixURLParams, "width" | "w" | "heigh
  * 	```
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const srcset = buildWidthSrcSet("https://example.imgix.net/image.png", {
  * 		widths: [400, 800, 1600],
  * 		sat: -100,

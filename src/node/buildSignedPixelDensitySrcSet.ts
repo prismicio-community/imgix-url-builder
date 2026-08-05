@@ -14,7 +14,7 @@ import { buildSignedURL } from "./buildSignedURL"
  * The `secureURLToken` parameter is a secret and should not be exposed to the public.
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const srcset = buildSignedPixelDensitySrcSet(
  * 		"https://example.imgix.net/image.png",
  * 		"example-token",
@@ -26,7 +26,7 @@ import { buildSignedURL } from "./buildSignedURL"
  * 	```
  *
  * @example
- * 	```ts
+ * 	;```ts
  * 	const srcset = buildSignedPixelDensitySrcSet(
  * 		"https://example.imgix.net/image.png",
  * 		"example-token",

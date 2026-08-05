@@ -67,7 +67,7 @@ export class SecureClient {
 	 * `buildWebProxyURL()`.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -90,7 +90,7 @@ export class SecureClient {
 	 * Builds a URL to an Imgix image with Imgix URL API parameters for the client's base URL.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -100,7 +100,7 @@ export class SecureClient {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net/folder",
 	 * 		secureURLToken: "example-token",
@@ -124,7 +124,7 @@ export class SecureClient {
 	 * Note: The returned URL is not signed. See `buildSignedURL` if a signature is required.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -134,7 +134,7 @@ export class SecureClient {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net/folder",
 	 * 		secureURLToken: "example-token",
@@ -163,13 +163,13 @@ export class SecureClient {
 	 * set the parameter to `undefined` in the `params` argument.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const url = client.buildSignedURL("https://example.imgix.net/image.png", { width: 400 })
 	 * 	// => https://example.imgix.net/image.png?width=400&s=def3e221c3f4c4debda091b8e49420ea
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const url = client.buildSignedURL("https://example.imgix.net/image.png?width=400", {
 	 * 		height: 300,
 	 * 	})
@@ -191,7 +191,7 @@ export class SecureClient {
 	 * its parameters to the signature to prevent URL tampering.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const url = client.signURL("https://example.imgix.net/image.png?width=400")
 	 * 	// => https://example.imgix.net/image.png?width=400&s=def3e221c3f4c4debda091b8e49420ea
 	 * 	```
@@ -214,7 +214,7 @@ export class SecureClient {
 	 * parameter is provided to the `params` parameter, it will be ignored.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const srcset = client.buildSignedWidthSrcSet("https://example.imgix.net/image.png", {
 	 * 		widths: [400, 800, 1600],
 	 * 	})
@@ -224,7 +224,7 @@ export class SecureClient {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const srcset = client.buildSignedWidthSrcSet("https://example.imgix.net/image.png", {
 	 * 		widths: [400, 800, 1600],
 	 * 		sat: -100,
@@ -255,7 +255,7 @@ export class SecureClient {
 	 * required.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -269,7 +269,7 @@ export class SecureClient {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -303,7 +303,7 @@ export class SecureClient {
 	 * parameter is provided to the `params` parameter, it will be ignored.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -317,7 +317,7 @@ export class SecureClient {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -351,7 +351,7 @@ export class SecureClient {
 	 * provided to the `params` parameter, it will be ignored.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const srcset = client.buildSignedPixelDensitySrcSet("https://example.imgix.net/image.png", {
 	 * 		pixelDensities: [1, 2, 3],
 	 * 	})
@@ -361,7 +361,7 @@ export class SecureClient {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const srcset = client.buildSignedPixelDensitySrcSet("https://example.imgix.net/image.png", {
 	 * 		pixelDensities: [1, 2, 3],
 	 * 		sat: -100,
@@ -392,7 +392,7 @@ export class SecureClient {
 	 * required.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -406,7 +406,7 @@ export class SecureClient {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -440,7 +440,7 @@ export class SecureClient {
 	 * provided to the `params` parameter, it will be ignored.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",
@@ -454,7 +454,7 @@ export class SecureClient {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new SecureClient({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 		secureURLToken: "example-token",

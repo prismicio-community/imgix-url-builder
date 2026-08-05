@@ -38,14 +38,14 @@ export class Client {
 	 * Builds a URL to an Imgix image with Imgix URL API parameters for the client's base URL.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new Client({ baseURL: "https://example.imgix.net" })
 	 * 	const url = client.buildURLForPath("/image.png", { width: 400 })
 	 * 	// => https://example.imgix.net/image.png?width=400
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new Client({
 	 * 		baseURL: "https://example.imgix.net/folder",
 	 * 	})
@@ -70,7 +70,7 @@ export class Client {
 	 * parameter is provided to the `params` parameter, it will be ignored.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new Client({ baseURL: "https://example.imgix.net" })
 	 * 	const srcset = client.buildWidthSrcSetForPath("/image.png", {
 	 * 		widths: [400, 800, 1600],
@@ -81,7 +81,7 @@ export class Client {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new Client({
 	 * 		baseURL: "https://example.imgix.net",
 	 * 	})
@@ -112,7 +112,7 @@ export class Client {
 	 * provided to the `params` parameter, it will be ignored.
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new Client({ baseURL: "https://example.imgix.net" })
 	 * 	const srcset = client.buildPixelDensitySrcSetForPath("/image.png", {
 	 * 		pixelDensities: [1, 2, 3],
@@ -123,7 +123,7 @@ export class Client {
 	 * 	```
 	 *
 	 * @example
-	 * 	```ts
+	 * 	;```ts
 	 * 	const client = new Client({ baseURL: "https://example.imgix.net" })
 	 * 	const srcset = client.buildPixelDensitySrcSetForPath("/image.png", {
 	 * 		pixelDensities: [1, 2, 3],
