@@ -24,10 +24,10 @@
 	"typesVersions": {
 		"*": {
 			"*": [
-				"dist/index.d.cts"
+				"dist/index.d.ts"
 			],
 			"node": [
-				"dist/node/index.d.cts"
+				"dist/richtext.d.ts"
 			]
 		}
 	},
