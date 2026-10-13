@@ -59,7 +59,7 @@
 		"test": "npm run lint && npm run types && npm run unit && npm run build"
 	},
 	"devDependencies": {
-		"@types/node": "^26.6.4",
+		"@types/node": "^26.6.5",
 		"@vitest/coverage-v8": "^5.0.3",
 		"imgix-url-params": "^11.36.0",
 		"oxfmt": "^0.72.0",
