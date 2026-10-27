@@ -10,4 +10,8 @@ export default defineConfig({
 	unbundle: true,
 	sourcemap: true,
 	exports: true,
+	dts: {
+		// TypeScript 7 has no classic compiler API, so emit declarations with Oxc.
+		generator: "oxc",
+	},
 })
