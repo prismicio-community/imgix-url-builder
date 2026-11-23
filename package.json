@@ -60,7 +60,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^26.6.6",
-		"@vitest/coverage-v8": "^5.1.0",
+		"@vitest/coverage-v8": "^5.1.1",
 		"imgix-url-params": "^11.36.0",
 		"oxfmt": "^0.79.0",
 		"oxlint": "^1.94.0",
@@ -69,7 +69,7 @@
 		"tsdown": "^0.23.7",
 		"tsx": "^4.23.15",
 		"typescript": "^7.0.2",
-		"vitest": "^5.1.0"
+		"vitest": "^5.1.1"
 	},
 	"engines": {
 		"node": ">=20"
